@@ -8,9 +8,11 @@ async function analyzeInput() {
         .value
         .toLowerCase();
 
-    for (const problem of problems) {
+   for (const problem of problems) {
 
-        if (text.includes(problem.keyword)) {
+    for (const keyword of problem.keywords) {
+
+        if (text.includes(keyword)) {
 
             document.getElementById("result").innerHTML =
                 problem.advice;
@@ -18,6 +20,7 @@ async function analyzeInput() {
             return;
         }
     }
+}
 
     document.getElementById("result").innerHTML =
         "I don't know that problem yet.";
