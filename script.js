@@ -20,3 +20,5 @@ async function analyzeInput() {
 
   document.getElementById("result").textContent = "I don't know that problem yet.";
 }
+
+document.getElementById("analyzeButton").addEventListener("click", analyzeInput);
