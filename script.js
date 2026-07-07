@@ -20,6 +20,7 @@ async function analyzeInput() {
             return;
         }
     }
+ }
 
     document.getElementById("result").innerHTML =
         "I don't know that problem yet.";
