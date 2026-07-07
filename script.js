@@ -18,7 +18,7 @@ async function analyzeInput() {
     }
   }
 
-  document.getElementById("result").textContent = "I don't know that problem yet.";
+  document.getElementById("result").textContent = "I don't know that problem yet. Try to check the spelling or use another keyword";
 }
 
 document.getElementById("analyzeButton").addEventListener("click", analyzeInput);
