@@ -2,15 +2,12 @@ async function analyzeInput() {
 
     const response = await fetch("data/troubleshooting/problems.json");
     const problems = await response.json();
-    console.log(problems);
-    
+       
     const text = document
         .getElementById("userInput")
         .value
         .toLowerCase();
-    document
-    .getElementById("analyzeButton")
-    .addEventListener("click", analyzeInput);
+   
 
    for (const problem of problems) {
 
