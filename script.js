@@ -1,5 +1,6 @@
 async function analyzeInput() {
   const response = await fetch("./data/troubleshooting/issues.json");
+  const response = await fetch("./data/troubleshooting/paper-buckling.json");
 
   if (!response.ok) {
     document.getElementById("result").textContent = "Could not load data.";
@@ -9,7 +10,8 @@ async function analyzeInput() {
   const issues = await response.json();
   const text = document.getElementById("userInput").value.toLowerCase();
 
-  for (const problem of issues) {
+  for (const problem of issues) 
+  for (const problem of paper-buckling){
     for (const keyword of problem.keywords) {
       if (text.includes(keyword)) {
         document.getElementById("result").textContent = problem.advice;
