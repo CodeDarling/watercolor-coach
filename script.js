@@ -6,7 +6,7 @@ async function analyzeInput() {
     return;
   }
 
-  const problems = await response.json();
+  const issues = await response.json();
   const text = document.getElementById("userInput").value.toLowerCase();
 
   for (const problem of issues) {
