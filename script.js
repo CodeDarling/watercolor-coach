@@ -1,8 +1,8 @@
 
 
 function analyzeInput() {
-    let text = document.GetElementById("userInput").value;
+    let text = document.getElementById("userInput").value;
 
-    document.GetElementById("result").innerHTML =
+    document.getElementById("result").innerHTML =
         "You wrote: " + text;
 }
