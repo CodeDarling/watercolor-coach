@@ -1,31 +1,21 @@
 async function analyzeInput() {
+  const response = await fetch("/watercolor-coach/data/troubleshooting/problems.json");
+  if (!response.ok) {
+    document.getElementById("result").innerHTML = "Could not load data.";
+    return;
+  }
 
-    const response = await fetch("data/troubleshooting/problems.json");
-    const problems = await response.json();
-       
-    const text = document
-        .getElementById("userInput")
-        .value
-        .toLowerCase();
-   
+  const problems = await response.json();
+  const text = document.getElementById("userInput").value.toLowerCase();
 
-   for (const problem of problems) {
-
+  for (const problem of problems) {
     for (const keyword of problem.keywords) {
-
-        if (text.includes(keyword)) {
-
-            document.getElementById("result").innerHTML =
-                problem.advice;
-
-            return;
-        }
+      if (text.includes(keyword)) {
+        document.getElementById("result").innerHTML = problem.advice;
+        return;
+      }
     }
- }
-    document
-.getElementById("result")
-.innerHTML =
-"I don't know that one yet.";
+  }
 
-    
+  document.getElementById("result").innerHTML = "I don't know that one yet.";
 }
