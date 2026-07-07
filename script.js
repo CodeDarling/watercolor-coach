@@ -1,5 +1,5 @@
 async function analyzeInput() {
-  const response = await fetch("/watercolor-coach/data/troubleshooting/problems.json");
+  const response = await fetch("data/troubleshooting/problems.json");
   if (!response.ok) {
     document.getElementById("result").innerHTML = "Could not load data.";
     return;
