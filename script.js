@@ -9,7 +9,7 @@ async function analyzeInput() {
   const issues = await response.json();
   const text = document.getElementById("userInput").value.toLowerCase();
 
-  for (const problem of issues)  {
+  for (const problem of issues) {
     for (const keyword of problem.keywords) {
       if (text.includes(keyword)) {
         document.getElementById("result").textContent = problem.advice;
@@ -18,7 +18,7 @@ async function analyzeInput() {
     }
   }
 
-  document.getElementById("result").textContent = "I don't know that problem yet. Try to check the spelling or use another keyword";
+  document.getElementById("result").textContent = "I don't know that problem yet.";
 }
 
 document.getElementById("analyzeButton").addEventListener("click", analyzeInput);
