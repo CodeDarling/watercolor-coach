@@ -1,6 +1,6 @@
 async function analyzeInput() {
 
-    const response = await fetch("data/troubleshooting/problems.json");
+    const response = await fetch("./data/troubleshooting/problems.json");
     const problems = await response.json();
 
     const text = document
