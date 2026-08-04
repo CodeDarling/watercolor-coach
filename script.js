@@ -140,11 +140,11 @@ async function analyzeInput() {
          * They contain broader associations, relations and free text.
          */
         const extendedFields = {
-          "AI keywords": paint.ai_keywords,
-          "Personal notes": paint.my_notes,
-          "Mix with": paint.mix_with,
-          "Full note content": paint.content,
-          "Manufacturer description":
+          "Subject and mood": paint.ai_keywords,
+          "personal notes": paint.my_notes,
+          "best mixes": paint.mix_with,
+          "personal notes": paint.content,
+          "manufacturer description":
             paint.ext_manufacturer_description
         };
 
@@ -271,7 +271,7 @@ async function analyzeInput() {
                 <h3>Paint relationships</h3>
                 <p>${aiKeywords}</p>
 
-                <h3>Mixes and relationships</h3>
+                <h3>Best mixes for this color</h3>
                 <p>${mixes}</p>
               </div>
             </details>
@@ -284,7 +284,7 @@ async function analyzeInput() {
     console.error("Search error:", error);
 
     resultElement.textContent =
-      "Could not load paint data. Check the browser console.";
+      "Could not load data. Check the browser console.";
   }
 }
 
