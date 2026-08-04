@@ -22,6 +22,16 @@ async function analyzeInput() {
 
     const paints = await response.json();
 
+    const normalizedSearch = searchText
+      .replaceAll("_", " ")
+      .replaceAll("-", " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const searchTerms = normalizedSearch
+      .split(" ")
+      .filter(Boolean);
+
     const matches = paints.filter((paint) => {
       const searchableValues = [
         paint.paint_name,
@@ -44,42 +54,31 @@ async function analyzeInput() {
         paint.content
       ];
 
-const searchableText = searchableValues
+      const normalizedData = searchableValues
         .flat()
-        .filter(value => value !== null && value !== undefined)
-        .map(value => String(value))
+        .filter((value) => value !== null && value !== undefined)
+        .map((value) => String(value))
         .join(" ")
-        .toLowerCase();
+        .toLowerCase()
+        .replaceAll("_", " ")
+        .replaceAll("-", " ")
+        .replace(/\s+/g, " ")
+        .trim();
 
-const normalizedSearch = searchText
-  .replaceAll("_", " ")
-  .replaceAll("-", " ")
-  .replace(/\s+/g, " ")
-  .trim();
+      return searchTerms.every((term) => {
+        const escapedTerm = term.replace(
+          /[.*+?^${}()|[\]\\]/g,
+          "\\$&"
+        );
 
-const normalizedData = searchableText
-  .replaceAll("_", " ")
-  .replaceAll("-", " ")
-  .replace(/\s+/g, " ")
-  .trim();
+        const termPattern = new RegExp(
+          `(^|[^a-z0-9])${escapedTerm}([^a-z0-9]|$)`,
+          "i"
+        );
 
-const searchTerms = normalizedSearch
-  .split(" ")
-  .filter(Boolean);
-
-return searchTerms.every((term) => {
-  const escapedTerm = term.replace(
-    /[.*+?^${}()|[\]\\]/g,
-    "\\$&"
-  );
-
-  const termPattern = new RegExp(
-    `(^|[^a-z0-9])${escapedTerm}([^a-z0-9]|$)`,
-    "i"
-  );
-
-  return termPattern.test(normalizedData);
-});
+        return termPattern.test(normalizedData);
+      });
+    });
 
     if (matches.length === 0) {
       resultElement.textContent = "No matching paints found.";
