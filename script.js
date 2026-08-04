@@ -63,18 +63,23 @@ const normalizedData = searchableText
   .replace(/\s+/g, " ")
   .trim();
 
-const escapedSearch = normalizedSearch.replace(
-  /[.*+?^${}()|[\]\\]/g,
-  "\\$&"
-);
+const searchTerms = normalizedSearch
+  .split(" ")
+  .filter(Boolean);
 
-const searchPattern = new RegExp(
-  `(^|[^a-z0-9])${escapedSearch}([^a-z0-9]|$)`,
-  "i"
-);
+return searchTerms.every((term) => {
+  const escapedTerm = term.replace(
+    /[.*+?^${}()|[\]\\]/g,
+    "\\$&"
+  );
 
-return searchPattern.test(normalizedData);
-    });
+  const termPattern = new RegExp(
+    `(^|[^a-z0-9])${escapedTerm}([^a-z0-9]|$)`,
+    "i"
+  );
+
+  return termPattern.test(normalizedData);
+});
 
     if (matches.length === 0) {
       resultElement.textContent = "No matching paints found.";
