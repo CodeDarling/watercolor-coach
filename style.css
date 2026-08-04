@@ -1,1 +1,77 @@
+.paint-search {
+  max-width: 760px;
+  margin: 2rem auto;
+}
 
+.paint-search > label:first-child {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#userInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.search-option {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#analyzeButton {
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 2rem;
+}
+
+.paint-result {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.paint-result h2 {
+  margin-top: 0;
+}
+
+.match-evidence {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #f4f4f4;
+}
+
+.match-evidence ul {
+  margin-bottom: 0;
+}
+
+.paint-result details {
+  margin-top: 1rem;
+}
+
+.paint-result summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.entry-details {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #dddddd;
+}
+
+.note-content {
+  white-space: pre-line;
+}
+
+mark {
+  font-weight: bold;
+  padding: 0 0.15em;
+}
