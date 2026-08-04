@@ -250,25 +250,25 @@ async function analyzeInput() {
             </p>
 
             <p>
-              <strong>Notes:</strong>
+              <strong>Personal observations:</strong>
               ${notes}
             </p>
 
             <div class="match-evidence">
-              <strong>Matched in:</strong>
+              <strong>Why this matches your search:</strong>
               <ul>
                 ${matchedFieldList}
               </ul>
             </div>
 
             <details>
-              <summary>Show complete entry</summary>
+              <summary>Show all information</summary>
 
               <div class="entry-details">
-                <h3>Full Obsidian note</h3>
+                <h3>Personal notes</h3>
                 <p class="note-content">${content}</p>
 
-                <h3>AI keywords</h3>
+                <h3>Paint relationships</h3>
                 <p>${aiKeywords}</p>
 
                 <h3>Mixes and relationships</h3>
