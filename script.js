@@ -52,9 +52,6 @@ async function analyzeInput() {
         paint.my_best_techniques,
         paint.my_recommended_paper,
         paint.paint_aliases,
-        paint.ai_keywords,
-        paint.my_notes,
-        paint.content
       ];
 
       const normalizedData = normalizeText(
