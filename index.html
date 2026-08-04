@@ -14,19 +14,28 @@
     
 <h2>Search anything watercolor</h2>
 
-<input
+<section class="paint-search">
+  <label for="userInput">Search your paint library</label>
+
+  <input
     type="text"
     id="userInput"
-    placeholder="Search pigments, brands etc..."
->
+    placeholder="e.g. transparent red"
+  >
 
-<button id="analyzeButton">
-    Analyze
-</button>
+  <label class="search-option">
+    <input type="checkbox" id="extendedSearch">
+    Also search notes, AI keywords, mixes and full content
+  </label>
 
-<p id="result"></p>
+  <button type="button" id="analyzeButton">
+    Search
+  </button>
 
-<script src="script.js"></script>
+  <div id="result" aria-live="polite"></div>
+</section>
+
+<script src="script.js?v=10"></script>
    
 </body>
 
