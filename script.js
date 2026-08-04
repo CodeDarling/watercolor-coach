@@ -1,21 +1,23 @@
 async function analyzeInput() {
   const resultElement = document.getElementById("result");
-  const text = document
-    .getElementById("userInput")
-    .value
-    .trim()
-    .toLowerCase();
+  const inputElement = document.getElementById("userInput");
 
-  if (!text) {
+  const searchText = inputElement.value.trim().toLowerCase();
+
+  if (!searchText) {
     resultElement.textContent = "Please enter a search term.";
     return;
   }
 
   try {
-    const response = await fetch("./data/paint.json");
+    resultElement.textContent = "Searching...";
+
+    const response = await fetch("./data/paint.json", {
+      cache: "no-store"
+    });
 
     if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`Could not load JSON. HTTP status: ${response.status}`);
     }
 
     const paints = await response.json();
@@ -38,16 +40,18 @@ async function analyzeInput() {
         paint.my_recommended_paper,
         paint.paint_aliases,
         paint.ai_keywords,
-        paint.my_notes
+        paint.my_notes,
+        paint.content
       ];
 
       const searchableText = searchableValues
         .flat()
-        .filter((value) => value !== null && value !== undefined)
+        .filter(value => value !== null && value !== undefined)
+        .map(value => String(value))
         .join(" ")
         .toLowerCase();
 
-      return searchableText.includes(text);
+      return searchableText.includes(searchText);
     });
 
     if (matches.length === 0) {
@@ -74,17 +78,21 @@ async function analyzeInput() {
             <h3>${name}</h3>
             <p><strong>Brand:</strong> ${brand}</p>
             <p><strong>Pigment:</strong> ${pigments}</p>
-            <p><strong>Notes:</strong> ${paint.my_notes ?? "No notes available."}</p>
+            <p><strong>Notes:</strong> ${paint.my_notes || "No notes available."}</p>
           </article>
         `;
       })
       .join("");
+
   } catch (error) {
-    console.error(error);
-    resultElement.textContent = "Could not load paint data.";
+    console.error("Search error:", error);
+    resultElement.textContent =
+      "Could not load paint data. Check the browser console.";
   }
 }
 
-document
-  .getElementById("analyzeButton")
-  .addEventListener("click", analyzeInput);
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("analyzeButton")
+    .addEventListener("click", analyzeInput);
+});
