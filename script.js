@@ -1,13 +1,25 @@
+function normalizeText(value) {
+  return String(value)
+    .toLowerCase()
+    .replaceAll("_", " ")
+    .replaceAll("-", " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 async function analyzeInput() {
   const resultElement = document.getElementById("result");
   const inputElement = document.getElementById("userInput");
 
-  const searchText = inputElement.value.trim().toLowerCase();
+  const normalizedSearch = normalizeText(inputElement.value);
 
-  if (!searchText) {
+  if (!normalizedSearch) {
     resultElement.textContent = "Please enter a search term.";
     return;
   }
+
+  const searchTerms = normalizedSearch.split(" ").filter(Boolean);
 
   try {
     resultElement.textContent = "Searching...";
@@ -17,20 +29,12 @@ async function analyzeInput() {
     });
 
     if (!response.ok) {
-      throw new Error(`Could not load JSON. HTTP status: ${response.status}`);
+      throw new Error(
+        `Could not load JSON. HTTP status: ${response.status}`
+      );
     }
 
     const paints = await response.json();
-
-    const normalizedSearch = searchText
-      .replaceAll("_", " ")
-      .replaceAll("-", " ")
-      .replace(/\s+/g, " ")
-      .trim();
-
-    const searchTerms = normalizedSearch
-      .split(" ")
-      .filter(Boolean);
 
     const matches = paints.filter((paint) => {
       const searchableValues = [
@@ -54,30 +58,18 @@ async function analyzeInput() {
         paint.content
       ];
 
-      const normalizedData = searchableValues
-        .flat()
-        .filter((value) => value !== null && value !== undefined)
-        .map((value) => String(value))
-        .join(" ")
-        .toLowerCase()
-        .replaceAll("_", " ")
-        .replaceAll("-", " ")
-        .replace(/\s+/g, " ")
-        .trim();
+      const normalizedData = normalizeText(
+        searchableValues
+          .flat(Infinity)
+          .filter((value) => value !== null && value !== undefined)
+          .join(" ")
+      );
 
-      return searchTerms.every((term) => {
-        const escapedTerm = term.replace(
-          /[.*+?^${}()|[\]\\]/g,
-          "\\$&"
-        );
+      const dataTerms = new Set(
+        normalizedData.split(" ").filter(Boolean)
+      );
 
-        const termPattern = new RegExp(
-          `(^|[^a-z0-9])${escapedTerm}([^a-z0-9]|$)`,
-          "i"
-        );
-
-        return termPattern.test(normalizedData);
-      });
+      return searchTerms.every((term) => dataTerms.has(term));
     });
 
     if (matches.length === 0) {
@@ -101,10 +93,12 @@ async function analyzeInput() {
 
         return `
           <article>
-            <h3>${name}</h3>
-            <p><strong>Brand:</strong> ${brand}</p>
-            <p><strong>Pigment:</strong> ${pigments}</p>
-            <p><strong>Notes:</strong> ${paint.my_notes || "No notes available."}</p>
+            <h3>${name || "Unnamed paint"}</h3>
+            <p><strong>Brand:</strong> ${brand || "Unknown"}</p>
+            <p><strong>Pigment:</strong> ${pigments || "Unknown"}</p>
+            <p><strong>Notes:</strong> ${
+              paint.my_notes || "No notes available."
+            }</p>
           </article>
         `;
       })
@@ -118,7 +112,9 @@ async function analyzeInput() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("analyzeButton")
-    .addEventListener("click", analyzeInput);
+  const analyzeButton = document.getElementById("analyzeButton");
+
+  if (analyzeButton) {
+    analyzeButton.addEventListener("click", analyzeInput);
+  }
 });
