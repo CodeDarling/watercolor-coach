@@ -1,5 +1,5 @@
 async function analyzeInput() {
-  const response = await fetch("./data/troubleshooting/issues.json");
+  const response = await fetch("./data/paint.json");
 
   if (!response.ok) {
     document.getElementById("result").textContent = "Could not load data.";
