@@ -51,7 +51,29 @@ async function analyzeInput() {
         .join(" ")
         .toLowerCase();
 
-      return searchableText.includes(searchText);
+      const normalizedSearch = searchText
+  .replaceAll("_", " ")
+  .replaceAll("-", " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const normalizedData = searchableText
+  .replaceAll("_", " ")
+  .replaceAll("-", " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const escapedSearch = normalizedSearch.replace(
+  /[.*+?^${}()|[\]\\]/g,
+  "\\$&"
+);
+
+const searchPattern = new RegExp(
+  `(^|[^a-z0-9])${escapedSearch}([^a-z0-9]|$)`,
+  "i"
+);
+
+return searchPattern.test(normalizedData);
     });
 
     if (matches.length === 0) {
