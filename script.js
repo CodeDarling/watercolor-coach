@@ -49,7 +49,6 @@ async function analyzeInput() {
         paint.paint_optical_role,
         paint.my_paint_subjects,
         paint.my_paint_purpose,
-        paint.mix_with,
         paint.my_best_techniques,
         paint.my_recommended_paper,
         paint.paint_aliases,
