@@ -173,7 +173,7 @@ ai_keywords:
   - tomato red
   - orange red
   - coral red
-  - orange-yellow undertones
+  - orange undertones
 ---
 Scarlet Lake is a bright red with orange-yellow undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.
 https://eu.winsornewton.com/en-row/products/professional-watercolour-scarlet-lake
