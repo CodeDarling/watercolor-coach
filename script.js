@@ -44,14 +44,14 @@ async function analyzeInput() {
         paint.content
       ];
 
-      const searchableText = searchableValues
+const searchableText = searchableValues
         .flat()
         .filter(value => value !== null && value !== undefined)
         .map(value => String(value))
         .join(" ")
         .toLowerCase();
 
-      const normalizedSearch = searchText
+const normalizedSearch = searchText
   .replaceAll("_", " ")
   .replaceAll("-", " ")
   .replace(/\s+/g, " ")
