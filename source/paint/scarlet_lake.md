@@ -145,7 +145,7 @@ paint_aliases: vermilion
 my_rating_1_10: 9
 my_notes: Poppy red with a coral and orange-pink undertone
 ext_references: https://eu.winsornewton.com/en-row/products/professional-watercolour-scarlet-lake
-ext_manufacturer_description: Scarlet Lake is a bright red with orange-yellow undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.
+ext_manufacturer_description: Scarlet Lake is a bright red with orange undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.
 ai_keywords:
   - lipstick red
   - soft rose petals
