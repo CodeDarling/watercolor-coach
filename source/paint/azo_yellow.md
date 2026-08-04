@@ -11,27 +11,27 @@ paint_id:
   - azo_yellow
 paint_brand:
   - roman_szmal
-single_pigment: false
+single_pigment: true
 paint_pigments:
   - PY150
 paint_color_family:
-  - Yellow
+  - yellow
 paint_hue_bias:
-  - Yellow-Green
-paint_temparature:
-  - Neutral
-  - Cool
+  - yellow_green
+paint_temperature:
+  - Warm
 paint_opacity:
-  - Transparent
+  - transparent
 paint_granulation:
+  - no
 paint_staining: true
 paint_lightfast: true
 paint_drying_shift:
-  - Low
+  - low
 paint_luminosity:
-  - high 
+  - high
 paint_glow:
-  - high 
+  - high
 paint_optical_role:
   - base_color
   - bright
@@ -50,8 +50,8 @@ paint_optical_role:
   - tonal_variety
   - complex
   - long_tonality
-pan: true
-tube:
+paint_pan: true
+paint_tube:
 my_paint_subjects:
   - sunsets
   - fruit
@@ -100,7 +100,7 @@ my_paint_purpose:
   - botanical_painting_iris
   - botanical_painting_apples
   - botanical_painting_lemons
-  - botanical_painting_orhids
+  - botanical_painting_orchids
   - botanical_painting_tulips
   - botanical_painting_dahlias
   - botanical_painting_poppies
@@ -120,7 +120,7 @@ my_paint_purpose:
   - yellow_dresses
   - yellow_crystals
 mix_with:
-  - winser_blue_red_shade
+  - winsor_blue_red_shade
   - winsor_blue_green_shade
   - sap_green_wn
   - scarlet_lake
@@ -157,19 +157,43 @@ my_recommended_paper:
   - arches
   - saunders_waterford
   - baohong_masters
-  - cp 
   - grain_fin
   - hotpress
   - rough
   - satin
+  - CP
 paint_avoid:
   - lifting
-paint_aliases: Transparent Yellow
+paint_aliases:
+  - transparent_yellow
 my_rating_1_10: 8
 my_notes: Incredibly staining, extremely versatile, works well with any green or green-leaning blue.
-ext_references:
-ext_manufactorer_description:
-ai_keywords: golden glow on an apple peel in the sun; jewel tones, golden glow; gold jewellery; inner glow; ligtning up; the light from the setting sun on golden meadows in a landscape; bathed in the light from the setting sun; morning glory; the glow of autumn leaves on a misty day; luminous autumn leaves; the sunshine from a pumpkin in the sun; golden light; the waves of golden tulle in a ballgown; sunrays behind the clouds peeking out; glowing flower petals; the color on a sunflower's petal; a deeply yello ripe, juicy lemon; the glow of sunlight on green leaves; velvety wine in a glass; many tonal steps; paints light inside color; golden coins; juicy apples; juicy grapes in the sunshine; shiny leaves in the sunset; the color of a sunrise;
+ext_references: https://paintlist.com/pigment-notebook/py150
+ext_manufacturer_description: '""'
+ai_keywords:
+  - golden glow on an apple peel in the sun
+  - inner glow
+  - sunset yellow
+  - morning glow
+  - autumn leaves in the sun
+  - luminous autumn leaves
+  - highlight on a pumpkin
+  - golden sunrays on a meadow
+  - sunflower yellow
+  - golden apples
+  - juicy lemons
+  - golden jewellery
+  - gold coins
+  - juicy grapes
+  - shine on metal
+  - the color of sunrise or sunset
+  - golden velvet fabrics
+  - paradise birds
+  - tropical birds
+  - yellow lilies
+  - the yellow glow inside a flower
+  - yellow flower stamens
+  - yellow marigolds
 ---
 While it may _look_ like a brown, this is a tremendous saturated yellow with depth which expands the gamut. It is incredibly useful- maybe almost indispensable for increasing the range of hues in oil paint and also for depicting lower-lightness high-chroma yellows.
 As many painters will tell you, it can be difficult to descent down into the lower lightness steps of yellows. One may start out thinking it's as easy dancing the Grapevine step only to find out it's more like a Viennese Waltz. PY150 is a color that can help maintain high chroma in difficult mixes.
