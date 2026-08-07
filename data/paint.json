@@ -6,6 +6,235 @@
     "item_status": [
       "complete"
     ],
+    "paint_id": [
+      "anthraquinoid_scarlet"
+    ],
+    "paint_name": [
+      "anthraquinoid_scarlet"
+    ],
+    "paint_brand": [
+      "daniel_smith"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PR168"
+    ],
+    "paint_color_family": [
+      "red "
+    ],
+    "paint_hue_bias": [
+      "red_orange"
+    ],
+    "paint_temperature": [
+      "warm "
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": null,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "low "
+    ],
+    "paint_luminosity": [
+      "high"
+    ],
+    "paint_glow": [
+      "high"
+    ],
+    "paint_optical_role": [
+      "airy",
+      "becomes_light",
+      "breathes_air",
+      "breathes_life",
+      "bright",
+      "complex",
+      "delicate",
+      "delicate_softness",
+      "light",
+      "long_tonality",
+      "mixer",
+      "rich",
+      "soft",
+      "soft_transitions",
+      "tonal_variety",
+      "transforms_light",
+      "warm",
+      "vibrancy"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "botanicals",
+      "crystals",
+      "exotic_flowers",
+      "exotic_fruits",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "fruit",
+      "jewels",
+      "petals",
+      "sunsets"
+    ],
+    "my_paint_purpose": [
+      "alstromeria",
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "ballgowns",
+      "base_color_for_petals",
+      "botanical_painting_alstromeria",
+      "botanical_painting_apples",
+      "botanical_painting_apricots",
+      "botanical_painting_dahlias",
+      "botanical_painting_dark_roses",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_french_anemones",
+      "botanical_painting_iris",
+      "botanical_painting_lilies",
+      "botanical_painting_marigolds",
+      "botanical_painting_orchids",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_pink_roses",
+      "botanical_painting_poppies",
+      "botanical_painting_rasperries",
+      "botanical_painting_red_roses",
+      "botanical_painting_strawberries",
+      "botanical_painting_tulips",
+      "cherries",
+      "detailed_ballgowns",
+      "detailed_crystals",
+      "detailed_fairy_wings",
+      "detailed_fish_scales",
+      "jewels",
+      "hightlights_on_botanicals"
+    ],
+    "mix_with": [
+      "yellow_ochre_wn",
+      "azo_yellow",
+      "hansa_yellow_medium",
+      "golden_yellow",
+      "quinophtalone_yellow",
+      "madder_rose",
+      "magenta_rose",
+      "permanent_rose",
+      "dioxazine_violet",
+      "quinacridone_lilac",
+      "winser_blue_red_shade",
+      "ultramarine_finest"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "grain_fin",
+      "hotpress",
+      "satin",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "\"\"",
+      "sunlight"
+    ],
+    "paint_aliases": [
+      "\"\""
+    ],
+    "my_rating_1_10": 10,
+    "my_notes": "The most beautiful red with high transparency for everything botanical, glazing and painting light in color. Long tonality - from peachy pink to bright fire-engine red.",
+    "ext_references": "https://danielsmith.com",
+    "ext_manufacturer_description": "A deep, transparent orange. In a wash, it’s a light peach tint and transparent at full strength, it moves to a deep, red-orange lipstick color with all the pigment strength, DANIEL SMITH paints are famous for. It’s absolutely beautiful!",
+    "ai_keywords": [
+      "atmospheric",
+      "autumn color",
+      "autumn leaves in the sun",
+      "luminous autumn leaves",
+      "red lips",
+      "red roses",
+      "red cars",
+      "red apples",
+      "red poppies",
+      "creamy",
+      "strawberry red",
+      "strawberry icecream",
+      "coral red",
+      "berry red",
+      "orange red",
+      "tomato red",
+      "lipstick red",
+      "lollipop red",
+      "popsicle red",
+      "rasberry red",
+      "soft rose petals",
+      "inside of a rose petal",
+      "summer roses",
+      "juicy peaches",
+      "pink grapefruit",
+      "lipgloss pink",
+      "light from within",
+      "highlights on a flower petal",
+      "light",
+      "lit from within",
+      "delicate",
+      "lively",
+      "bright",
+      "calm",
+      "clear",
+      "charming",
+      "cakes and deserts",
+      "rich",
+      "juicy",
+      "succulent",
+      "macarons",
+      "peaceful",
+      "serene",
+      "soft",
+      "juicy ripe cherries",
+      "golden velvet fabrics",
+      "stained glass effect",
+      "tranquil",
+      "transculent",
+      "transports light",
+      "playful",
+      "perfect for glazing",
+      "paradise birds",
+      "sophisticated",
+      "happy",
+      "expressive",
+      "easy",
+      "exotic",
+      "sensual",
+      "pure",
+      "inner glow",
+      "complex"
+    ],
+    "source_file": "anthraquinoid_scarlet.md",
+    "content": ""
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
     "paint_owned": true,
     "my_favorite": true,
     "paint_name": [
@@ -228,6 +457,2808 @@
     "item_status": [
       "complete"
     ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "paint_name": [
+      "Brown-Green"
+    ],
+    "paint_id": [
+      "brown_green"
+    ],
+    "paint_brand": [
+      "Sennelier"
+    ],
+    "single_pigment": true,
+    "paint_pigments": [
+      "PY129"
+    ],
+    "paint_color_family": [
+      "Yellow"
+    ],
+    "paint_hue_bias": [
+      "Yellow-Green"
+    ],
+    "paint_temperature": [
+      "Cool",
+      "Neutral"
+    ],
+    "paint_opacity": [
+      "Transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "Low"
+    ],
+    "paint_luminosity": [
+      "High"
+    ],
+    "paint_glow": [
+      "High"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "becomes_light",
+      "bright",
+      "brilliant",
+      "complex",
+      "deep",
+      "great_mixer",
+      "intense",
+      "light",
+      "long_tonality",
+      "mixer",
+      "rich",
+      "saturated",
+      "workhorse",
+      "warm",
+      "transforms_light",
+      "tonal_variety",
+      "soft_transitions",
+      "delicate_softness"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "bark",
+      "butterflies",
+      "crystals",
+      "exotic flowers",
+      "exotic fruits",
+      "exotic vegetables",
+      "fashion",
+      "fish",
+      "flowers",
+      "fruit",
+      "green leaves",
+      "insects",
+      "jewellery",
+      "jewels",
+      "landscapes",
+      "leaves",
+      "metal",
+      "petals",
+      "pumpkins",
+      "trees",
+      "vegetables",
+      "tropical subjects",
+      "tropical scenes",
+      "sunsets"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "autumn leaves",
+      "autumn scenes",
+      "background on a single flower",
+      "ballgowns",
+      "crystals",
+      "dark green leaves",
+      "exotic flowers",
+      "alstromeria",
+      "stamens",
+      "fish scales",
+      "dragonfruit",
+      "golden subjects",
+      "green leaves",
+      "green mixing",
+      "highlights on a flower petal",
+      "leaves mixing",
+      "lilies",
+      "lemons",
+      "magnolias",
+      "orhids",
+      "orchid flowers",
+      "jewels",
+      "gold",
+      "landscape scenes",
+      "pumpkins",
+      "underwater scenes",
+      "the light after a sunset",
+      "sunset light on a meadow",
+      "sunset afterglow",
+      "sunrise",
+      "sunlight",
+      "sunflowers",
+      "yellow roses",
+      "shoes",
+      "stones",
+      "corals",
+      "base color on petals",
+      "dried fruit",
+      "exotic fruit",
+      "autumn trees",
+      "sunflowers"
+    ],
+    "mix_with": [
+      "antwerp blue",
+      "blue ",
+      "blue-greens",
+      "bright blue",
+      "buff titanium",
+      "emerald green",
+      "azo yellow",
+      "aqua green",
+      "french ultramarine",
+      "green oxide chromium",
+      "green gold",
+      "helio green",
+      "hookers green",
+      "indanthrene blue",
+      "lamp black",
+      "neutral tint",
+      "permanent green olive",
+      "perylene green",
+      "Winsor Lemon",
+      "winsor blue green shade",
+      "undersea green",
+      "transparent gold",
+      "sap green",
+      "quinophtalone yellow",
+      "prussian blue",
+      "perylene violet"
+    ],
+    "my_best_techniques": [
+      "glazing",
+      "mixing",
+      "washes",
+      "wet in wet",
+      "wet on damp",
+      "wet on dry",
+      "layering",
+      "underpainting"
+    ],
+    "my_recommended_paper": [
+      "CP",
+      "grain fin",
+      "hot press",
+      "Saunders Waterford",
+      "arches",
+      "satin",
+      "rough"
+    ],
+    "paint_avoid": [
+      "lifting"
+    ],
+    "paint_aliases": "Rich Green Gold (Daniel Smith), Green Gold (Winsor & Newton)",
+    "my_rating_1_10": 8,
+    "my_notes": "Incredibly staining, extremely versatile, works well with any green or green-leaning blue.",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "rich",
+      "bright",
+      "deep",
+      "jewel tones",
+      "jewel colors",
+      "golden apples",
+      "golden velvet fabrics",
+      "golden sunrays on a meadow",
+      "golden glow on an apple peel in the sun",
+      "sparkling",
+      "amazing dark greens",
+      "atmospheric",
+      "autumn color",
+      "autumn forest",
+      "autumn green",
+      "autumn leaves in the sun",
+      "inner glow",
+      "the yellow glow inside a flower",
+      "delicate",
+      "spices",
+      "vibrant",
+      "juicy lemons",
+      "earthy",
+      "crystal clear",
+      "the color of sunrise or sunset",
+      "pumpkins",
+      "highlight on a pumpkin",
+      "highlights on a flower petal",
+      "sophisticated",
+      "shine on metal",
+      "yellow orchid flowers",
+      "lit from within",
+      "light from within",
+      "brown leaves",
+      "complex",
+      "warm",
+      "yellow flower stamens",
+      "yellow lilies",
+      "sunflower yellow",
+      "gold coins",
+      "soft rose petals",
+      "tropical",
+      "the sky after sunset",
+      "morning glow",
+      "canary yellow",
+      "great mixer",
+      "deep bright greens",
+      "intense greens",
+      "juicy",
+      "joyful",
+      "lantern lights",
+      "perfect for glazing",
+      "juicy grapes",
+      "enigma",
+      "sensual",
+      "pure",
+      "powerful",
+      "succulent",
+      "fullfilled",
+      "lively",
+      "intense",
+      "luminous autumn leaves",
+      "mystical",
+      "green vegetables",
+      "leaf green"
+    ],
+    "source_file": "brown_green.md",
+    "content": "This is a super mysterious and weirdly fascinating color is also known as Green Gold. It's magic is not its masstone but rather what it does in mixes-- it is concentrated sort of like how yellow food dye often doesn't look yellow, but a drop of water brings out bright color. This transparent color is like the essence of deep yellow-greens, and it is actually necessary to expand the gamut. In masstone, it's actually quite green but it takes on more of a yellow in tints. PY129 shines in the low notes of the yellow-greens and allows some of the highest chroma greens in mixing."
+  },
+  {
+    "tags": [
+      "PG17"
+    ],
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "chrome_oxide_green"
+    ],
+    "paint_name": [
+      "chrome oxide green"
+    ],
+    "paint_brand": [
+      "Rembrandt"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PG17"
+    ],
+    "paint_color_family": [
+      "green"
+    ],
+    "paint_hue_bias": [
+      "blue_green"
+    ],
+    "paint_temperature": [
+      "cool",
+      "neutral "
+    ],
+    "paint_opacity": [
+      "opaque"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "low"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "cool",
+      "delicate_softness",
+      "great_mixer",
+      "muted",
+      "workhorse",
+      "structural",
+      "solid_color",
+      "soft_transitions",
+      "soft",
+      "mixer",
+      "low_contrast",
+      "shadows"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "bark",
+      "botanical_painting",
+      "botanicals",
+      "fantasy",
+      "leaves",
+      "trees",
+      "landscapes",
+      "fruit"
+    ],
+    "my_paint_purpose": [
+      "autumn_leaves",
+      "autumn_scenes",
+      "botanical_painting_flower_stamens",
+      "botanical_painting_green_leaves",
+      "botanical_painting_pumpkins",
+      "botanical_painting_iris",
+      "botanical_painting_lemons",
+      "detailed_fish_scales",
+      "green_leaves",
+      "houses"
+    ],
+    "mix_with": [
+      "azo yellow",
+      "brown_green",
+      "golden_yellow",
+      "manganese_blue",
+      "yellow_ochre_wn",
+      "winsor_blue_green_shade",
+      "winser_blue_red_shade",
+      "vandyke_brown",
+      "ultramarine_finest",
+      "transparent_yellow",
+      "raw_umber_wn",
+      "quinophtalone_yellow",
+      "prussian_blue"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "red paints",
+      "purple paints"
+    ],
+    "paint_aliases": [
+      "\"\""
+    ],
+    "my_rating_1_10": 7,
+    "my_notes": "The most natural botanical green - perfect for any type of fooliage and leaves. Great mixer too. Opaque as well.",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "mist green",
+      "great mixer",
+      "green-blue topazes",
+      "leaf green",
+      "muted green",
+      "natural",
+      "money green",
+      "frog green",
+      "pond green",
+      "pea green",
+      "low chroma green",
+      "low contrast",
+      "subdued",
+      "quiet",
+      "soft",
+      "understated",
+      "mellow",
+      "fullfilled",
+      "comforting",
+      "wholesome",
+      "organic",
+      "grounded",
+      "autumn color",
+      "autumn forest",
+      "autumn leaves in the sun",
+      "earthy",
+      "creamy",
+      "bark",
+      "moss green",
+      "hunters in the woods",
+      "hunter green",
+      "autumn green",
+      "botanical",
+      "green vegetables",
+      "atmospheric",
+      "calm",
+      "classic",
+      "cool",
+      "charming",
+      "peaceful",
+      "dark sea green",
+      "effortless",
+      "innocent",
+      "sincere",
+      "pine trees",
+      "withered flowers",
+      "delicate",
+      "sensitive",
+      "tranquil",
+      "serious",
+      "dark mountain green",
+      "pure",
+      "dark green moss",
+      "smooth",
+      "formal",
+      "pumpkins",
+      "blue shadows",
+      "fern green",
+      "easy"
+    ],
+    "source_file": "chromium_oxide_green.md",
+    "content": "leaf green, muted green, natural green, foliage green, frog green, the most natural green for leaves and plat painting, money green, pea green, pond plants, green brick, wall paper green, low chroma, low contrast green, base color, ivy leaf green, versatile, sea plants, subtle, simplicity, subdued, quiet green, unobtrusive green, understated, mellow, gray-green, soft green, enveloping, touchable, creamy green, ease, fullfillment, opaque green, comforting green, wholesome, organic, grounded, earthy, harvest green, autumn green leaves, green to paint tree leaves, tree bark green, moss green, a walk in the woods in autumn, hunter green, botanical green, soft green, earthy green, easy going, unprovocative, effortless, relaxed, vegetables, fruits, fern green, broccoli green,\n\nSometimes described as ,\"The green of printed money.\" (From Artiscreation). This is an interesting, heavy pea soup green, and evokes a memory of pond plants in its hue. However in handling this color always packs a significant punch and while some have complained of phthalos being very intense, this is a color I have found to be sometimes almost overwhelming in its opacity, however like all things when used in the places one wants it, it is fantastic."
+  },
+  {
+    "tags": [
+      "PV23"
+    ],
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "dioxazine_violet_rosa"
+    ],
+    "paint_name": [
+      "dioxazine_violet"
+    ],
+    "paint_brand": [
+      "rosa_ukraine"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PV23"
+    ],
+    "paint_color_family": [
+      "violet"
+    ],
+    "paint_hue_bias": [
+      "blue_violet"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "bright",
+      "brilliant",
+      "cool",
+      "darkens",
+      "deep",
+      "vibrancy",
+      "tonal_variety",
+      "structural",
+      "shadows",
+      "rich",
+      "mixer",
+      "long_tonality",
+      "intense"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "christmas_ornaments",
+      "clouds",
+      "crystals",
+      "exotic_flowers",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "fruit",
+      "insects",
+      "landscapes",
+      "maritime_subjects",
+      "jewels",
+      "metal",
+      "petals",
+      "shadows",
+      "skies",
+      "steampunk",
+      "sunsets",
+      "underwater_scenes"
+    ],
+    "my_paint_purpose": [
+      "ballgowns",
+      "base_color_for_petals",
+      "blue_crystals",
+      "blue_jewels",
+      "blue_flowers",
+      "botanical_painting_agapanthus",
+      "botanical_painting_alstromeria",
+      "botanical_painting_clematis",
+      "botanical_painting_dahlias",
+      "botanical_painting_delphinium",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_french_anemones",
+      "botanical_painting_hyacinths",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_iris",
+      "botanical_painting_lilacs",
+      "botanical_painting_lotus",
+      "botanical_painting_mushrooms",
+      "botanical_painting_orhids",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_tulips",
+      "clematis",
+      "dahlias",
+      "crystals",
+      "detailed_crystals",
+      "detailed_fairy_wings",
+      "detailed_ballgowns",
+      "detailed_jewels",
+      "detailed_fish scales",
+      "lilacs",
+      "dragonfly",
+      "dragons",
+      "hyacinths",
+      "hydrangeas",
+      "iris",
+      "jewels",
+      "moody_skies",
+      "sunrise",
+      "sunset_afterglow",
+      "the_light_after_sunset",
+      "purple_jewels",
+      "purple_crystals"
+    ],
+    "mix_with": [
+      "winser_blue_red_shade",
+      "winsor_blue_green_shade",
+      "winsor_red_deep",
+      "ultramarine_finest",
+      "prussian_blue",
+      "manganese_blue",
+      "pyrrol_red",
+      "quinacridone_red_wn",
+      "scarlet_lake",
+      "vermilion_sch",
+      "azo_yellow",
+      "yellow_ochre_wn",
+      "brown_green",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "perylene_violet",
+      "sap_green_wn",
+      "quinacridone_purple",
+      "quinacridone_lilac",
+      "permanent_rose",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "quinacridone_burnt_orange",
+      "burnt_sienna_wn",
+      "vandyke_brown",
+      "raw_umber_wn",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "mixing",
+      "underpainting",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "grain_fin",
+      "hotpress",
+      "satin"
+    ],
+    "paint_avoid": [
+      "lifting"
+    ],
+    "paint_aliases": [
+      "\"\""
+    ],
+    "my_rating_1_10": 7,
+    "my_notes": "basic workhorse mixer",
+    "ext_references": "\"\"",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "jewel tones",
+      "jewel colors",
+      "lit from within",
+      "rich",
+      "deep",
+      "vibrant",
+      "bright",
+      "sophisticated",
+      "soft darkness",
+      "violet jewels",
+      "dark purple iris petals",
+      "dark",
+      "dynamic",
+      "tasty grapes",
+      "juicy plums",
+      "juicy grapes",
+      "cupcakes",
+      "artificial",
+      "purple crystals",
+      "amethysts",
+      "exotic",
+      "blackberries",
+      "exotic",
+      "delicate",
+      "sensual",
+      "theatrical",
+      "shadows",
+      "deep purple lilacs",
+      "complex",
+      "enigma",
+      "royal",
+      "noble",
+      "wisteria purple",
+      "great mixer",
+      "the sky after sunset",
+      "nightsky",
+      "wildflowers on a meadow",
+      "violet silk scarfs",
+      "silk fabrics",
+      "royal purple",
+      "majestic",
+      "atmospheric",
+      "classic",
+      "cocktails",
+      "cool",
+      "clear",
+      "cornflowers",
+      "dark blue delphinium",
+      "dragon scales",
+      "formal",
+      "muted shadows",
+      "mystical",
+      "light from within",
+      "inner glow",
+      "dark forests",
+      "a dark winter lake",
+      "winter",
+      "powerful",
+      "stormy skies",
+      "reflective",
+      "fantasy creatures",
+      "transparent shadows"
+    ],
+    "source_file": "dioxazine_violet_ros.md",
+    "content": ""
+  },
+  {
+    "tags": [
+      "PY110"
+    ],
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "golden_yellow"
+    ],
+    "paint_name": [
+      "golden yellow"
+    ],
+    "paint_brand": [
+      "Rosa Ukraine"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PY110"
+    ],
+    "paint_color_family": [
+      "yellow"
+    ],
+    "paint_hue_bias": [
+      "yellow-red"
+    ],
+    "paint_temperature": [
+      "warm "
+    ],
+    "paint_opacity": [
+      "semi_transparent",
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "low "
+    ],
+    "paint_luminosity": [
+      "high "
+    ],
+    "paint_glow": [
+      "high "
+    ],
+    "paint_optical_role": [
+      "becomes_light",
+      "breathes_life",
+      "bright",
+      "deep",
+      "delicate",
+      "delicate_softness",
+      "light",
+      "warm",
+      "transforms_light",
+      "tonal_variety",
+      "solid_color",
+      "soft_transitions",
+      "soft",
+      "saturated",
+      "rich",
+      "long_tonality",
+      "intense",
+      "complex",
+      "great_mixer",
+      "brilliant",
+      "structural",
+      "workhorse"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "animals",
+      "backgrounds",
+      "botanical_painting",
+      "botanicals",
+      "vegetables",
+      "urban_sketching",
+      "tropical_subjects",
+      "sunsets",
+      "skies",
+      "christmas_ornaments",
+      "crystals",
+      "exotic flowers",
+      "exotic_flowers",
+      "exotic_vegetables",
+      "flowers",
+      "fruit",
+      "jewels",
+      "landscapes",
+      "metal",
+      "petals"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "base_color_for_petals",
+      "botanical_painting_alstromeria",
+      "botanical_painting_iris",
+      "botanical_painting_apples",
+      "botanical_painting_lemons",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_dahlias",
+      "botanical_painting_oranges",
+      "botanical_painting_poppies",
+      "botanical_painting_apricots",
+      "botanical_painting_daffodil",
+      "botanical_painting_pumpkins",
+      "botanical_painting_marigolds",
+      "botanical_painting_mushrooms",
+      "botanical_painting_sunflowers",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_flower_stamens",
+      "botanical_painting_exotic_flowers",
+      "crystals",
+      "peaches",
+      "golden_subjects",
+      "dragons",
+      "oranges",
+      "the light after a sunset",
+      "metal_screws",
+      "marigolds",
+      "lanterns",
+      "houses"
+    ],
+    "mix_with": [
+      "winser_blue_red_shade",
+      "winsor_red_deep",
+      "ultramarine_finest",
+      "prussian_blue",
+      "manganese_blue",
+      "quinacridone_red_wn",
+      "scarlet_lake",
+      "vermilion_sch",
+      "perylene_maroon",
+      "perylene_green_ds",
+      "chrome_oxide_green",
+      "permanent_green_olive",
+      "sap_green_wn",
+      "perylene_violet",
+      "magenta_rose",
+      "permanent_rose",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "quinacridone_burnt_orange",
+      "yellow_ochre_wn",
+      "burnt_sienna_wn",
+      "vandyke_brown",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "hotpress",
+      "satin"
+    ],
+    "paint_avoid": [
+      "red paints",
+      "green paints",
+      "purple paints"
+    ],
+    "paint_aliases": "isoindolinone yellow",
+    "my_rating_1_10": 6,
+    "my_notes": "looks like hansa yellow deep - but behaves differently",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "light from within",
+      "highlight on a pumpkin",
+      "hibiscus",
+      "shine on metal",
+      "gold coins",
+      "golden apples",
+      "golden jewellery",
+      "golden velvet fabrics",
+      "golden sunrays on a meadow",
+      "golden glow on an apple peel in the sun",
+      "yellow marigolds",
+      "pumpkins",
+      "yellow poppies",
+      "sunset yellow",
+      "sunflower yellow",
+      "the sky after sunset",
+      "autumn leaves in the sun",
+      "the color of sunrise or sunset",
+      "yellow iris",
+      "yellow lilies",
+      "yellow flower stamens",
+      "yellow orchid flowers",
+      "the yellow glow inside a flower",
+      "canary yellow",
+      "orange-yellow undertones",
+      "soft rose petals",
+      "delicate",
+      "jewel tones",
+      "inner glow",
+      "morning glow",
+      "lit from within",
+      "fireplace and a cup of tea",
+      "juicy lemons",
+      "autumn color",
+      "luminous autumn leaves",
+      "deep",
+      "atmospheric",
+      "calm",
+      "bright",
+      "candy",
+      "classic",
+      "fruity",
+      "inside of a rose petal",
+      "juicy",
+      "juicy peaches",
+      "jewel colors",
+      "cakes and deserts",
+      "silk fabrics",
+      "popsickles",
+      "reflective",
+      "summer roses",
+      "warm",
+      "earthy",
+      "tropical",
+      "buttercups",
+      "smooth",
+      "highlights on a flower petal",
+      "lantern lights",
+      "lit candles",
+      "transculent"
+    ],
+    "source_file": "golden_yellow.md",
+    "content": "Isoindolinone Yellow, a warm bright reddish yellow that has gained popularity among painters. PY110 is a fabulous transparent yellow-orange that is incredibly useful in mixes. It also makes a great yellow for sap green convenience blends and is quite versatile. It is reported to have excellent lightfastness and weatherfastness.\nThe transparency of this yellow is a huge attraction, though it is a slow dryer in oils. Painter Kathleen Hudson noted that it can be used in mixes without adding a lightening effect to the overall mix (in contrast, cadmiums sometimes end up raising the lightness of a color blend). We have found it be outstanding for mixing greens."
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "hansa_yellow_medium"
+    ],
+    "paint_name": [
+      "hansa yellow medium"
+    ],
+    "paint_brand": [
+      "daniel_smith"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PY97"
+    ],
+    "paint_color_family": [
+      "yellow"
+    ],
+    "paint_hue_bias": [
+      "yellow"
+    ],
+    "paint_temperature": [
+      "neutral "
+    ],
+    "paint_opacity": [
+      "semi_opaque"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "low "
+    ],
+    "paint_luminosity": [
+      "high "
+    ],
+    "paint_glow": [
+      "high "
+    ],
+    "paint_optical_role": [
+      "airy",
+      "base_color",
+      "becomes_light",
+      "breathes_life",
+      "bright",
+      "brilliant",
+      "great_mixer",
+      "workhorse",
+      "warm",
+      "transforms_light",
+      "tonal_variety",
+      "solid_color",
+      "rich",
+      "saturated",
+      "mixer",
+      "intense",
+      "light",
+      "long_tonality",
+      "low_contrast",
+      "structural",
+      "primary"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "christmas_ornaments",
+      "crystals",
+      "exotic_flowers",
+      "exotic_fruits",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "fish",
+      "flowers",
+      "fruit",
+      "green_leaves",
+      "insects",
+      "jewellery",
+      "jewels",
+      "landscapes",
+      "petals",
+      "sunsets",
+      "vegetables",
+      "tropical_subjects",
+      "tropical_scenes"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "background_on_a_flower",
+      "ballgowns",
+      "base_color_for_petals",
+      "yellow_roses",
+      "yellow_crystals",
+      "yellow_jewels",
+      "yellow_cars",
+      "yellow_dresses",
+      "botanical_painting_lemons",
+      "botanical_painting_daffodil",
+      "botanical_painting_dahlias",
+      "botanical_painting_dragonfruit",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_lilies",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_oranges",
+      "botanical_painting_poppies",
+      "botanical_painting_pumpkins",
+      "botanical_painting_apricots",
+      "botanical_painting_marigolds",
+      "botanical_painting_sunflowers",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_flower_stamens",
+      "hightlights_on_botanicals",
+      "marigolds",
+      "lemons",
+      "lanterns",
+      "jewels",
+      "iris"
+    ],
+    "mix_with": [
+      "winsor_blue_green_shade",
+      "winser_blue_red_shade",
+      "winsor_red_deep",
+      "pyrrol_red",
+      "ultramarine_finest",
+      "prussian_blue",
+      "manganese_blue",
+      "quinacridone_red",
+      "scarlet_lake",
+      "vermilion_sch",
+      "perylene_maroon",
+      "brown_green",
+      "golden_yellow",
+      "helio_green",
+      "chrome_oxide_green",
+      "permanent_green_olive",
+      "sap_green_wn",
+      "perylene_violet",
+      "perylene_green_ds",
+      "magenta_rose",
+      "madder_rose",
+      "transparent_orange",
+      "transparent_yellow",
+      "quinacridone_burnt_orange",
+      "yellow_ochre_wn",
+      "burnt_sienna_wn",
+      "vandyke_brown",
+      "raw_umber_wn",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "underpainting",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "grain_fin",
+      "hotpress",
+      "saunders_waterford",
+      "satin",
+      "rough"
+    ],
+    "paint_avoid": [
+      "purple paints"
+    ],
+    "paint_aliases": "arylide yellow, permanent yellow, hansa yellow",
+    "my_rating_1_10": 9,
+    "my_notes": "sunshine in a tube, primary yellow, makes indian yellow from daniel smith with PY150",
+    "ext_references": "https://danielsmith.com/color-stories/watercolors/hansa-yellow-medium-watercolor/",
+    "ext_manufacturer_description": "Hansa Yellow Medium is a high-tinting, organic pigment. Considered the ‘perfect yellow’, Hansa Yellow Medium offers more control when mixing. Painters admire the purity of this primary pigment and adjust its temperature while avoiding a gray from a hidden complement. Think of a yellow pepper.",
+    "ai_keywords": [
+      "sunset yellow",
+      "sunflower yellow",
+      "the sky after sunset",
+      "golden glow on an apple peel in the sun",
+      "the color of sunrise or sunset",
+      "yellow lilies",
+      "yellow marigolds",
+      "the yellow glow inside a flower",
+      "orange-yellow undertones",
+      "canary yellow",
+      "jewel tones",
+      "golden jewellery",
+      "happy",
+      "bright",
+      "luminous autumn leaves",
+      "vibrant",
+      "juicy lemons",
+      "upbeat",
+      "uplifting",
+      "paradise birds",
+      "tropical birds",
+      "hibiscus",
+      "jewel colors",
+      "jelly bean colors",
+      "energetic",
+      "pure",
+      "primary colors",
+      "clear",
+      "tropical",
+      "buttercups",
+      "succulent",
+      "summer roses",
+      "lit from within",
+      "light",
+      "lively",
+      "light from within",
+      "delicate",
+      "popsickles",
+      "yellow flower stamens",
+      "yellow popsickles",
+      "autumn color",
+      "active",
+      "joyful",
+      "inner glow",
+      "juicy",
+      "innocent",
+      "highlight on a pumpkin",
+      "highlights on a flower petal",
+      "yellow orchid flowers",
+      "yellow lilies",
+      "yellow iris",
+      "warm",
+      "exotic",
+      "spices",
+      "macarons",
+      "cake frosting",
+      "classic",
+      "crystal clear",
+      "dynamic",
+      "effortless",
+      "fresh",
+      "spontaneity",
+      "sweets",
+      "cupcakes",
+      "spring flowers",
+      "refreshing",
+      "rich",
+      "fruity",
+      "morning glow",
+      "charming",
+      "smooth",
+      "expressive",
+      "splashy",
+      "exuberant",
+      "pure"
+    ],
+    "source_file": "hansa_yellow_medium_ds.md",
+    "content": "Hansa Yellow Medium is a high-tinting, organic pigment. Considered the ‘perfect yellow’, Hansa Yellow Medium offers more control when mixing. Painters admire the purity of this primary pigment and adjust its temperature while avoiding a gray from a hidden complement. Think of a yellow pepper.\nsource: https://danielsmith.com/color-stories/watercolors/hansa-yellow-medium-watercolor/"
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "manganese_blue"
+    ],
+    "paint_name": [
+      "manganese blue hue"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PB15"
+    ],
+    "paint_color_family": [
+      "blue"
+    ],
+    "paint_hue_bias": [
+      "blue_green"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "semi_transparent"
+    ],
+    "paint_granulation": true,
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "high "
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "bright",
+      "brilliant",
+      "cool",
+      "light",
+      "breathes_air",
+      "breathes_life",
+      "delicate",
+      "delicate_softness",
+      "great_mixer",
+      "soft_transitions",
+      "airy"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "botanical_painting",
+      "christmas_ornaments",
+      "clouds",
+      "crystals",
+      "exotic_flowers",
+      "fantasy",
+      "fashion",
+      "fish",
+      "flowers",
+      "impressionalism",
+      "insects",
+      "jewels",
+      "landscapes",
+      "leaves",
+      "maritime_subjects",
+      "seascapes",
+      "petals",
+      "skies",
+      "water",
+      "underwater_scenes",
+      "tropical_subjects",
+      "tropical_scenes"
+    ],
+    "my_paint_purpose": [
+      "background_on_a_flower",
+      "base color on petals",
+      "blue_cars",
+      "blue_crystals",
+      "blue_flowers",
+      "blue_jewels",
+      "blue_poppies",
+      "botanical_painting_agapanthus",
+      "botanical_painting_delphinium",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_french_anemones",
+      "botanical_painting_green leaves",
+      "botanical_painting_hyacinths",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_iris",
+      "botanical_painting_lotus",
+      "botanical_painting_lilacs",
+      "botanical_painting_orhids",
+      "botanical_painting_poppies",
+      "botanical_painting_clematis",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_green_leaves",
+      "city_scenes",
+      "dragonfly",
+      "detailed_ballgowns",
+      "detailed_buildings",
+      "detailed_jewels",
+      "detailed_crystals",
+      "detailed_fairy_wings",
+      "detailed_fish_scales",
+      "underwater_scenes",
+      "tropical_underwater",
+      "tropical_waters"
+    ],
+    "mix_with": [
+      "ultramarine_finest",
+      "prussian blue",
+      "scarlet_lake",
+      "azo_yellow",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "quinacridone_gold",
+      "perylene_green",
+      "helio_green",
+      "permanent_green",
+      "chrome_oxide_green",
+      "sap_green"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "\"\""
+    ],
+    "paint_aliases": "pthalo_blue",
+    "my_rating_1_10": 7,
+    "my_notes": "pthalo blues' lighter little sister - tropical blue, perfect for turquise mixes",
+    "ext_references": "https://eu.winsornewton.com/en-row/products/professional-watercolour-manganese-blue-hue",
+    "ext_manufacturer_description": "Manganese Blue Hue is a clear greenish azure blue colour. It is based on the now obsolete Manganese Blue made of Barium Manganate.",
+    "ai_keywords": [
+      "jewel tones",
+      "jewel colors",
+      "azure blue",
+      "happy",
+      "tropical blue",
+      "tropical waters",
+      "sensitive",
+      "upbeat",
+      "charming",
+      "playful",
+      "exuberant",
+      "energetic",
+      "upbeat",
+      "funny",
+      "spontaneity",
+      "jelly bean colors",
+      "lollipop blue",
+      "cool",
+      "tropical seas",
+      "bermuda blue",
+      "refreshing",
+      "light from within",
+      "light",
+      "waters around coral reefs",
+      "holidays in the tropics",
+      "splashy",
+      "tropical birds",
+      "island paradise blue",
+      "vivid",
+      "turquise waters",
+      "serene",
+      "mediterranian sea blue",
+      "blue lagunas",
+      "crystal clear",
+      "waterfalls",
+      "cocktails"
+    ],
+    "source_file": "manganese_blue_hue_wn.md",
+    "content": "Manganese Blue Hue is a clear greenish azure blue colour. It is based on the now obsolete Manganese Blue made of Barium Manganate.\nhttps://eu.winsornewton.com/en-row/products/professional-watercolour-manganese-blue-hue"
+  },
+  {
+    "tags": [
+      "PBk31"
+    ],
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "perylene_green_ds"
+    ],
+    "paint_name": [
+      "perylene green"
+    ],
+    "paint_brand": [
+      "Daniel Smith"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PBk31"
+    ],
+    "paint_color_family": [
+      "green"
+    ],
+    "paint_hue_bias": [
+      "blue_green"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": null,
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "low"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_optical_role": [
+      "cool",
+      "complex",
+      "deep",
+      "great_mixer",
+      "workhorse",
+      "tonal_variety",
+      "solid_color",
+      "soft_transitions",
+      "muted",
+      "mixer",
+      "saturated",
+      "shadows",
+      "long_tonality",
+      "soft",
+      "rich",
+      "darkens",
+      "muted_darkness"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "architecture",
+      "animals",
+      "backgrounds",
+      "bark",
+      "boats",
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "clouds",
+      "christmas_ornaments",
+      "crystals",
+      "details",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "vegetables",
+      "urban_sketching",
+      "underwater_scenes",
+      "trees",
+      "street_scenes",
+      "steampunk",
+      "seascapes",
+      "fruit",
+      "green leaves",
+      "insects",
+      "jewels",
+      "leaves",
+      "landscapes",
+      "marine_subjects",
+      "maritime_subjects",
+      "metal",
+      "shadows",
+      "sunsets"
+    ],
+    "my_paint_purpose": [
+      "alstromeria",
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "background_on_a_flower",
+      "ballgowns",
+      "botanical_painting_agapanthus",
+      "botanical_painting_iris",
+      "botanical_painting_lotus",
+      "botanical_painting_lemons",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_clematis",
+      "botanical_painting_mushrooms",
+      "botanical_painting_pumpkins",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_alstromeria",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_green_leaves",
+      "botanical_painting_flower_stamens",
+      "water in a harbour",
+      "detailed_ballgowns",
+      "detailed_jewels",
+      "detailed_crystals",
+      "detailed_buildings",
+      "underwater_scenes",
+      "metal_cogs",
+      "metal_screws",
+      "lanterns",
+      "houses",
+      "green_leaves"
+    ],
+    "mix_with": [
+      "azo_yellow",
+      "winsor_red_deep",
+      "winser_blue_red_shade",
+      "winsor_blue_green_shade",
+      "prussian_blue",
+      "manganese_blue",
+      "quinacridone_red",
+      "perylene_maroon",
+      "brown_green",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "helio_green",
+      "permanent_green",
+      "magenta_rose",
+      "transparent_yellow",
+      "quinacridone_burnt_orange",
+      "yellow_ochre_wn",
+      "vandyke_brown",
+      "raw_umber_wn",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "la grisaille",
+      "layering",
+      "mixing",
+      "underpainting",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin"
+    ],
+    "paint_avoid": [
+      "red paints"
+    ],
+    "paint_aliases": [
+      "\"\""
+    ],
+    "my_rating_1_10": 8,
+    "my_notes": "cool shadow color on green leaves",
+    "ext_references": "https://danielsmith.com",
+    "ext_manufacturer_description": "a color perfect for delineating shadows or creating moody landscapes, ominous horizons and stormy seas.",
+    "ai_keywords": [
+      "amazing dark greens",
+      "for underpainting on a dark green leaf",
+      "muted shadows",
+      "transparent shadows",
+      "deep sea water",
+      "depths of the ocean",
+      "dark sea green",
+      "dark green moss",
+      "transculent",
+      "heavy clouds",
+      "dark waters",
+      "pumkins",
+      "moody landscapes",
+      "stormy skies",
+      "a dark winter lake",
+      "dark forests",
+      "pine trees",
+      "mist green",
+      "rich",
+      "cool",
+      "soft darkness",
+      "dark green flower stems",
+      "bark",
+      "wood",
+      "dark mountain green",
+      "ground shadows",
+      "dark emerald green",
+      "urban",
+      "hunters in the woods",
+      "atmospheric",
+      "mystical"
+    ],
+    "source_file": "perylene_green.md",
+    "content": "If you want to add atmospheric or emotional punch to your work, then squeeze some transparent Perylene Green onto your palette. It exhibits an almost black mass tone that spreads to a beautiful blue/green wash without producing mud – a color perfect for delineating shadows or creating moody landscapes, ominous horizons and stormy seas. A medium-staining pigment with intensity and softness, Perylene Green is highly soluble and easy to use. It glazes under or over other colors ~a very cool color~ allowed one of our more demanding artist/testers."
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "perylene_maroon"
+    ],
+    "paint_name": [
+      "perylene maroon"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PR179"
+    ],
+    "paint_color_family": [
+      "red "
+    ],
+    "paint_hue_bias": [
+      "red_violet"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "high"
+    ],
+    "paint_luminosity": [
+      "low"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "cool",
+      "deep",
+      "workhorse",
+      "warm",
+      "structural",
+      "solid_color",
+      "soft_transitions",
+      "soft",
+      "shadows",
+      "saturated",
+      "rich",
+      "muted",
+      "mixer",
+      "great_mixer"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "architecture",
+      "backgrounds",
+      "bark",
+      "boats",
+      "animals",
+      "botanical_painting",
+      "christmas_ornaments",
+      "exotic_flowers",
+      "exotic_fruits",
+      "water",
+      "tropical_subjects",
+      "tropical_scenes",
+      "trees",
+      "sunsets",
+      "steampunk",
+      "shadows",
+      "marine_subjects",
+      "seascapes",
+      "urban_sketching",
+      "metal",
+      "butterflies",
+      "crystals",
+      "exotic_vegetables",
+      "fantasy",
+      "fruit",
+      "flowers",
+      "fashion",
+      "insects",
+      "jewellery",
+      "landscapes",
+      "jewels",
+      "leaves",
+      "petals",
+      "pumpkins",
+      "street_scenes"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "background_on_a_flower",
+      "base_color_for_petals",
+      "botanical_painting_alstromeria",
+      "botanical_painting_apples",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_dahlias",
+      "botanical_painting_lilies",
+      "botanical_painting_apricots",
+      "botanical_painting_pumpkins",
+      "botanical_painting_mushrooms",
+      "botanical_painting_red_roses",
+      "botanical_painting_dark_roses",
+      "botanical_painting_rasperries",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_sunflowers",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_strawberries",
+      "botanical_painting_flower_stamens",
+      "fishing boats",
+      "muted effects",
+      "mushrooms ",
+      "moody skies",
+      "metal_screws",
+      "metal_cogs",
+      "marigolds",
+      "red_cars",
+      "red_roses",
+      "streets",
+      "botanical_painting_green_leaves",
+      "detailed_buildings",
+      "de"
+    ],
+    "mix_with": [
+      "hansa_yellow_medium",
+      "golden_yellow",
+      "brown_green",
+      "azo_yellow",
+      "chrome_oxide_green",
+      "perylene_green",
+      "sap_green_wn",
+      "dioxazine_violet",
+      "perylene_violet",
+      "permanent_rose"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "mixing",
+      "underpainting",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin"
+    ],
+    "paint_avoid": [
+      "\"\""
+    ],
+    "paint_aliases": "sennelier alizarin crimson, caput mortem",
+    "my_rating_1_10": 7,
+    "my_notes": "color for shadows and mixing, red-brown wine color",
+    "ext_references": "https://eu.winsornewton.com/en-row/products/professional-watercolour-perylene-maroon",
+    "ext_manufacturer_description": "Perylene Maroon is a dark maroon pigment. Perylene is a modern synthetic organic pigment and was first available as a dye around 1912 before becoming available as an artist pigment in the late 1950s.",
+    "ai_keywords": [
+      "brickwalls",
+      "deep burgundy",
+      "juicy ripe cherries",
+      "autumn leaves in the sun",
+      "autumn color",
+      "brown leaves",
+      "muted red wine",
+      "spices",
+      "port wine",
+      "muted brown",
+      "shadows on a red rose",
+      "withered flowers",
+      "dark brown velvet",
+      "earthy brown-red",
+      "autumn forest",
+      "pumpkins",
+      "russet",
+      "wood",
+      "teak",
+      "wooden logs",
+      "fireplace and a cup of tea",
+      "earthy",
+      "library bookshelves",
+      "walnut",
+      "dark nuts",
+      "comfortable leather chair",
+      "effortless",
+      "rich"
+    ],
+    "source_file": "perylene_maroon.md",
+    "content": "Perylene Maroon is a dark maroon pigment. Perylene is a modern synthetic organic pigment and was first available as a dye around 1912 before becoming available as an artist pigment in the late 1950s.\nhttps://eu.winsornewton.com/en-row/products/professional-watercolour-perylene-maroon"
+  },
+  {
+    "tags": [
+      "PV29"
+    ],
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "perylene_violet_sch"
+    ],
+    "paint_name": [
+      "perylene_violet"
+    ],
+    "paint_brand": [
+      "schmincke"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PV29"
+    ],
+    "paint_color_family": [
+      "violet"
+    ],
+    "paint_hue_bias": [
+      "red_violet"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "low"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "complex",
+      "cool",
+      "darkens",
+      "deep",
+      "delicate",
+      "delicate_softness",
+      "great_mixer",
+      "workhorse",
+      "tonal_variety",
+      "structural",
+      "soft_transitions",
+      "shadows",
+      "rich",
+      "muted_darkness",
+      "muted",
+      "mixer",
+      "low_contrast"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "animals",
+      "architecture",
+      "backgrounds",
+      "bark",
+      "boats",
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "clouds",
+      "exotic_flowers",
+      "exotic_fruits",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "fruit",
+      "green_leaves",
+      "insects",
+      "jewels",
+      "landscapes",
+      "maritime_subjects",
+      "petals",
+      "metal",
+      "shadows",
+      "vegetables",
+      "urban_sketching",
+      "underwater_scenes",
+      "trees",
+      "sunsets",
+      "street_scenes",
+      "steampunk"
+    ],
+    "my_paint_purpose": [
+      "alstromeria",
+      "apples",
+      "autumn_leaves",
+      "autumn_scenes",
+      "background_on_a_flower",
+      "ballgowns",
+      "base_color_for_petals",
+      "purple_crystals",
+      "botanical_painting_iris",
+      "botanical_painting_lilacs",
+      "botanical_painting_lilies",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_dahlias",
+      "botanical_painting_poppies",
+      "botanical_painting_clematis",
+      "botanical_painting_pumpkins",
+      "botanical_painting_hyacinths",
+      "botanical_painting_mushrooms",
+      "botanical_painting_red_roses",
+      "botanical_painting_dark_roses",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_pink_roses",
+      "botanical_painting_rasperries",
+      "botanical_painting_alstromeria",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_flower_stamens",
+      "botanical_painting_french_anemones",
+      "botanical_painting_dark_green_leaves",
+      "moody skies",
+      "mushrooms ",
+      "metal_screws",
+      "metal_cogs",
+      "night scenes",
+      "lanterns",
+      "houses",
+      "golden_subjects",
+      "city_scenes",
+      "cherries",
+      "detailed_buildings",
+      "detailed_fairy_wings",
+      "detailed_crystals",
+      "detailed_ballgowns",
+      "detailed_jewels",
+      "underwater_scenes"
+    ],
+    "mix_with": [
+      "winser_blue_red_shade",
+      "winsor_red_deep",
+      "ultramarine_finest",
+      "prussian_blue",
+      "quinacridone_red",
+      "scarlet_lake",
+      "golden_yellow",
+      "hansa_yellow_medium",
+      "sap_green_wn",
+      "magenta_rose",
+      "permanent_rose",
+      "madder_rose",
+      "transparent_orange",
+      "quinacridone_burnt_orange",
+      "yellow_ochre_wn",
+      "burnt_sienna_wn",
+      "raw_umber_wn",
+      "vandyke_brown",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "mixing",
+      "underpainting",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "\"\""
+    ],
+    "paint_aliases": [
+      "\"\""
+    ],
+    "my_rating_1_10": 7,
+    "my_notes": "bluer or cooler than other perylene violets",
+    "ext_references": "\"\"",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "shadows",
+      "shadows on a red rose",
+      "muted shadows",
+      "ground shadows",
+      "transparent shadows",
+      "dark",
+      "dark brown velvet",
+      "dark purple iris petals",
+      "dark forests",
+      "soft darkness",
+      "a dark winter lake",
+      "the dark side of a blue flower",
+      "atmospheric",
+      "autumn color",
+      "autumn forest",
+      "calm",
+      "majestic",
+      "dark green moss",
+      "classic",
+      "peaceful",
+      "tranquil",
+      "formal",
+      "perfect for glazing",
+      "violet silk scarfs",
+      "sensual",
+      "soft",
+      "purple crystals",
+      "earthy",
+      "enigma",
+      "deep",
+      "mellow",
+      "serious",
+      "red lips",
+      "deep burgundy",
+      "quiet",
+      "spices",
+      "winter",
+      "cool",
+      "complex",
+      "sophisticated",
+      "moody landscapes",
+      "smooth",
+      "heavy clouds",
+      "for underpainting on a dark green leaf",
+      "grounded",
+      "urban",
+      "pure",
+      "punchy",
+      "pumkins",
+      "understated",
+      "muted red wine",
+      "juicy ripe cherries",
+      "nightsky",
+      "mystical",
+      "stormy skies",
+      "rich",
+      "port wine",
+      "bark",
+      "jewel colors",
+      "serene",
+      "muted purple"
+    ],
+    "source_file": "perylene_violet_sch.md",
+    "content": ""
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "prussian_blue"
+    ],
+    "paint_name": [
+      "prussian blue"
+    ],
+    "paint_brand": [
+      "rosa ukraine"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PB27"
+    ],
+    "paint_color_family": [
+      "blue"
+    ],
+    "paint_hue_bias": [
+      "blue_green"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "high "
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "deep",
+      "rich",
+      "saturated",
+      "shadows",
+      "mixer",
+      "intense",
+      "muted",
+      "cool",
+      "workhorse",
+      "structural",
+      "great_mixer",
+      "solid_color",
+      "base_color"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": null,
+    "my_paint_purpose": null,
+    "mix_with": [
+      "azo_yellow",
+      "brown_green",
+      "quinophtalone_yellow",
+      "quinacridone_gold",
+      "perylene_green",
+      "helio_green",
+      "permanent_green",
+      "green_gold",
+      "chrome_oxide_green",
+      "permanent_green_olive",
+      "sap_green",
+      "transparent_orange",
+      "yellow_ochre",
+      "burnt_sienna",
+      "vandyke_brown",
+      "raw_umber",
+      "umber ",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "rough",
+      "satin",
+      "hotpress",
+      "saunders_waterford",
+      "arches",
+      "baohong_masters",
+      "cp ",
+      "grain_fin"
+    ],
+    "paint_avoid": [
+      "sunlight",
+      "pink mixes",
+      "red mixes"
+    ],
+    "paint_aliases": "antwerp blue, prussian blue",
+    "my_rating_1_10": 7,
+    "my_notes": "amazing in mixes with PY150 or PY138 - or any other blue_green paint",
+    "ext_references": "\"\"",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "green-blue",
+      "amazing dark greens",
+      "jewel tones",
+      "blue shadows",
+      "PY150s' best friend",
+      "intense greens",
+      "tropical birds",
+      "tropical blue",
+      "turquise's cousin",
+      "deep",
+      "mystical",
+      "serene",
+      "rich",
+      "fantasy creatures",
+      "dragon scales",
+      "the dark side of a blue flower",
+      "urban",
+      "cousin to black",
+      "for underpainting on a dark green leaf",
+      "deep bright greens"
+    ],
+    "source_file": "prussian_blue.md",
+    "content": ""
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "pyrrol_red_ds"
+    ],
+    "paint_name": [
+      "pyrrol_red"
+    ],
+    "paint_brand": [
+      "daniel_smith"
+    ],
+    "paint_owned": true,
+    "my_favorite": null,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PR255"
+    ],
+    "paint_color_family": [
+      "red "
+    ],
+    "paint_hue_bias": [
+      "red_violet"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "semi_opaque"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "cool",
+      "darkens",
+      "deep",
+      "great_mixer",
+      "intense",
+      "low_contrast",
+      "mixer",
+      "rich",
+      "saturated",
+      "shadows",
+      "solid_color",
+      "structural",
+      "workhorse"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "christmas_ornaments",
+      "crystals",
+      "exotic_flowers",
+      "exotic_fruits",
+      "fashion",
+      "flowers",
+      "fruit",
+      "jewels",
+      "maritime_subjects",
+      "petals",
+      "shadows",
+      "sunsets",
+      "vegetables",
+      "tropical_subjects",
+      "butterflies"
+    ],
+    "my_paint_purpose": [
+      "alstromeria",
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "base_color_for_petals",
+      "botanical_painting_alstromeria",
+      "botanical_painting_apples",
+      "botanical_painting_dahlias",
+      "botanical_painting_dark_roses",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_lilies",
+      "botanical_painting_orchids",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_strawberries",
+      "botanical_painting_poppies",
+      "botanical_painting_rasperries",
+      "botanical_painting_red_roses",
+      "cherries",
+      "detailed_jewels"
+    ],
+    "mix_with": [
+      "azo_yellow",
+      "yellow_ochre_wn",
+      "hansa_yellow_medium",
+      "golden_yellow",
+      "transparent_yellow",
+      "quinophtalone_yellow",
+      "dioxazine_violet",
+      "quinacridone_purple",
+      "magenta_rose",
+      "madder_rose",
+      "permanent_rose",
+      "vermilion_sch",
+      "winsor_blue_red_shade",
+      "ultramarine_finest"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "layering",
+      "underpainting",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "hotpress",
+      "satin",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "\"\"",
+      "sunlight"
+    ],
+    "paint_aliases": [
+      "vermilion",
+      "winsor_red_deep"
+    ],
+    "my_rating_1_10": 5,
+    "my_notes": "cool version of Schmincke's Vermillion which has the same pigment. Can replace Winsor Red Deep",
+    "ext_references": "https://danielsmith.com/color-stories/watercolors/pyrrol-red-watercolor/",
+    "ext_manufacturer_description": "This fire engine red is cleaner than Cadmium or Permanent Red. It is a modern synthetic-organic pigment. While close in value to its cousins the Perylenes, it disperses more evenly and is less granular.",
+    "ai_keywords": [
+      "red cars",
+      "red lips",
+      "red roses",
+      "red apples",
+      "red poppies",
+      "soft",
+      "soft rose petals",
+      "sophisticated",
+      "wholesome",
+      "mystical",
+      "deep",
+      "bright",
+      "vivid",
+      "vibrant",
+      "soft darkness",
+      "juicy ripe cherries",
+      "autumn color",
+      "autumn leaves in the sun",
+      "luminous autumn leaves",
+      "rich",
+      "fireplace and a cup of tea",
+      "lipstick red",
+      "lollipop red",
+      "berry red",
+      "calm",
+      "classic",
+      "clear",
+      "botanical",
+      "cool",
+      "dark",
+      "shadows on a red rose",
+      "silk fabrics",
+      "velvet",
+      "grounded",
+      "great mixer",
+      "fruity",
+      "serious",
+      "rasberry red",
+      "royal",
+      "strawberry red",
+      "low contrast",
+      "enigma",
+      "sensual",
+      "theatrical",
+      "intense",
+      "jewel colors",
+      "tomato red",
+      "powerful",
+      "winter",
+      "blood",
+      "noble",
+      "formal",
+      "complex",
+      "smooth",
+      "summer roses",
+      "pure",
+      "quiet",
+      "punchy",
+      "fullfilled",
+      "subdued",
+      "inside of a rose petal",
+      "shadows",
+      "expressive",
+      "majestic"
+    ],
+    "source_file": "pyrrol_red_ds.md",
+    "content": "This fire engine red is cleaner than Cadmium or Permanent Red. It is a modern synthetic-organic pigment. While close in value to its cousins the Perylenes, it disperses more evenly and is less granular."
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "quinacridone_red_wn"
+    ],
+    "paint_name": [
+      "quinacridone red"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PR209"
+    ],
+    "paint_color_family": [
+      "Red"
+    ],
+    "paint_hue_bias": [
+      "red_violet"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "high "
+    ],
+    "paint_glow": [
+      "high "
+    ],
+    "paint_optical_role": [
+      "breathes_life",
+      "bright",
+      "light",
+      "intense",
+      "cool",
+      "brilliant",
+      "delicate",
+      "airy",
+      "breathes_air",
+      "great_mixer",
+      "soft_transitions",
+      "delicate_softness",
+      "soft"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "christmas_ornaments",
+      "crystals",
+      "exotic_fruits",
+      "exotic_flowers",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "fruit",
+      "fish",
+      "insects",
+      "jewellery",
+      "jewels",
+      "petals",
+      "sunsets"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "ballgowns",
+      "botanical_painting_alstromeria",
+      "botanical_painting_apples",
+      "botanical_painting_lilies",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_dahlias",
+      "botanical_painting_oranges",
+      "botanical_painting_poppies",
+      "botanical_painting_apricots",
+      "botanical_painting_pumpkins",
+      "botanical_painting_magnolias",
+      "botanical_painting_marigolds",
+      "botanical_painting_dark roses",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_pink_roses",
+      "botanical_painting_dragonfruit",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_strawberries",
+      "botanical_painting_rasperries",
+      "detailed_jewels",
+      "detailed_crystals",
+      "detailed_ballgowns",
+      "detailed_fish_scales",
+      "detailed_pink moth",
+      "dragons",
+      "red_cars",
+      "hightlights_on_botanicals",
+      "city_scenes",
+      "candy_floss",
+      "pink_crystals",
+      "pink_poppies"
+    ],
+    "mix_with": [
+      "ultramarine_finest",
+      "manganese_blue",
+      "winser_blue_red_shade",
+      "scarlet_lake",
+      "vermillon",
+      "winsor_red_deep",
+      "perylene_maroon",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "quinacridone_gold",
+      "sap_green",
+      "perylene_violet",
+      "quinacridone_lilac",
+      "quinacridone_purple",
+      "quinacridone_burnt_orange",
+      "permanent_rose",
+      "dioxazine_violet",
+      "magenta_rose",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "yellow_ochre",
+      "burnt_sienna",
+      "vandyke_brown",
+      "raw_umber",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet",
+      "underpainting"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "satin",
+      "saunders_waterford"
+    ],
+    "paint_avoid": [
+      "green paints"
+    ],
+    "paint_aliases": "quinacridone red light, quinacridone pink",
+    "my_rating_1_10": 10,
+    "my_notes": "Best of the bunch in my stash",
+    "ext_references": "https://eu.winsornewton.com/en-row/products/professional-watercolour-quinacridone-red",
+    "ext_manufacturer_description": "Quinacridone Red is a vivid mid-red colour. It is a transparent pigment which was first introduced by Winsor & Newton in the 1950s.",
+    "ai_keywords": [
+      "jewel tones",
+      "vivid",
+      "bright",
+      "light from within",
+      "red apples",
+      "red poppies",
+      "berry red",
+      "lipstick red",
+      "lollipop red",
+      "popsicle red",
+      "rasberry red",
+      "autumn color",
+      "candy",
+      "happy",
+      "silk fabrics",
+      "charming",
+      "jelly bean colors",
+      "cocktails",
+      "cool",
+      "crystal clear",
+      "clear",
+      "joyful",
+      "happy",
+      "upbeat",
+      "uplifting",
+      "highlights on a flower petal",
+      "succulent",
+      "exuberant",
+      "strawberry red",
+      "blue poppies",
+      "the sky after sunset",
+      "autumn leaves in the sun",
+      "ballet pinks",
+      "soft rose petals",
+      "pastel dreams",
+      "macarons",
+      "cakes and deserts",
+      "cupcakes",
+      "red lips",
+      "lollipop pink",
+      "pop tarts",
+      "strawberry icecream",
+      "lipgloss pink",
+      "juicy",
+      "cake frosting",
+      "sweets",
+      "innocent",
+      "inner glow",
+      "hibiscus",
+      "jewel colors",
+      "ballgown pink",
+      "delicate",
+      "popsickles",
+      "pink lemonade",
+      "pink grapefruit",
+      "playful",
+      "fun",
+      "expressive",
+      "the color of sunrise or sunset",
+      "coral red",
+      "tropical birds",
+      "fruity",
+      "lit from within",
+      "light",
+      "tasty grapes",
+      "lively",
+      "holidays in the tropics",
+      "vibrant",
+      "spring flowers",
+      "punchy",
+      "refreshing",
+      "perfect for glazing",
+      "summer roses",
+      "smooth",
+      "spontaneity",
+      "fantasy creatures",
+      "inside of a rose petal"
+    ],
+    "source_file": "quinacridone_red_wn.md",
+    "content": "Quinacridone Red is a vivid mid-red colour. It is a transparent pigment which was first introduced by Winsor & Newton in the 1950s."
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
     "paint_id": [
       "scarlet_lake"
     ],
@@ -389,7 +3420,7 @@
     "my_rating_1_10": 9,
     "my_notes": "Poppy red with a coral and orange-pink undertone",
     "ext_references": "https://eu.winsornewton.com/en-row/products/professional-watercolour-scarlet-lake",
-    "ext_manufacturer_description": "Scarlet Lake is a bright red with orange undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.",
+    "ext_manufacturer_description": "Scarlet Lake is a bright red with orange-yellow undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.",
     "ai_keywords": [
       "lipstick red",
       "soft rose petals",
@@ -417,9 +3448,917 @@
       "tomato red",
       "orange red",
       "coral red",
-      "orange undertones"
+      "orange-yellow undertones"
     ],
     "source_file": "scarlet_lake.md",
     "content": "Scarlet Lake is a bright red with orange-yellow undertones. The name stems from a type of fine woollen cloth called scarlet cloth which was often dyed red, leading it to become the pigment's name.\nhttps://eu.winsornewton.com/en-row/products/professional-watercolour-scarlet-lake"
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "ultramarine_finest"
+    ],
+    "paint_name": [
+      "ultramarine finest"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PB29"
+    ],
+    "paint_color_family": [
+      "blue"
+    ],
+    "paint_hue_bias": [
+      "blue_violet"
+    ],
+    "paint_temperature": [
+      "warm "
+    ],
+    "paint_opacity": [
+      "transparent",
+      "semi_transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "low "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "warm",
+      "saturated",
+      "delicate softness",
+      "rich",
+      "deep",
+      "shadows",
+      "mixer"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "architecture",
+      "backgrounds",
+      "bark",
+      "boats",
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "christmas_ornaments",
+      "clouds",
+      "crystals",
+      "details",
+      "exotic_flowers",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "fish",
+      "flowers",
+      "fruit",
+      "insects",
+      "jewellery",
+      "jewels",
+      "landscapes",
+      "leaves",
+      "marine_subjects",
+      "maritime_subjects",
+      "metal",
+      "petals",
+      "seascapes",
+      "skies",
+      "shadows",
+      "steampunk",
+      "sunsets",
+      "tropical_scenes",
+      "water",
+      "underwater_scenes",
+      "vegetables",
+      "trees"
+    ],
+    "my_paint_purpose": [
+      "autumn_scenes",
+      "background_on_a_flower",
+      "ballgowns",
+      "blue_cars",
+      "blue_crystals",
+      "blue_flowers",
+      "blue_jewels",
+      "blue_poppies",
+      "botanical_painting_agapanthus",
+      "botanical_painting_alstromeria",
+      "botanical_painting_iris",
+      "botanical_painting_lotus",
+      "botanical_painting_lilacs",
+      "botanical_painting_orhids",
+      "botanical_painting_dahlias",
+      "botanical_painting_clematis",
+      "botanical_painting_hyacinths",
+      "botanical_painting_dark roses",
+      "botanical_painting_delphinium",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_french_anemones",
+      "botanical_painting_green_leaves"
+    ],
+    "mix_with": [
+      "quinacridone_red",
+      "scarlet_lake",
+      "vermillon",
+      "winsor_red_deep",
+      "perylene_maroon",
+      "azo_yellow",
+      "brown_green",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "quinacridone_gold",
+      "perylene_green",
+      "helio_green",
+      "permanent_green",
+      "chrome_oxide_green",
+      "sap_green",
+      "perylene_violet",
+      "quinacridone_purple",
+      "dioxazine_violet",
+      "magenta_rose",
+      "quinacridone_lilac",
+      "permanent_rose",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "quinacridone_burnt_orange",
+      "yellow_ochre",
+      "burnt_sienna",
+      "vandyke_brown",
+      "raw_umber",
+      "umber ",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "underpainting",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "saunders_waterford",
+      "baohong_masters",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin"
+    ],
+    "paint_avoid": [
+      "\"\""
+    ],
+    "paint_aliases": "french ultramarine",
+    "my_rating_1_10": 8,
+    "my_notes": "Unlike french ultramarine blue, this paint has no granulation = perfect for botanicals",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "london blue topaz",
+      "jewel tones",
+      "dark blue delphinium",
+      "larkspur blue",
+      "clear",
+      "classic",
+      "deep",
+      "lapiz lazuli blue",
+      "sky blue",
+      "deep blue",
+      "sea blue",
+      "shadow blue",
+      "ink blue",
+      "calm",
+      "serene",
+      "reflective",
+      "sincere",
+      "denim",
+      "ocean blue",
+      "formal",
+      "tranquil",
+      "peaceful",
+      "classic",
+      "smooth",
+      "perfect for glazing",
+      "non-granulating",
+      "shadows",
+      "dark blue crystals",
+      "dark blue sapphires",
+      "cornflowers",
+      "nighttime blue"
+    ],
+    "source_file": "ultramarine_finest.md",
+    "content": ""
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "vermilion_sch"
+    ],
+    "paint_name": [
+      "vermilion"
+    ],
+    "paint_brand": [
+      "schmincke"
+    ],
+    "paint_owned": true,
+    "my_favorite": null,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PR255"
+    ],
+    "paint_color_family": [
+      "red "
+    ],
+    "paint_hue_bias": [
+      "red_orange"
+    ],
+    "paint_temperature": [
+      "warm "
+    ],
+    "paint_opacity": [
+      "semi_transparent"
+    ],
+    "paint_granulation": true,
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "low "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "base_color",
+      "breathes_air",
+      "bright",
+      "delicate",
+      "delicate_softness",
+      "light",
+      "soft",
+      "warm",
+      "soft_transitions",
+      "airy"
+    ],
+    "paint_glow": [
+      "low"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "botanicals",
+      "christmas_ornaments",
+      "crystals",
+      "butterflies",
+      "exotic_flowers",
+      "exotic_fruits",
+      "exotic_vegetables",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "fruit",
+      "vegetables",
+      "tropical_subjects",
+      "sunsets",
+      "petals",
+      "jewels"
+    ],
+    "my_paint_purpose": [
+      "apples",
+      "apricots",
+      "autumn_leaves",
+      "autumn_scenes",
+      "ballgowns",
+      "base_color_for_petals",
+      "red_cars",
+      "red_lips",
+      "red_roses",
+      "botanical_painting_apples",
+      "botanical_painting_tulips",
+      "botanical_painting_lilies",
+      "botanical_painting_dahlias",
+      "botanical_painting_oranges",
+      "botanical_painting_poppies",
+      "botanical_painting_apricots",
+      "botanical_painting_marigolds",
+      "botanical_painting_mushrooms",
+      "botanical_painting_red_roses",
+      "botanical_painting_pink_roses",
+      "botanical_painting_rasperries",
+      "botanical_painting_alstromeria",
+      "botanical_painting_dragonfruit",
+      "botanical_painting_dried_fruit",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_exotic_fruit",
+      "botanical_painting_strawberries",
+      "botanical_painting_french_anemones",
+      "corals",
+      "cherries",
+      "candy_floss",
+      "peaches",
+      "detailed_crystals",
+      "detailed_jewels",
+      "detailed_ballgowns"
+    ],
+    "mix_with": [
+      "winser_blue_red_shade",
+      "winsor_red_deep",
+      "azo_yellow",
+      "quinophtalone_yellow",
+      "quinacridone_gold_hue",
+      "perylene_green_ds",
+      "helio_green",
+      "sap_green_wn",
+      "perylene_green",
+      "perylene maroon",
+      "magenta_rose",
+      "yellow_ochre_wn",
+      "transparent_orange",
+      "sennelier_orange",
+      "vandyke_brown",
+      "raw_umber_wn"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "drybrush",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "wet_on_dry",
+      "wet_on_damp",
+      "wet_in_wet"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "cp ",
+      "grain_fin",
+      "hotpress",
+      "satin",
+      "rough"
+    ],
+    "paint_avoid": [
+      "\"\""
+    ],
+    "paint_aliases": "scarlet lake",
+    "my_rating_1_10": 6,
+    "my_notes": "A warm expression of PR255 compared to DS' Pyrolle Red",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "\"\"",
+    "ai_keywords": [
+      "red lips",
+      "red apples",
+      "red cars",
+      "red poppies",
+      "berry red",
+      "orange red",
+      "tomato red",
+      "lipstick red",
+      "lollipop red",
+      "popsicle red",
+      "rasberry red",
+      "strawberry red",
+      "femme fatale red",
+      "red roses",
+      "warm",
+      "transculent",
+      "highlights on a flower petal",
+      "easy",
+      "candy",
+      "happy",
+      "classic",
+      "charming",
+      "tropical",
+      "juicy peaches",
+      "primary colors",
+      "vibrant",
+      "jewel tones",
+      "soft",
+      "soft rose petals",
+      "wholesome",
+      "classic",
+      "jelly bean colors",
+      "cupcakes",
+      "cakes and deserts",
+      "strawberry icecream",
+      "juicy ripe cherries",
+      "clear",
+      "bright",
+      "silk fabrics",
+      "autumn color",
+      "autumn leaves in the sun",
+      "cocktails",
+      "effortless",
+      "holidays in the tropics",
+      "joyful",
+      "light",
+      "fruity",
+      "playful",
+      "the sky after sunset",
+      "tropical birds",
+      "exuberant",
+      "fresh",
+      "sweets",
+      "pure",
+      "innocent",
+      "lively"
+    ],
+    "source_file": "vermillion_sch.md",
+    "content": "french red, light red, ballarina red, apple red, autumn red, muted, transparent light red, warm red, more transparent than scarlet lake, not the most popular red, berry red, transclucent, requires many layers to be opaque, let light in, lsunight through a soft red rose petal, natural red lips, tomatoes"
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "winsor_blue_green_shade"
+    ],
+    "paint_name": [
+      "Winsor Blue Green Shade"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PB15-3"
+    ],
+    "paint_color_family": [
+      "blue"
+    ],
+    "paint_hue_bias": [
+      "blue_green"
+    ],
+    "paint_temperature": [
+      "cool"
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "bright",
+      "brilliant",
+      "intense",
+      "base_color",
+      "cool",
+      "great_mixer",
+      "workhorse",
+      "solid_color",
+      "saturated",
+      "rich",
+      "mixer"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "boats",
+      "botanical_painting",
+      "botanicals",
+      "christmas_ornaments",
+      "crystals",
+      "exotic_flowers",
+      "tropical_subjects",
+      "tropical_scenes",
+      "skies",
+      "seascapes",
+      "maritime_subjects",
+      "impressionalism",
+      "marine_subjects",
+      "fantasy",
+      "fashion",
+      "flowers",
+      "insects",
+      "jewels",
+      "landscapes"
+    ],
+    "my_paint_purpose": [
+      "ballgowns",
+      "botanical_painting_agapanthus",
+      "botanical_painting_iris",
+      "botanical_painting_lilacs",
+      "botanical_painting_orhids",
+      "botanical_painting_tulips",
+      "botanical_painting_poppies",
+      "botanical_painting_clematis",
+      "botanical_painting_delphinium",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_green leaves",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_french_anemones",
+      "jewels",
+      "detailed_crystals",
+      "detailed_ballgowns",
+      "detailed_jewels",
+      "detailed_fairy_wings",
+      "detailed_fish_scales",
+      "underwater_scenes",
+      "dragons",
+      "dragonfly"
+    ],
+    "mix_with": [
+      "azo_yellow",
+      "brown_green",
+      "buff_titanium",
+      "burnt_sienna",
+      "emerald_green",
+      "green_gold",
+      "magenta_rose",
+      "helio_green",
+      "neutral_tint",
+      "permanent_green",
+      "transparent_orange",
+      "ultramarine_finest",
+      "quinacridone_red",
+      "scarlet_lake",
+      "vermillon",
+      "winsor_red_deep",
+      "perylene_maroon",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "quinacridone_gold",
+      "perylene_green",
+      "helio_green",
+      "permanent_green",
+      "chrome_oxide_green",
+      "sap_green",
+      "dioxazine_violet",
+      "quinacridone_purple",
+      "permanent_rose",
+      "quinacridone_lilac",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "quinacridone_burnt_orange",
+      "yellow_ochre",
+      "burnt_sienna",
+      "vandyke_brown",
+      "raw_umber",
+      "umber "
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "underpainting",
+      "washes",
+      "wet_in_wet",
+      "wet_on_dry",
+      "wet_on_damp"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "saunders_waterford",
+      "CP",
+      "grain_fin",
+      "hotpress",
+      "rough",
+      "satin"
+    ],
+    "paint_avoid": [
+      "lifting"
+    ],
+    "paint_aliases": "pthalo_blue",
+    "my_rating_1_10": 8,
+    "my_notes": "amazing in mixes with PY150, PV19, PV55 and so on",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "Winsor Blue (Green Shade) is a deep intense blue with a green undertone. It is made from the modern pigment Phthalocyanine which was introduced in the 1930s.",
+    "ai_keywords": [
+      "bright",
+      "jewel tones",
+      "tropical blue",
+      "a blue lake in summer",
+      "blue mountains",
+      "sky blue",
+      "light from within",
+      "happy",
+      "upbeat",
+      "great mixer",
+      "playful",
+      "young",
+      "joyful",
+      "exuberant",
+      "lively",
+      "jelly bean colors",
+      "jewel colors",
+      "green-blue topazes",
+      "aquarius",
+      "candy",
+      "funny",
+      "spontaneity",
+      "fresh",
+      "tropical birds",
+      "tropical waters",
+      "blue ballgowns",
+      "blue poppies",
+      "vibrant",
+      "punchy",
+      "blazing blue",
+      "electric blue",
+      "outer space",
+      "energetic",
+      "active",
+      "fresh"
+    ],
+    "source_file": "winsor_blue_gs.md",
+    "content": "Winsor Blue (Green Shade) is a deep intense blue with a green undertone. It is made from the modern pigment Phthalocyanine which was introduced in the 1930s. \nSource: https://eu.winsornewton.com/en-row/products/professional-watercolour-winsor-blue-green-shade"
+  },
+  {
+    "item_type": [
+      "paint"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "paint_id": [
+      "winsor_blue_red_shade"
+    ],
+    "paint_name": [
+      "Winsor Blue Red Shade"
+    ],
+    "paint_brand": [
+      "Winsor & Newton"
+    ],
+    "paint_owned": true,
+    "my_favorite": true,
+    "single_pigment": true,
+    "paint_pigments": [
+      "PB15"
+    ],
+    "paint_color_family": [
+      "blue"
+    ],
+    "paint_hue_bias": [
+      "blue_violet"
+    ],
+    "paint_temperature": [
+      "warm "
+    ],
+    "paint_opacity": [
+      "transparent"
+    ],
+    "paint_granulation": [
+      false
+    ],
+    "paint_staining": true,
+    "paint_lightfast": true,
+    "paint_drying_shift": [
+      "medium "
+    ],
+    "paint_luminosity": [
+      "medium"
+    ],
+    "paint_glow": [
+      "medium"
+    ],
+    "paint_optical_role": [
+      "intense",
+      "brilliant",
+      "bright",
+      "base_color",
+      "deep",
+      "great_mixer",
+      "workhorse",
+      "solid_color",
+      "shadows",
+      "rich",
+      "mixer",
+      "structural",
+      "darkens",
+      "long_tonality",
+      "primary",
+      "saturated",
+      "vibrancy",
+      "warm",
+      "popping out of the paper"
+    ],
+    "paint_pan": null,
+    "paint_tube": true,
+    "my_paint_subjects": [
+      "backgrounds",
+      "boats",
+      "botanical_painting",
+      "botanicals",
+      "butterflies",
+      "christmas_ornaments",
+      "clouds",
+      "crystals",
+      "exotic_flowers",
+      "fantasy",
+      "water",
+      "underwater_scenes",
+      "sunsets",
+      "tropical_scenes",
+      "tropical_subjects",
+      "skies",
+      "shadows",
+      "seascapes",
+      "petals",
+      "metal",
+      "maritime_subjects",
+      "marine_subjects",
+      "fashion",
+      "leaves",
+      "fish",
+      "flowers",
+      "jewels",
+      "insects",
+      "landscapes"
+    ],
+    "my_paint_purpose": [
+      "botanical_painting_iris",
+      "botanical_painting_lotus",
+      "botanical_painting_lilacs",
+      "botanical_painting_orhids",
+      "botanical_painting_dahlias",
+      "botanical_painting_tulips",
+      "botanical_painting_poppies",
+      "botanical_painting_clematis",
+      "botanical_painting_hyacinths",
+      "botanical_painting_agapanthus",
+      "botanical_painting_delphinium",
+      "botanical_painting_hydrangeas",
+      "botanical_painting_pea_flowers",
+      "botanical_painting_green_leaves",
+      "botanical_painting_exotic_flowers",
+      "botanical_painting_french_anemones",
+      "dragonfly",
+      "detailed_fairy_wings",
+      "detailed_jewels",
+      "detailed_crystals",
+      "detailed_ballgowns",
+      "detailed_fish_scales",
+      "underwater_scenes",
+      "blue_crystals",
+      "blue_jewels",
+      "ballgowns",
+      "crystals",
+      "blue_poppies",
+      "blue_flowers",
+      "blue_cars",
+      "steam_trains"
+    ],
+    "mix_with": [
+      "quinacridone_red",
+      "scarlet_lake",
+      "vermillon",
+      "winsor_red_deep",
+      "perylene maroon",
+      "azo_yellow",
+      "brown_green",
+      "quinophtalone_yellow",
+      "golden_yellow",
+      "quinacridone_gold",
+      "perylene_green",
+      "helio_green",
+      "green_gold",
+      "chrome_oxide_green",
+      "permanent_green_olive",
+      "sap_green",
+      "perylene_violet",
+      "quinacridone_purple",
+      "quinacridone_lilac",
+      "dioxazine_violet",
+      "magenta_rose",
+      "permanent_rose",
+      "madder_rose",
+      "transparent_orange",
+      "sennelier_orange",
+      "quinacridone_burnt_orange",
+      "yellow_ochre",
+      "burnt_sienna",
+      "vandyke_brown",
+      "raw_umber",
+      "umber ",
+      "neutral_tint"
+    ],
+    "my_best_techniques": [
+      "botanical_painting",
+      "glazing",
+      "layering",
+      "mixing",
+      "washes",
+      "underpainting",
+      "wet_in_wet",
+      "wet_on_damp",
+      "wet_on_dry"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "saunders_waterford",
+      "satin",
+      "rough",
+      "hotpress",
+      "cp ",
+      "grain_fin"
+    ],
+    "paint_avoid": [
+      "lifting"
+    ],
+    "paint_aliases": [
+      "pthalo_blue_red_shade",
+      "pthalo_blue"
+    ],
+    "my_rating_1_10": 8,
+    "my_notes": "beautiful for botanical painting subjects, sea, leaves or landscapes",
+    "ext_references": "https://paintlist.com/pigment-notebook/",
+    "ext_manufacturer_description": "Winsor Blue (Red Shade) is a deep intense blue with a red undertone. It is made from the modern pigment Phthalocyanine which was introduced in the 1930s.",
+    "ai_keywords": [
+      "bright",
+      "jewel tones",
+      "blue poppies",
+      "blue shadows",
+      "blue mountains",
+      "a blue lake in summer",
+      "sea blue",
+      "calm",
+      "amazing dark greens",
+      "blazing blue",
+      "dark blue crystals",
+      "blue ballgowns",
+      "cornflowers",
+      "dark blue delphinium",
+      "dark blue sapphires",
+      "deep blue",
+      "deep bright greens",
+      "denim",
+      "deep",
+      "for underpainting on a dark green leaf",
+      "great mixer",
+      "ink blue",
+      "intense greens",
+      "jewel colors",
+      "vibrant",
+      "tropical blue",
+      "larkspur blue",
+      "london blue topaz",
+      "shadow blue",
+      "lapiz lazuli blue",
+      "ocean blue",
+      "nighttime blue",
+      "the sky after sunset",
+      "santorini blue",
+      "laguna blue",
+      "serious",
+      "mediterranian sea blue",
+      "crystal clear",
+      "sophisticated"
+    ],
+    "source_file": "winsor_blue_rs.md",
+    "content": "Winsor Blue (Red Shade) is a deep intense blue with a red undertone. It is made from the modern pigment Phthalocyanine which was introduced in the 1930s.\nSource: https://eu.winsornewton.com/en-row/products/professional-watercolour-winsor-blue-red-shade"
   }
 ]
