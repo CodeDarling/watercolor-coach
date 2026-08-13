@@ -268,7 +268,7 @@ async function analyzeInput() {
                 <h3>Personal notes</h3>
                 <p class="note-content">${content}</p>
 
-                <h3>Paint relationships</h3>
+                <h3>Related keywords and emotional characteristics</h3>
                 <p>${aiKeywords}</p>
 
                 <h3>Best mixes for this color</h3>
