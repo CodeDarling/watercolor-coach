@@ -51,10 +51,12 @@ function formatValue(value) {
     ? value.flat(Infinity).join(", ")
     : String(value);
 
-  return text
-    .replaceAll("_", " ")
-    .replace(/\s+/g, " ")
-    .trim();
+ const formattedText = text
+  .replaceAll("_", " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+return formattedText.charAt(0).toUpperCase() + formattedText.slice(1);
 }
 
 
