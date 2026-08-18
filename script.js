@@ -96,8 +96,6 @@ function highlightText(value, searchTerms) {
  * - Bullet points
  * * Bullet points
  * Paragraph breaks
- *
- * Search terms are highlighted afterwards.
  */
 function renderMarkdown(value, searchTerms) {
   if (
@@ -150,7 +148,6 @@ function renderMarkdown(value, searchTerms) {
 
   /*
    * Group consecutive list items
-   * inside one <ul>
    */
   text = text.replace(
     /(?:<li>.*?<\/li>\s*)+/gs,
@@ -407,9 +404,6 @@ function renderPaintResult(
     searchTerms
   );
 
-  /*
-   * Full Obsidian content now uses Markdown rendering
-   */
   const content = renderMarkdown(
     paint.content ||
       "No full note content available.",
@@ -552,9 +546,6 @@ function renderSubjectResult(
     searchTerms
   );
 
-  /*
-   * Painting guide now uses Markdown rendering
-   */
   const content = renderMarkdown(
     subject.content ||
       "No painting guide available.",
@@ -662,6 +653,65 @@ function renderSubjectResult(
       </details>
 
     </article>
+  `;
+}
+
+
+/*
+ * Create clickable result-category navigation
+ *
+ * Only categories that actually contain matches
+ * are shown.
+ */
+function createResultNavigation(
+  subjectCount,
+  paintCount
+) {
+  const links = [];
+
+
+  if (subjectCount > 0) {
+    links.push(`
+      <a
+        class="result-category-link"
+        href="#subject-results"
+      >
+        Painting subjects
+        <span class="result-category-count">
+          ${subjectCount}
+        </span>
+      </a>
+    `);
+  }
+
+
+  if (paintCount > 0) {
+    links.push(`
+      <a
+        class="result-category-link"
+        href="#paint-results"
+      >
+        Paints
+        <span class="result-category-count">
+          ${paintCount}
+        </span>
+      </a>
+    `);
+  }
+
+
+  if (links.length === 0) {
+    return "";
+  }
+
+
+  return `
+    <nav
+      class="result-category-nav"
+      aria-label="Search result categories"
+    >
+      ${links.join("")}
+    </nav>
   `;
 }
 
@@ -776,13 +826,25 @@ async function analyzeInput() {
 
 
     /*
+     * CATEGORY NAVIGATION
+     */
+    resultHtml += createResultNavigation(
+      subjectMatches.length,
+      paintMatches.length
+    );
+
+
+    /*
      * SUBJECT RESULTS
      */
     if (subjectMatches.length > 0) {
       resultHtml += `
-        <section class="subject-results">
+        <section
+          class="subject-results"
+          id="subject-results"
+        >
 
-          <h2>
+          <h2 class="result-section-title">
             Painting subjects
             (${subjectMatches.length})
           </h2>
@@ -807,9 +869,12 @@ async function analyzeInput() {
      */
     if (paintMatches.length > 0) {
       resultHtml += `
-        <section class="paint-results">
+        <section
+          class="paint-results"
+          id="paint-results"
+        >
 
-          <h2>
+          <h2 class="result-section-title">
             Paints
             (${paintMatches.length})
           </h2>
