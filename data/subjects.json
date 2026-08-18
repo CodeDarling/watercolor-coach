@@ -1,0 +1,708 @@
+[
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "lanterns"
+    ],
+    "subject_id": "lantern_lamp",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "lanterns"
+    ],
+    "my_paint_purpose": [
+      "lanterns",
+      "street_lamps"
+    ],
+    "mix_with": [
+      "Neutral_Tint",
+      "Transparent_Orange",
+      "Aussie_Red_Gold",
+      "Lunar_Blue",
+      "Paynes_Grey_WN",
+      "Indigo_WN",
+      "Lamp_Black",
+      "French_Ultramarine_SCH",
+      "French_Ultramarine_WN",
+      "Burnt_Sienna_WN",
+      "Quinacridone_Burnt_Orange",
+      "Winsor_Lemon",
+      "Quinophtalone_Yellow",
+      "Golden_Yellow"
+    ],
+    "my_recommended_brushes": [
+      "6",
+      "4",
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "my_notes": "The black is always the base color - the other paint color shows the type of metal (copper, iron etc.). Best results on fine grain or rough surfaces with granulating colors.",
+    "subject_difficulty": [
+      "beginner",
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "cp",
+      "grain_fin",
+      "rough",
+      "saunders_waterford",
+      "baohong_masters",
+      "arches"
+    ],
+    "ext_references": [
+      "https://youtu.be/KrxGutValrE?si=r5quBpHXCiGtWV6l"
+    ],
+    "ai_keywords": [
+      "lantern lights",
+      "shine on metal",
+      "vintage vibes",
+      "vintage street lamp",
+      "victorian",
+      "metal subjects",
+      "classic",
+      "atmospheric",
+      "fireplace and a cup of tea",
+      "cosy",
+      "inner glow",
+      "high contrast",
+      "soft darkness",
+      "nighttime",
+      "mystical",
+      "fantasy creatures",
+      "dark",
+      "dark forests",
+      "shadows",
+      "deep",
+      "enigma",
+      "theatrical",
+      "muted shadows",
+      "winter",
+      "copper",
+      "lit candles",
+      "port wine",
+      "transports light",
+      "sophisticated",
+      "urban",
+      "light from within",
+      "nightsky",
+      "stained glass effect",
+      "majestic",
+      "powerful",
+      "serious",
+      "formal",
+      "mellow",
+      "comforting"
+    ],
+    "content": "### How to paint this subject:\n\n**Step 1: Base color**\nApply a thin wash of neutral tint or other dark color in the dark areas (corners, crevices, openings etc.)\n\n**Step 2: Main color**\nMix a dark-ish color from black and accent colors and apply a broader wash onto the larger metal areas. Make sure to avoid the glass areas\n\n**Step 3: Preserve highlights + add more darks**\nRepeat Step 2 to add depth in shadows, leaving the highligts to be either lighter or an accent color - e.g. bright blue or yellow, depending on the light from the lightbulb inside. \nAreas to highligt: The stems between the glass, the lower part of the top, other highlights from the surroundings\n\nStep 4: Details\nWhen Step 1-3 is done, use a small sized brush (eg 0, 1, 2) to add small details in the nooks and crannies in the metal. Make sure to add darker details to any holes, unless they are lit from within.\n\n**Step 5: Adding light behind the glass**\nKeep the area of the glass where the light is most intense, free from paint. In a wet wash, apply a vey thin layer of orange or yellow to darken the bright luminous light. Work in thin layers, and make sure to apply the paint to the highlighted areas on the metal. Also make sure to add highlights in the bottom areas of the lamp, depending on if it is a street lamp or handheld lantern."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "trains"
+    ],
+    "subject_id": "steam_trains",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "steampunk",
+      "vehicles",
+      "metal"
+    ],
+    "my_paint_purpose": [
+      "steam_trains",
+      "vehicles",
+      "trains"
+    ],
+    "mix_with": [
+      "Neutral_Tint",
+      "Aussie_Red_Gold",
+      "Perylene_Green_DS",
+      "Perylene_Violet",
+      "French_Ultramarine_WN",
+      "French_Ultramarine_SCH",
+      "Ultramarine_Finest"
+    ],
+    "my_recommended_brushes": [
+      "6",
+      "4",
+      "2",
+      "1",
+      "0",
+      "00"
+    ],
+    "my_notes": "To make subject look realistic, fine grain paper or paper with rougher surfaces is the best solution for this subject type. The main challenge is to preserve the highlights and add enough contrast in the dark areas.",
+    "subject_difficulty": [
+      "intermediate",
+      "beginner"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "cp",
+      "grain_fin",
+      "saunders_waterford",
+      "rough"
+    ],
+    "ext_references": [],
+    "ai_keywords": [
+      "steampunk items",
+      "steamtrain",
+      "steam locomotive",
+      "steam engines",
+      "railway locomotive",
+      "vintage vibes",
+      "vintage steamtrain",
+      "historic train",
+      "engines",
+      "shine on metal",
+      "metal objects",
+      "metallic",
+      "metalwork",
+      "metal hardware",
+      "metal subjects",
+      "industrial components",
+      "railway",
+      "locomotive",
+      "vintage train",
+      "steam locomotive",
+      "steam-powered",
+      "classic",
+      "historic"
+    ],
+    "content": "### How to paint this subject:\n\n**Step 0: Identify the hue on the metal**\nIs the metal casing warm or cool? Or neutral?\n**Cool** = black paint + blue (Neutral Tint, Payne's Grey, Lamp Black etc)\n**Warm** = black paint + warm (burnt sienna or orange)\n**Neutral** = blue + burnt sienna or \"Jane's Grey\" from Daniel Smith. This allows the flexibility to be toned cooler or warmer from the base color by adding either more blue or sienna to the mix.\n**Light areas/highlights**: Use Warm Grey (Rosa), Ultramarine Ash or Mineral Grey from Winsor & Newton if not left completely bare\n\n**Step 1: ID contrasts**\nStart by identifying light source and contrasts. If needed (optional), map the contrast on the reference photo or printed photo of the subject - otherwise use phone camera settings or photo editing in black and white to identify shadows. Use a medium sized brush, e.g. brush size 6 or 4, depending on the subject's size.\n\n**Step 2: Base layer**\nBegin by adding a base layer of the main color, using wet-in-wet to let granulating colors flow etc. When done and dry, add a second base layer, this time, making sure to avoid the highlighted areas. Use a smaller brush for this, e.g. size 4 or similar.\n\n**Step 4: Contrast layers**\nAdd more paint/darker mixes to the dark areas on the metal by adding a thicker mix of darker paint. Use more black/blue in the mix.\n\n**Step 5: Details/highlights**\nWith a small brush, add shadows to the small parts, or below the small parts, e.g. on metal screws, hinges on the front wheel, train lights, bells etc. Use a mix of either base layer or another dark color for shadows. If the highlighted areas has been painted over, use either a moist brush to lift paint, or white paint to restore them."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "agapanthus"
+    ],
+    "subject_id": "blue_agapanthus_flower",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "flowers",
+      "summer_flowers"
+    ],
+    "my_paint_purpose": [
+      "botanical_painting_agapanthus",
+      "blue_flowers"
+    ],
+    "mix_with": [
+      "Cobalt_Blue_DS",
+      "Smalt_Blue",
+      "Green_Gold",
+      "Neutral_Tint",
+      "Indanthrene_Blue",
+      "Winsor_Blue_Red_Shade",
+      "Quinacridone_Lilac",
+      "Ultramarine_Finest",
+      "Permanent_Rose",
+      "Magenta_Rose"
+    ],
+    "my_recommended_brushes": [
+      "4",
+      "2",
+      "1",
+      "000"
+    ],
+    "my_notes": "Best colors are red-leaning blues and a dash of PV19 / Permanent Rose or PR122 / Magenta. See Julia Trickey, Rae Cambell and Kristina Rapopina on YouTube for more input or details with regard to the painting process and Louise DiMasi for painting the flower bulb with portrouding flowers.",
+    "subject_difficulty": [
+      "advanced"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "hotpress",
+      "saunders_waterford"
+    ],
+    "ext_references": [
+      "https://youtu.be/pZK6ao8O4X4?si=tHw4xFgXc7QR6_DY"
+    ],
+    "ai_keywords": [],
+    "content": "Kristina Rapohina: https://youtu.be/qgtFye48lqk?si=-omikkIw93ZGt5r0\n\n### How to paint this subject:\n\nIt can be adviseable to use masking fluid to paint this flower, as the flower stems risk being easy to paint on/over. Often the stamens need to be a light hue/value, where only the tips on the filaments needs a darker black or blue color. Thus, remember to use masking fluid where applicable.\n\n**Step 1: ID shadows and highlights**\nAs this flower has many flower bulbs/head on a single flower stem, identifying shadows and highlights add to the realism and make painting easier. With Neutral Tint or botanical grey, add the required shadows in the crevices and shadow areas. If you have a reference photo, use your phone to add a black-and-white filter - or, if not, decide the direction of the light source and take in reflected shadows, highlights as well as the core of shadows (James Gurney)\n\n**Step 2: First wash**\nBrush size: Small (e.g. 3, 2 or less)\nUsing a mix of blues, add the first washes to the flower with a very light wash - e.g. Cobalt Blue, Ultramarine or a mix of blue with a lilac/pink, depending on the base color on the flower (e.g. purple or blueish. Ensure that highlights are preserved!\nWork each flower or flower petal individually.\nRepeat this proces after the first layer is dry, to add depth to the first layers of colors. Vary between blue and/or purple washes.\nThe middle of the petals are often darker, so make sure to see which color these have\n\n**Step 3: Shadows and details**\nUsing a size 1 or 0 brush, add the darker areas on the flower with e.g. Blue-Violet PV15 or Smalt Blue as a difference color, as this is often an accent color on the petal. Add dark areas in the tips of each petal and/or along the center ridge on each petal. Build up color gradually with thin layers to add depth. Take care to preserve the highlighted areas, as the contrast adds to this special flower's special appeal.\n\n**Step 4: Flower stamens and filaments**\nIf masking fluid is used, remove the gum, and with a size 000 brush, paint the stamens with a very thin brush, e.g. size 000 or smaller, depending on the size of the subject. Sometimes the stamens are white, and sometimes light blue - make a thin wash of e.g. PV15 or a bluish purple and use black/neutral tint to paint the small filamnts. \n\n**Step 5: Each flower's green stem**\nWith a light green (e.g. Sap Green), paint each thin stem from each flower with a size 000 brush and add shadows where the stems connect to the flower bulb OR the main flower stem below, to add depth."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "french_anemones"
+    ],
+    "subject_id": "french_anemone_leaves",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "green_leaves",
+      "leaves"
+    ],
+    "my_paint_purpose": [
+      "botanical_painting_french_anemones"
+    ],
+    "mix_with": [
+      "Hansa_yellow_medium",
+      "Helio_Green",
+      "Winsor_Lemon",
+      "Quinophtalone_Yellow",
+      "Permanent_Green_Olive",
+      "Quinacridone_Lilac",
+      "Winsor_Blue_Red_Shade",
+      "Winsor_Blue_Green_Shade",
+      "Hookers_Green",
+      "Pure_Yellow_SCH"
+    ],
+    "my_recommended_brushes": [
+      "00",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "my_notes": "Intricate leaves - for more info or tips, see Sandrine Maugys book page 50 or look up Kristina Rapopina on YouTube for in-depth video tutorial. Also see the bought material link in Kristina Rapopinas leaf bundle.",
+    "subject_difficulty": [
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "hotpress",
+      "satin",
+      "saunders_waterford"
+    ],
+    "ext_references": [
+      "https://youtu.be/pkydUvpS-mE?si=Jwk3fbh9AnprrU9j"
+    ],
+    "ai_keywords": [
+      "pea green",
+      "leaf green",
+      "intense greens",
+      "high chroma green",
+      "low chroma green",
+      "frog green",
+      "fern green",
+      "deep bright greens",
+      "green"
+    ],
+    "content": "### How to paint this subject:\n\n**Step 1: Shadows**\nAdd shadows on the leaves with a botanical grey or neutral tint first\n\n**Step 2: Base color**\nUse a very very tiny brush (**size 0** or **1**) to apply a thin layer of light green base color \n**Mix suggestions:** Winsor Lemon, Quinophtalone Yellow mixed with Helio Green, Permanent Green or Hooker's Green. Add a touch of Quinacridone Lilac if the paint feels to bright or artificial. \nAllow a very light wash of light green to cover the thin veins that runs from the stem to the edge of the leaves.\n\n**Step 3: Intensify colors and shadow areas**\nAdd more green to the darker areas on the leaves, leaving the highlights free. Add more blue or lilac to the mix to darken it. Make sure to avoid the center veins.\n\n**Step 4: Correct mistakes**\nIf the middle veins have been painted over, add some finishing touches with a white paint, either guache or white watercolor (e.g. Titanium White).\n\nAlso see this video tutorial by Billy Showel: https://youtu.be/4VNFN3OYh5U?si=u8xzCybBEnhovL1f"
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "anemones"
+    ],
+    "subject_id": "french_anemone",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "flowers"
+    ],
+    "my_paint_purpose": [
+      "botanical_painting_french_anemones",
+      "blue_flowers"
+    ],
+    "mix_with": [
+      "Winsor_Blue_Red_Shade",
+      "Quinacridone_Lilac",
+      "Smalt_Blue",
+      "Indanthrene_Blue",
+      "Permanent_Rose",
+      "Neutral_Tint"
+    ],
+    "my_recommended_brushes": [
+      "4",
+      "2",
+      "0",
+      "000"
+    ],
+    "my_notes": "This flower is all about layering in very thin and light ways. Also: see page 50 in Sandrine Maugy. Also check Kristina Rapopina on YouTube (link below)",
+    "subject_difficulty": [
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "saunders_waterford",
+      "hotpress",
+      "satin"
+    ],
+    "ext_references": [
+      "https://youtu.be/SnZWPhMSkk8?si=YFmEFMNefUmcdLuw"
+    ],
+    "ai_keywords": [
+      "sky blue",
+      "ink blue",
+      "deep blue",
+      "shadow blue",
+      "the dark side of a blue flower",
+      "french anemones",
+      "blue shadows",
+      "muted purple",
+      "spring flowers",
+      "summer flowers",
+      "velvet",
+      "atmospheric",
+      "botanical",
+      "calm",
+      "captivating",
+      "creamy",
+      "soft",
+      "soft petals",
+      "velvet flower petals",
+      "rich",
+      "deep"
+    ],
+    "content": "### How to paint this subject: Flower petals\n\nThe petals are painted first. Then the centre of the flowers with the black and blue stamens + loaded pollen tips (filaments) are painted on top, using wet-on-dry and a drawing technique. In other words, it does not matter, if you paint over these small stamens during the process of painting the petals, as these will be over-painted afterwards with black.\n\n**Step 0: Identify light and dark areas**\nUsing either a botanical grey or neutral tint, lightly add the shadowy parts of the petals with a small brush for a more controlled result. Leave and let dry.\n\n**Step 1: First wash**\nMix a wash with blue and a touch of lilac/rose and lay down a very gentle wash on the whole petal. Repeat the proces on the rest of the petals. Notice where the petals are more violet than blue, as the flower has several hues between light purple and all the way to the darkest of blues, almost black in the crevices on the petals. Adjust the mixes accordingly. \nUse a medium sized brush for this, e.g. size 4 or 5.\n\n**Step 2: Add more layers to the flowers**\nAdd a single color to the layering process in between glazing/layering with mixes. This build up glow and transparency on the petals. \nBrush size: 3, 2 or 1\n\n**Step 3: Add veins or darker crevices on the petals**\nBy adding a darker mix strategically using the wet-in-damp technique, at the same time as Step 2 is done, can build up depth of color and natural shadows on the petals. Make sure to keep the highlighted areas light! Use the blue/pink/lilac mix - or use the Smalt Blue from Winsor & Newton for the perfect touch of \"glow\".\nAdd extra layers of paint onto the shadows, to give depth of contrast on veins or folds on the petals. \nThis require a small brush, e.g. 1, 0 or 00, depending on the size of the flower petal. \n\n*STEP 3 IS ESSENTIAL THE BUILDING STAGE AND CAN TAKE A LONG TIME, AS LAYERS ARE BUILT GRADUALLY FROM SCRATCH.*\n\n**Step 4: Add detailed veins**\nWith a size 00 or 000 brush, add thin, dark veins onto the petals to indicate the veins of the petal. Immediately after, soften the edges with a moist, soft brush tip, to make the petals look natural and a part of the deeper layers in the petals.\n\n**Step 5: Drybrush petals**\nWith a dry, loaded brush size 2 or 3, brush gently on top of the darkest parts of the petals, to give the overall velvety softness of the flower.\n\n\n### How to paint this subject: centre of open blooms\n\n**Step 1: Drawing with the brush**\nUse a very thin brush, size 000, with a good snap and spring, to literally draw the stamens and filaments (the tip of the stamens). Make sure to be very precise and remove any excess paint to increase precision of lines.\n\n**Step 2: Paint the centre piece**\nUsing a size 00 brush, add a light layer of Hansa Yellow Medium to the round button in the middle. Repeat with a wash of Green Gold. It's perfect if the yellow and gren mute some of the filaments sharpness. \n\n**Step 3: Add hairs and more stamens**\nWith the tip of the 000 brush, add very very small hairs on the round button with a black/dark mix. After this, add more stamens and filaments around the \"hairy button\" slowly and methodically. Make it look random, to indicate a sense of realism."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "hydrangeas"
+    ],
+    "subject_id": "green_hydrangea_leaves",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "leaves",
+      "green_leaves"
+    ],
+    "my_paint_purpose": [
+      "green_leaves",
+      "botanical_painting_dark_green_leaves",
+      "leaves_mixing"
+    ],
+    "mix_with": [
+      "Perylene_Green_DS",
+      "Jadeite",
+      "Deep_Sap_Green",
+      "Hookers_Green",
+      "Brown_Green",
+      "Aqua_Green",
+      "Prussian_Blue",
+      "Transparent_Yellow",
+      "Indigo_WN",
+      "Pure_Yellow_SCH",
+      "Indanthrene_Blue",
+      "Cobalt_Blue_DS",
+      "Chrome_Oxide_Green",
+      "Green_Gold",
+      "Sap_Green_DS",
+      "Sap_Green_WN",
+      "Vandyke_Brown",
+      "Raw_Umber_WN",
+      "Terre_Verte_WN",
+      "Winsor_Lemon"
+    ],
+    "my_recommended_brushes": [
+      "00",
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "my_notes": "Leaves are light green on the underside, dark green on the upper side. Look up Sandrine Maugy's tutorial on page 136",
+    "subject_difficulty": [
+      "intermediate",
+      "advanced"
+    ],
+    "my_recommended_paper": [
+      "satin",
+      "hotpress",
+      "grain_fin",
+      "arches",
+      "baohong_masters",
+      "saunders_waterford"
+    ],
+    "ext_references": [
+      "https://youtu.be/_DsAyFAaI9w?si=Ov3qdDVL7opDUBaV"
+    ],
+    "ai_keywords": [
+      "leaf green",
+      "intense greens",
+      "amazing dark greens",
+      "low chroma green",
+      "high chroma green",
+      "deep bright greens",
+      "dark emerald green",
+      "for underpainting on a dark green leaf",
+      "fresh",
+      "natural",
+      "healthy",
+      "autumn green",
+      "botanical",
+      "complex",
+      "elegant",
+      "pea green",
+      "vibrant",
+      "organic",
+      "soft",
+      "grounded",
+      "tranquil",
+      "green-blue"
+    ],
+    "content": "### How to paint this subject:\n\n### How to paint this subject: Upper side of leaf\n\n**Step 1: Highlights**\nFind the highlights on the leaf and paint a very thin layer of cobalt blue or cerulean blue to mark them. Otherwise: paint around these areas when applying washes in the next steps.\n\n**Step 2: Shadows**\nAdd shadows along the leaf border with botanical grey or neutral tint and in any dark crevices. Let dry. \n\n**Step 3: Base color**\nThen, add a base light green (e.g. **Sap Green** or **Hooker's Green**) in a wash on top of the shadow areas and along the leaf veins. Let it dry.\n\n**Step 4**\nRepeat Step 2 with the same colors/wash to add more intensity of color in the already painted areas.\n\n**Step 5**\nWork in sections between veins to add more depth and color. Add more dark blue to the mix - or layer several times to achieve the correct hue. NO DETAILS YET!\n\n**Step 6: Soften edges on veins**\nAfter the final layers and correct values and hue have been achieved, add one final layer to the vein area to soften any edges. \n\n**Step 7: Texture**\nTo add texture to the leaf, mix a darker green than the base color, and work very lightly and with thin layers to mark the folds and valleys on the leaf, thus adding texture and dark crevices on the leaf surface. \nMove the brush from top of the vein and downwards, building layers in between drying sessions. \n\n**Step 8: Imperfections**\nFor added realism, use **Raw Umber** or **Vandyke Brown** to add small \"blemishes\" or dents to the leaf surface. If any areas look a bit dull or moldy, add a touch of titanium white to the areas, e.g. highlights or blemishes. \n\n### How to paint: the underside of the leaf\n\n**Step 1: Shadows**\nAs with the upper side, add shadows to specific areas with a botanical grey or neutral tint. (Tip: along the spine in the middle of the leaf and along the outer edges on the underside)\n\n**Step 2: Base color**\nSince the underside is usually in shadow, no need for highlights. Thus, add the base color (e.g. **Terre Verte**, **Sap Green** or **Hookers Green**). \nAfter that, add a layer of warm green, e.g. **Green Gold** or **Transparent Yellow** to make it look warmer and lighter.\n\n**Step 3: Intensifying the base color**\n**IMPORTANT:** Make sure to avoid the veins when doing this step, to keep them lighter than the rest of the leaf. \n**Repeat Step 2** for as many times it is nessecary. Make sure to make the color richer and darker close to the \"spine\" in the middle of the leaf, painting the shadow areas and along the outer edges. \n\n**Step 4: Soften the edges and add texture**\nAs in Step 7 and 8 on the upside of the leaf, finish painting by applying a soft wash of lighter green on the veins to soften any sharp edges. Then pick up some brown or neutral tint, and with a tiny brush, paint small imperfections on the backside as well."
+  },
+  {
+    "item_type": [
+      "subject",
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "roses"
+    ],
+    "subject_id": "dark_green_rose_leaves",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "botanical_painting",
+      "leaves",
+      "green_leaves"
+    ],
+    "my_paint_purpose": [
+      "roses",
+      "rose_leaves",
+      "green_leaves",
+      "botanical_painting_green_leaves"
+    ],
+    "mix_with": [
+      "Indigo_WN",
+      "Sap_Green_WN",
+      "Sap_Green_DS",
+      "Indanthrene_Blue",
+      "Transparent_Yellow",
+      "Prussian_Blue",
+      "Ultramarine_Finest",
+      "Brown_Green",
+      "Winsor_Blue_Green_Shade",
+      "Perylene_Green_DS",
+      "Permanent_Green"
+    ],
+    "my_recommended_brushes": [
+      "00",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "my_notes": "Add dark blues like Indigo (WN or Sennelier) or PB60 as base color to obtain dark hues",
+    "subject_underpainting_needed": true,
+    "subject_difficulty": [
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "hotpress",
+      "grain_fin"
+    ],
+    "ext_references": [],
+    "ai_keywords": [
+      "for underpainting on a dark green leaf",
+      "soft darkness",
+      "dark green flower stems",
+      "muted green",
+      "muted shadows",
+      "amazing dark greens",
+      "green-blue",
+      "leaf green",
+      "intense greens",
+      "dark",
+      "light from within",
+      "blue shadows",
+      "shadows",
+      "shadows on leaves"
+    ],
+    "content": "### How to paint this subject:\n\n### How to paint this subject:\n\n**Step 1**\nUnderpainting: Underpaint the leaf with with a dark blue, like Indigo or Indanthrene blue to add depth and preliminary shadows on the leaf. Let it dry.\n\n**Step 2**\nNext layer: Use the wet-in-damp or wet-in-wet technique to add the base layer - e.g. a light sap green for the veins - only paint the areas that needs light. \n\n**Step 3**\nAdd a very very thin wash of cobalt blue (or similar) to mark the highlights on the leaf.\n\n**Step 4**\nUse the **wet-on-dry** technique and paint a light layer of dark green mix - vary the amount of blues and greens and yellows to keep it interesting.\nPRESERVERVE THE VEINS AND HIGHLIGHTS!\nPaint layers of the dark green mix in between drying sessions to add depth.\nPaint consistency should be like tea, to avoid too much color too fast.\n\n**Step 5**\nFinishing touches: Add a darker border along the outer edge of the leaf with e.g. perylene green or a darker version of the paint mix."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "complete"
+    ],
+    "subject_name": [
+      "sunflower"
+    ],
+    "subject_id": "sunflower_leaves",
+    "my_favorite": null,
+    "my_paint_subjects": [
+      "green_leaves",
+      "leaves",
+      "foliage"
+    ],
+    "my_paint_purpose": [
+      "sunflowers",
+      "botanical_painting_sunflowers",
+      "green_leaves",
+      "dark green leaves",
+      "botanical_painting_green_leaves",
+      "botanical_painting_dark_green_leaves"
+    ],
+    "mix_with": [
+      "Lemon_Yellow_SEN",
+      "Winsor_Blue_Red_Shade",
+      "Quinophtalone_Yellow",
+      "Brown_Green",
+      "Green_Gold",
+      "Perylene_Violet",
+      "Raw_Umber_WN",
+      "Vandyke_Brown",
+      "Sap_Green_DS",
+      "Sap_Green_WN",
+      "Deep_Sap_Green"
+    ],
+    "my_recommended_brushes": [
+      "000",
+      "00",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "my_notes": "Not yet painted - notes are based entirely on external references. See page 105 in Sandrine Maugy.",
+    "subject_difficulty": [
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "arches",
+      "baohong_masters",
+      "cp",
+      "grain_fin",
+      "hotpress",
+      "satin",
+      "saunders_waterford"
+    ],
+    "ext_references": [],
+    "ai_keywords": [
+      "green",
+      "fern green",
+      "leaf green",
+      "muted green",
+      "low chroma green",
+      "hunter green",
+      "sunflower yellow",
+      "autumn leaves in the sun",
+      "autumn green",
+      "luminous autumn leaves"
+    ],
+    "content": "### How to paint this subject:\n\n**Step 1: Shadows**\nAdd shadows to the leaves using botanical grey or Neutral Tint. \n\n**Step 2: Base color**\n**IMPORTANT:** The veins must remain unpainted, even if they are thick.\nAdd a mix of Quinophtalone Yellow and Winsor Blue Red Shade on the leaves, avoiding the vein areas, and make shadows a darker or coolor green by adding more blue. \nAdd a touch brown to mute the dark greens if nessecary. \n\n**Step 3: The veins**\nUse a thin layer of Brown-Green to paint over the veins \n\n**Step 4: Leaf tips**\nAdd details to the tips of the leaf tips with a size 000 brush. Mix a dark green with a touch of brown to make them look a bit dried up as it is late summer. Remember to keep the lights light and the shadow areas dark to add contrast. \n\n**Step 5: Flower stem**\nUse Brown-Green and Sap Green to paint the stem of the flower, adding warmt in thin washes as it fits. Add details to crevices and valleys with a size 00 or 0 brush, to add shadow and details.\n\n**Step 6: Hairs on flower stem**\nThe small hairs on the flower stem are painting using all the greens and browns mixed together. Adjust the direction and angle of the hairs to make them look random and natural."
+  },
+  {
+    "item_type": [
+      "subjects"
+    ],
+    "item_status": [
+      "draft"
+    ],
+    "subject_name": [
+      "metal"
+    ],
+    "subject_id": "metal_cogs",
+    "my_favorite": true,
+    "my_paint_subjects": [
+      "metal",
+      "steampunk",
+      "steam_trains"
+    ],
+    "my_paint_purpose": [
+      "metal_screws",
+      "metal_wheels",
+      "steam_trains",
+      "vehicles"
+    ],
+    "mix_with": [
+      "Neutral_Tint",
+      "Cobalt_Blue_DS",
+      "Indigo_WN",
+      "Winsor_Blue_Red_Shade",
+      "Lunar_Blue",
+      "Prussian_Blue",
+      "Indanthrene_Blue",
+      "Lamp_Black",
+      "French_Ultramarine_WN",
+      "French_Ultramarine_SCH",
+      "Quinacridone_Burnt_Orange",
+      "Burnt_Sienna_WN",
+      "Warm_Grey",
+      "Ultramarine_Ash",
+      "Mineral_Grey"
+    ],
+    "my_recommended_brushes": [
+      "2",
+      "3",
+      "4",
+      "6",
+      "1"
+    ],
+    "my_notes": "Use high contrast. The blacks should be very black and the highlights preserved. Look on YouTube for more input or tutorials.",
+    "subject_difficulty": [
+      "intermediate"
+    ],
+    "my_recommended_paper": [
+      "cp",
+      "arches",
+      "baohong_masters",
+      "grain_fin",
+      "saunders_waterford",
+      "rough"
+    ],
+    "ext_references": [
+      "https://youtu.be/_dl7dkofZOo?si=b8IhmU00rE46r6z0"
+    ],
+    "ai_keywords": [
+      "metal subjects",
+      "shine on metal",
+      "solid",
+      "steampunk items",
+      "metallic",
+      "shiny",
+      "dark",
+      "moody",
+      "complex",
+      "high contrast",
+      "light",
+      "solid",
+      "cool",
+      "copper",
+      "sharp",
+      "gears",
+      "cogs",
+      "machinery",
+      "metalwork",
+      "metalfittings",
+      "metal hardware",
+      "metal hardware",
+      "nuts and bolts",
+      "industrial components",
+      "metal objects"
+    ],
+    "content": "### How to paint this subject:\n\n**Step 0: Identify the hue on the metal**\nIs the metal warm or cool? Or neutral?\n**Cool** = black paint + blue (Neutral Tint, Payne's Grey, Lamp Black etc)\n**Warm** = black paint + warm (burnt sienna or orange)\n**Neutral** = blue + burnt sienna or \"Jane's Grey\" from Daniel Smith. This allows the flexibility to be toned cooler or warmer from the base color by adding either more blue or sienna to the mix.\n**Light areas/highlights**: Use Warm Grey (Rosa), Ultramarine Ash or Mineral Grey from Winsor & Newton if not left completely bare\n\n**Step 1: ID contrasts**\nStart by identifying light source and contrasts. If needed (optional), map the contrast on the reference photo or printed photo of the subject - otherwise use phone camera settings or photo editing in black and white to identify shadows. Use a medium sized brush, e.g. brush size 6 or 4, depending on the subject's size.\n\n**Step 2: Base layer**\nBegin by adding a base layer of the main color, using wet-in-wet to let granulating colors flow etc. When done and dry, add a second base layer, this time, making sure to avoid the highlighted areas. Use a smaller brush for this, e.g. size 4, 3, 2 or similar.\n\n**Step 4: Contrast layers**\nAdd more paint/darker mixes to the dark areas on the metal by adding a thicker mix of darker paint. Use more black/blue in the mix.\n\n**Step 5: Details/highlights**\nWith a small brush, add shadows to the small parts, or dents and creases. Use a mix of either base layer or another dark color for shadows. If the highlighted areas has been painted over, use either a moist brush to lift paint, or white paint to restore them."
+  }
+]
