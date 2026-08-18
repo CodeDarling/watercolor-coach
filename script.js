@@ -58,6 +58,9 @@ function formatValue(value) {
 }
 
 
+/*
+ * Highlight ordinary metadata values
+ */
 function highlightText(value, searchTerms) {
   let highlightedText = escapeHtml(formatValue(value));
 
@@ -79,6 +82,134 @@ function highlightText(value, searchTerms) {
   }
 
   return highlightedText;
+}
+
+
+/*
+ * Render Markdown-style content from Obsidian.
+ *
+ * Supports:
+ * # Heading
+ * ## Heading
+ * ### Heading
+ * **Bold text**
+ * - Bullet points
+ * * Bullet points
+ * Paragraph breaks
+ *
+ * Search terms are highlighted afterwards.
+ */
+function renderMarkdown(value, searchTerms) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return "";
+  }
+
+  let text = escapeHtml(String(value));
+
+
+  /*
+   * Markdown headings
+   */
+  text = text.replace(
+    /^### (.+)$/gm,
+    "<h3>$1</h3>"
+  );
+
+  text = text.replace(
+    /^## (.+)$/gm,
+    "<h2>$1</h2>"
+  );
+
+  text = text.replace(
+    /^# (.+)$/gm,
+    "<h1>$1</h1>"
+  );
+
+
+  /*
+   * Bold Markdown
+   */
+  text = text.replace(
+    /\*\*(.+?)\*\*/g,
+    "<strong>$1</strong>"
+  );
+
+
+  /*
+   * Markdown bullet points
+   */
+  text = text.replace(
+    /^\s*[-*] (.+)$/gm,
+    "<li>$1</li>"
+  );
+
+
+  /*
+   * Group consecutive list items
+   * inside one <ul>
+   */
+  text = text.replace(
+    /(?:<li>.*?<\/li>\s*)+/gs,
+    (match) => `<ul>${match}</ul>`
+  );
+
+
+  /*
+   * Separate text into readable blocks
+   */
+  const blocks = text
+    .split(/\n\s*\n/)
+    .filter((block) => block.trim() !== "");
+
+
+  text = blocks
+    .map((block) => {
+      const trimmedBlock = block.trim();
+
+      if (
+        trimmedBlock.startsWith("<h1>") ||
+        trimmedBlock.startsWith("<h2>") ||
+        trimmedBlock.startsWith("<h3>") ||
+        trimmedBlock.startsWith("<ul>")
+      ) {
+        return trimmedBlock;
+      }
+
+      return `
+        <p>
+          ${trimmedBlock.replace(/\n/g, "<br>")}
+        </p>
+      `;
+    })
+    .join("");
+
+
+  /*
+   * Highlight search terms
+   */
+  const uniqueTerms = [...new Set(searchTerms)]
+    .sort((first, second) => second.length - first.length);
+
+  for (const term of uniqueTerms) {
+    const escapedTerm = escapeRegExp(term);
+
+    const pattern = new RegExp(
+      `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
+      "gi"
+    );
+
+    text = text.replace(
+      pattern,
+      "$1<mark>$2</mark>"
+    );
+  }
+
+
+  return text;
 }
 
 
@@ -276,7 +407,10 @@ function renderPaintResult(
     searchTerms
   );
 
-  const content = highlightText(
+  /*
+   * Full Obsidian content now uses Markdown rendering
+   */
+  const content = renderMarkdown(
     paint.content ||
       "No full note content available.",
     searchTerms
@@ -335,22 +469,35 @@ function renderPaintResult(
       </div>
 
       <details>
-        <summary>Show all information</summary>
+        <summary>
+          Show all information
+        </summary>
 
         <div class="entry-details">
 
-          <h3>Personal notes</h3>
-          <p class="note-content">
+          <h3>
+            Personal notes
+          </h3>
+
+          <div class="note-content">
             ${content}
-          </p>
+          </div>
 
           <h3>
             Related keywords and emotional characteristics
           </h3>
-          <p>${aiKeywords}</p>
 
-          <h3>Best mixes for this color</h3>
-          <p>${mixes}</p>
+          <p>
+            ${aiKeywords}
+          </p>
+
+          <h3>
+            Best mixes for this color
+          </h3>
+
+          <p>
+            ${mixes}
+          </p>
 
         </div>
       </details>
@@ -405,7 +552,10 @@ function renderSubjectResult(
     searchTerms
   );
 
-  const content = highlightText(
+  /*
+   * Painting guide now uses Markdown rendering
+   */
+  const content = renderMarkdown(
     subject.content ||
       "No painting guide available.",
     searchTerms
@@ -431,7 +581,9 @@ function renderSubjectResult(
         PAINTING SUBJECT
       </p>
 
-      <h2>${name}</h2>
+      <h2>
+        ${name}
+      </h2>
 
       <p>
         <strong>Difficulty:</strong>
@@ -473,29 +625,37 @@ function renderSubjectResult(
 
         <div class="entry-details">
 
-          <h3>How to paint this subject</h3>
+          <h3>
+            How to paint this subject
+          </h3>
 
-          <p class="note-content">
+          <div class="note-content">
             ${content}
-          </p>
+          </div>
 
           <h3>
             Recommended paints and mixes
           </h3>
 
-          <p>${mixes}</p>
+          <p>
+            ${mixes}
+          </p>
 
           <h3>
             Related keywords
           </h3>
 
-          <p>${keywords}</p>
+          <p>
+            ${keywords}
+          </p>
 
           <h3>
             External references
           </h3>
 
-          <p>${references}</p>
+          <p>
+            ${references}
+          </p>
 
         </div>
 
@@ -526,6 +686,7 @@ async function analyzeInput() {
   if (!normalizedSearch) {
     resultElement.textContent =
       "Please enter a search term.";
+
     return;
   }
 
@@ -547,6 +708,7 @@ async function analyzeInput() {
       paintResponse,
       subjectResponse
     ] = await Promise.all([
+
       fetch("./data/paint.json", {
         cache: "no-store"
       }),
@@ -554,6 +716,7 @@ async function analyzeInput() {
       fetch("./data/subjects.json", {
         cache: "no-store"
       })
+
     ]);
 
 
@@ -671,6 +834,7 @@ async function analyzeInput() {
 
 
   } catch (error) {
+
     console.error(
       "Search error:",
       error
@@ -713,5 +877,6 @@ document.addEventListener(
 
       }
     );
+
   }
 );
