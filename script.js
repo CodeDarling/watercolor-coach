@@ -87,15 +87,6 @@ function highlightText(value, searchTerms) {
 
 /*
  * Render Markdown-style content from Obsidian.
- *
- * Supports:
- * # Heading
- * ## Heading
- * ### Heading
- * **Bold text**
- * - Bullet points
- * * Bullet points
- * Paragraph breaks
  */
 function renderMarkdown(value, searchTerms) {
   if (
@@ -108,10 +99,6 @@ function renderMarkdown(value, searchTerms) {
 
   let text = escapeHtml(String(value));
 
-
-  /*
-   * Markdown headings
-   */
   text = text.replace(
     /^### (.+)$/gm,
     "<h3>$1</h3>"
@@ -127,41 +114,24 @@ function renderMarkdown(value, searchTerms) {
     "<h1>$1</h1>"
   );
 
-
-  /*
-   * Bold Markdown
-   */
   text = text.replace(
     /\*\*(.+?)\*\*/g,
     "<strong>$1</strong>"
   );
 
-
-  /*
-   * Markdown bullet points
-   */
   text = text.replace(
     /^\s*[-*] (.+)$/gm,
     "<li>$1</li>"
   );
 
-
-  /*
-   * Group consecutive list items
-   */
   text = text.replace(
     /(?:<li>.*?<\/li>\s*)+/gs,
     (match) => `<ul>${match}</ul>`
   );
 
-
-  /*
-   * Separate text into readable blocks
-   */
   const blocks = text
     .split(/\n\s*\n/)
     .filter((block) => block.trim() !== "");
-
 
   text = blocks
     .map((block) => {
@@ -184,10 +154,6 @@ function renderMarkdown(value, searchTerms) {
     })
     .join("");
 
-
-  /*
-   * Highlight search terms
-   */
   const uniqueTerms = [...new Set(searchTerms)]
     .sort((first, second) => second.length - first.length);
 
@@ -204,7 +170,6 @@ function renderMarkdown(value, searchTerms) {
       "$1<mark>$2</mark>"
     );
   }
-
 
   return text;
 }
@@ -329,6 +294,46 @@ function findMatches(
       }
 
 
+      /*
+       * PAPER SEARCH FIELDS
+       */
+      if (type === "paper") {
+        structuredFields = {
+          "Paper name": entry.paper_name,
+          "Paper ID": entry.paper_id,
+          "Brand": entry.paper_brand,
+          "Weight": entry.paper_gsm_weight,
+          "Color": entry.paper_color,
+          "Material": entry.paper_material,
+          "Cotton content": entry.paper_cotton_content,
+          "Surface": entry.paper_surface,
+          "Sizing": entry.paper_sizing,
+          "Lifting abilities": entry.paper_lifting_abilities,
+          "Pilling": entry.paper_pilling,
+          "Granulation": entry.paper_granulation,
+          "Burnisher suited": entry.paper_burnisher_suited,
+          "Paint edges": entry.paper_clear_paintedges,
+          "Color shift": entry.paper_colorshift,
+          "Scrub tolerance": entry.paper_scrub_tolerance,
+          "Layer tolerance": entry.paper_layer_tolerance,
+          "Brush recommendations":
+            entry.paper_brush_recommendations,
+          "Luminosity": entry.paint_luminosity,
+          "Glow": entry.paint_glow,
+          "Techniques": entry.my_best_techniques,
+          "Subjects": entry.my_paint_subjects,
+          "Purpose": entry.my_paint_purpose,
+          "Rating": entry.my_rating_1_10
+        };
+
+        extendedFields = {
+          "Related keywords": entry.ai_keywords,
+          "Personal notes": entry.my_notes,
+          "Full content": entry.content
+        };
+      }
+
+
       const searchFields = useExtendedSearch
         ? { ...structuredFields, ...extendedFields }
         : structuredFields;
@@ -342,12 +347,6 @@ function findMatches(
         }));
 
 
-      /*
-       * AND SEARCH
-       *
-       * Every entered word must exist somewhere
-       * inside the same record.
-       */
       const isMatch = searchTerms.every((term) =>
         preparedFields.some((field) =>
           field.words.has(term)
@@ -657,15 +656,348 @@ function renderSubjectResult(
 }
 
 
+function renderPaperResult(
+  paper,
+  matchedFields,
+  searchTerms
+) {
+  const name = highlightText(
+    paper.paper_name ||
+      paper.paper_id ||
+      "Unnamed paper",
+    searchTerms
+  );
+
+  const brand = highlightText(
+    paper.paper_brand || "Unknown",
+    searchTerms
+  );
+
+  const weight = highlightText(
+    paper.paper_gsm_weight,
+    searchTerms
+  );
+
+  const surface = highlightText(
+    paper.paper_surface,
+    searchTerms
+  );
+
+  const material = highlightText(
+    paper.paper_material,
+    searchTerms
+  );
+
+  const cotton = highlightText(
+    paper.paper_cotton_content,
+    searchTerms
+  );
+
+  const color = highlightText(
+    paper.paper_color,
+    searchTerms
+  );
+
+  const sizing = highlightText(
+    paper.paper_sizing,
+    searchTerms
+  );
+
+  const lifting = highlightText(
+    paper.paper_lifting_abilities,
+    searchTerms
+  );
+
+  const pilling = highlightText(
+    paper.paper_pilling,
+    searchTerms
+  );
+
+  const granulation = highlightText(
+    paper.paper_granulation,
+    searchTerms
+  );
+
+  const burnisher = highlightText(
+    paper.paper_burnisher_suited,
+    searchTerms
+  );
+
+  const edges = highlightText(
+    paper.paper_clear_paintedges,
+    searchTerms
+  );
+
+  const colorShift = highlightText(
+    paper.paper_colorshift,
+    searchTerms
+  );
+
+  const scrubTolerance = highlightText(
+    paper.paper_scrub_tolerance,
+    searchTerms
+  );
+
+  const layerTolerance = highlightText(
+    paper.paper_layer_tolerance,
+    searchTerms
+  );
+
+  const brushes = highlightText(
+    paper.paper_brush_recommendations,
+    searchTerms
+  );
+
+  const luminosity = highlightText(
+    paper.paint_luminosity,
+    searchTerms
+  );
+
+  const glow = highlightText(
+    paper.paint_glow,
+    searchTerms
+  );
+
+  const techniques = highlightText(
+    paper.my_best_techniques,
+    searchTerms
+  );
+
+  const subjects = highlightText(
+    paper.my_paint_subjects,
+    searchTerms
+  );
+
+  const purpose = highlightText(
+    paper.my_paint_purpose,
+    searchTerms
+  );
+
+  const rating = highlightText(
+    paper.my_rating_1_10,
+    searchTerms
+  );
+
+  const notes = highlightText(
+    paper.my_notes ||
+      "No personal notes available.",
+    searchTerms
+  );
+
+  const content = renderMarkdown(
+    paper.content ||
+      "No full paper note available.",
+    searchTerms
+  );
+
+  const references =
+    createClickableReferences(
+      paper.ext_references
+    );
+
+  const source =
+    createClickableReferences(
+      paper.ext_source
+    );
+
+  const matchedFieldList = matchedFields
+    .map(
+      (field) =>
+        `<li>${escapeHtml(field)}</li>`
+    )
+    .join("");
+
+
+  return `
+    <article class="paper-result">
+
+      <p class="result-type">
+        PAPER
+      </p>
+
+      <h2>
+        ${name}
+      </h2>
+
+      <p>
+        <strong>Brand:</strong>
+        ${brand}
+      </p>
+
+      <p>
+        <strong>Weight:</strong>
+        ${weight} gsm
+      </p>
+
+      <p>
+        <strong>Surface:</strong>
+        ${surface}
+      </p>
+
+      <p>
+        <strong>Material:</strong>
+        ${material}
+      </p>
+
+      <p>
+        <strong>Cotton content:</strong>
+        ${cotton}%
+      </p>
+
+      <p>
+        <strong>Color:</strong>
+        ${color}
+      </p>
+
+      <p>
+        <strong>Best techniques:</strong>
+        ${techniques}
+      </p>
+
+      <p>
+        <strong>Subjects:</strong>
+        ${subjects}
+      </p>
+
+      <p>
+        <strong>Best used for:</strong>
+        ${purpose}
+      </p>
+
+      <p>
+        <strong>My rating:</strong>
+        ${rating}/10
+      </p>
+
+      <p>
+        <strong>Personal observations:</strong>
+        ${notes}
+      </p>
+
+      <div class="match-evidence">
+
+        <strong>
+          Why this matches your search:
+        </strong>
+
+        <ul>
+          ${matchedFieldList}
+        </ul>
+
+      </div>
+
+      <details>
+
+        <summary>
+          Show paper details and full notes
+        </summary>
+
+        <div class="entry-details">
+
+          <h3>
+            Paper properties
+          </h3>
+
+          <p>
+            <strong>Sizing:</strong>
+            ${sizing}
+          </p>
+
+          <p>
+            <strong>Lifting abilities:</strong>
+            ${lifting}
+          </p>
+
+          <p>
+            <strong>Pilling:</strong>
+            ${pilling}
+          </p>
+
+          <p>
+            <strong>Granulation suited:</strong>
+            ${granulation}
+          </p>
+
+          <p>
+            <strong>Burnisher suited:</strong>
+            ${burnisher}
+          </p>
+
+          <p>
+            <strong>Paint edges:</strong>
+            ${edges}
+          </p>
+
+          <p>
+            <strong>Color shift:</strong>
+            ${colorShift}
+          </p>
+
+          <p>
+            <strong>Scrub tolerance:</strong>
+            ${scrubTolerance}
+          </p>
+
+          <p>
+            <strong>Layer tolerance:</strong>
+            ${layerTolerance}
+          </p>
+
+          <p>
+            <strong>Recommended brush hair:</strong>
+            ${brushes}
+          </p>
+
+          <p>
+            <strong>Paint luminosity:</strong>
+            ${luminosity}
+          </p>
+
+          <p>
+            <strong>Paint glow:</strong>
+            ${glow}
+          </p>
+
+          <h3>
+            Personal experience and paper description
+          </h3>
+
+          <div class="note-content">
+            ${content}
+          </div>
+
+          <h3>
+            External references
+          </h3>
+
+          <p>
+            ${references}
+          </p>
+
+          <h3>
+            External source
+          </h3>
+
+          <p>
+            ${source}
+          </p>
+
+        </div>
+
+      </details>
+
+    </article>
+  `;
+}
+
+
 /*
  * Create clickable result-category navigation
- *
- * Only categories that actually contain matches
- * are shown.
  */
 function createResultNavigation(
   subjectCount,
-  paintCount
+  paintCount,
+  paperCount
 ) {
   const links = [];
 
@@ -694,6 +1026,21 @@ function createResultNavigation(
         Paints
         <span class="result-category-count">
           ${paintCount}
+        </span>
+      </a>
+    `);
+  }
+
+
+  if (paperCount > 0) {
+    links.push(`
+      <a
+        class="result-category-link"
+        href="#paper-results"
+      >
+        Papers
+        <span class="result-category-count">
+          ${paperCount}
         </span>
       </a>
     `);
@@ -752,11 +1099,12 @@ async function analyzeInput() {
 
 
     /*
-     * Load both databases at the same time
+     * Load all three databases
      */
     const [
       paintResponse,
-      subjectResponse
+      subjectResponse,
+      paperResponse
     ] = await Promise.all([
 
       fetch("./data/paint.json", {
@@ -764,6 +1112,10 @@ async function analyzeInput() {
       }),
 
       fetch("./data/subjects.json", {
+        cache: "no-store"
+      }),
+
+      fetch("./data/papers.json", {
         cache: "no-store"
       })
 
@@ -784,11 +1136,21 @@ async function analyzeInput() {
     }
 
 
+    if (!paperResponse.ok) {
+      throw new Error(
+        `Could not load papers.json. HTTP status: ${paperResponse.status}`
+      );
+    }
+
+
     const paints =
       await paintResponse.json();
 
     const subjects =
       await subjectResponse.json();
+
+    const papers =
+      await paperResponse.json();
 
 
     const useExtendedSearch =
@@ -811,12 +1173,21 @@ async function analyzeInput() {
     );
 
 
+    const paperMatches = findMatches(
+      papers,
+      searchTerms,
+      useExtendedSearch,
+      "paper"
+    );
+
+
     if (
       paintMatches.length === 0 &&
-      subjectMatches.length === 0
+      subjectMatches.length === 0 &&
+      paperMatches.length === 0
     ) {
       resultElement.textContent =
-        "No matching paints or painting subjects found.";
+        "No matching paints, painting subjects or papers found.";
 
       return;
     }
@@ -830,7 +1201,8 @@ async function analyzeInput() {
      */
     resultHtml += createResultNavigation(
       subjectMatches.length,
-      paintMatches.length
+      paintMatches.length,
+      paperMatches.length
     );
 
 
@@ -882,6 +1254,36 @@ async function analyzeInput() {
           ${paintMatches
             .map(({ entry, matchedFields }) =>
               renderPaintResult(
+                entry,
+                matchedFields,
+                searchTerms
+              )
+            )
+            .join("")}
+
+        </section>
+      `;
+    }
+
+
+    /*
+     * PAPER RESULTS
+     */
+    if (paperMatches.length > 0) {
+      resultHtml += `
+        <section
+          class="paper-results"
+          id="paper-results"
+        >
+
+          <h2 class="result-section-title">
+            Papers
+            (${paperMatches.length})
+          </h2>
+
+          ${paperMatches
+            .map(({ entry, matchedFields }) =>
+              renderPaperResult(
                 entry,
                 matchedFields,
                 searchTerms
