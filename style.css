@@ -572,7 +572,44 @@ a:hover {
   color: #244f64;
 }
 
+/* ----------------------------------------------------------
+   BACK TO TOP BUTTON
+   ---------------------------------------------------------- */
 
+.back-to-top {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 1000;
+
+  padding: 10px 15px;
+
+  color: #ffffff;
+  background: rgba(69, 110, 130, 0.90);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 3px 12px rgba(20, 55, 70, 0.18);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.back-to-top:hover {
+  color: #ffffff;
+  background: #365f73;
+
+  transform: translateY(-2px);
+}
 /* ----------------------------------------------------------
    MOBILE
    ---------------------------------------------------------- */
