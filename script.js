@@ -470,7 +470,7 @@ function renderPaintResult(
         <div class="entry-details">
 
           <h3>
-            Personal notes
+            Personal notes and experiences with this color
           </h3>
 
           <div class="note-content">
@@ -478,7 +478,7 @@ function renderPaintResult(
           </div>
 
           <h3>
-            Related keywords and emotional characteristics
+            Related keywords and characteristics
           </h3>
 
           <p>
@@ -486,7 +486,7 @@ function renderPaintResult(
           </p>
 
           <h3>
-            Best mixes for this color
+            This color performs great in mixes with:
           </h3>
 
           <p>
