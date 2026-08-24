@@ -102,7 +102,7 @@ function formatValue(value) {
           .replace(/\s+/g, " ")
           .trim();
 
-        return capitalizeFirst(formattedItem);
+        return titleCase(formattedItem);
       })
       .join(" | ");
   }
@@ -114,7 +114,7 @@ function formatValue(value) {
     .trim();
 
 
-  return capitalizeFirst(formattedText);
+  return titleCase(formattedText);
 }
 
 
