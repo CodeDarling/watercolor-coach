@@ -37,6 +37,42 @@ function escapeRegExp(value) {
 }
 
 
+/*
+ * Capitalize first letter only.
+ * Used for ordinary metadata values.
+ */
+function capitalizeFirst(value) {
+  const text = String(value).trim();
+
+  if (!text) {
+    return text;
+  }
+
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+
+/*
+ * Capitalize every word.
+ * Primarily used for paint brands.
+ */
+function titleCase(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/\b([a-zæøå])/gi, (letter) =>
+      letter.toUpperCase()
+    );
+}
+
+
+/*
+ * Format ordinary metadata.
+ *
+ * - underscores become spaces
+ * - arrays use |
+ * - booleans become Yes / No
+ * - first item starts with uppercase
+ */
 function formatValue(value) {
   if (
     value === null ||
@@ -47,27 +83,83 @@ function formatValue(value) {
     return "Not specified";
   }
 
-  const text = Array.isArray(value)
-    ? value.flat(Infinity).join(", ")
-    : String(value);
 
- const formattedText = text
-  .replaceAll("_", " ")
-  .replace(/\s+/g, " ")
-  .trim();
+  if (typeof value === "boolean") {
+    return value ? "Yes" : "No";
+  }
 
-return formattedText.charAt(0).toUpperCase() + formattedText.slice(1);
+
+  if (Array.isArray(value)) {
+    return value
+      .flat(Infinity)
+      .map((item) => {
+        if (typeof item === "boolean") {
+          return item ? "Yes" : "No";
+        }
+
+        const formattedItem = String(item)
+          .replaceAll("_", " ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+        return capitalizeFirst(formattedItem);
+      })
+      .join(" | ");
+  }
+
+
+  const formattedText = String(value)
+    .replaceAll("_", " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+
+  return capitalizeFirst(formattedText);
 }
 
 
 /*
- * Highlight ordinary metadata values
+ * Format brand names so every word begins
+ * with a capital letter.
  */
-function highlightText(value, searchTerms) {
-  let highlightedText = escapeHtml(formatValue(value));
+function formatBrand(value) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return "Unknown";
+  }
+
+  const formattedText = Array.isArray(value)
+    ? value.flat(Infinity).join(" | ")
+    : String(value);
+
+  return titleCase(
+    formattedText
+      .replaceAll("_", " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+
+/*
+ * Highlight already formatted text.
+ */
+function highlightFormattedText(
+  formattedValue,
+  searchTerms
+) {
+  let highlightedText =
+    escapeHtml(formattedValue);
 
   const uniqueTerms = [...new Set(searchTerms)]
-    .sort((first, second) => second.length - first.length);
+    .sort(
+      (first, second) =>
+        second.length - first.length
+    );
+
 
   for (const term of uniqueTerms) {
     const escapedTerm = escapeRegExp(term);
@@ -77,13 +169,37 @@ function highlightText(value, searchTerms) {
       "gi"
     );
 
-    highlightedText = highlightedText.replace(
-      pattern,
-      "$1<mark>$2</mark>"
-    );
+    highlightedText =
+      highlightedText.replace(
+        pattern,
+        "$1<mark>$2</mark>"
+      );
   }
 
+
   return highlightedText;
+}
+
+
+/*
+ * Highlight ordinary metadata values.
+ */
+function highlightText(value, searchTerms) {
+  return highlightFormattedText(
+    formatValue(value),
+    searchTerms
+  );
+}
+
+
+/*
+ * Highlight brand names.
+ */
+function highlightBrand(value, searchTerms) {
+  return highlightFormattedText(
+    formatBrand(value),
+    searchTerms
+  );
 }
 
 
@@ -100,6 +216,7 @@ function renderMarkdown(value, searchTerms) {
   }
 
   let text = escapeHtml(String(value));
+
 
   text = text.replace(
     /^### (.+)$/gm,
@@ -131,13 +248,19 @@ function renderMarkdown(value, searchTerms) {
     (match) => `<ul>${match}</ul>`
   );
 
+
   const blocks = text
     .split(/\n\s*\n/)
-    .filter((block) => block.trim() !== "");
+    .filter(
+      (block) =>
+        block.trim() !== ""
+    );
+
 
   text = blocks
     .map((block) => {
-      const trimmedBlock = block.trim();
+      const trimmedBlock =
+        block.trim();
 
       if (
         trimmedBlock.startsWith("<h1>") ||
@@ -156,11 +279,17 @@ function renderMarkdown(value, searchTerms) {
     })
     .join("");
 
+
   const uniqueTerms = [...new Set(searchTerms)]
-    .sort((first, second) => second.length - first.length);
+    .sort(
+      (first, second) =>
+        second.length - first.length
+    );
+
 
   for (const term of uniqueTerms) {
-    const escapedTerm = escapeRegExp(term);
+    const escapedTerm =
+      escapeRegExp(term);
 
     const pattern = new RegExp(
       `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
@@ -172,6 +301,7 @@ function renderMarkdown(value, searchTerms) {
       "$1<mark>$2</mark>"
     );
   }
+
 
   return text;
 }
@@ -186,30 +316,42 @@ function getFieldWords(value) {
 }
 
 
-function createClickableReferences(references) {
+function createClickableReferences(
+  references
+) {
   if (!references) {
     return "No external references available.";
   }
 
-  const referenceList = Array.isArray(references)
-    ? references
-    : [references];
 
-  const validReferences = referenceList
-    .map((reference) => String(reference).trim())
-    .filter(
-      (reference) =>
-        reference &&
-        reference !== '""'
-    );
+  const referenceList =
+    Array.isArray(references)
+      ? references
+      : [references];
+
+
+  const validReferences =
+    referenceList
+      .map(
+        (reference) =>
+          String(reference).trim()
+      )
+      .filter(
+        (reference) =>
+          reference &&
+          reference !== '""'
+      );
+
 
   if (validReferences.length === 0) {
     return "No external references available.";
   }
 
+
   return validReferences
     .map((reference, index) => {
-      const safeUrl = escapeHtml(reference);
+      const safeUrl =
+        escapeHtml(reference);
 
       return `
         <a
@@ -240,6 +382,9 @@ function findMatches(
 
       /*
        * PAINT SEARCH FIELDS
+       *
+       * ai_keywords is intentionally NOT included.
+       * It is reserved for a future LLM layer.
        */
       if (type === "paint") {
         structuredFields = {
@@ -247,23 +392,44 @@ function findMatches(
           "Paint ID": entry.paint_id,
           "Brand": entry.paint_brand,
           "Pigments": entry.paint_pigments,
-          "Color family": entry.paint_color_family,
-          "Hue bias": entry.paint_hue_bias,
-          "Temperature": entry.paint_temperature,
-          "Opacity": entry.paint_opacity,
-          "Optical role": entry.paint_optical_role,
-          "Subjects": entry.my_paint_subjects,
-          "Purpose": entry.my_paint_purpose,
-          "Techniques": entry.my_best_techniques,
-          "Recommended paper": entry.my_recommended_paper,
-          "Aliases": entry.paint_aliases
+          "Color family":
+            entry.paint_color_family,
+          "Hue bias":
+            entry.paint_hue_bias,
+          "Temperature":
+            entry.paint_temperature,
+          "Opacity":
+            entry.paint_opacity,
+          "Granulation":
+            entry.paint_granulation,
+          "Staining":
+            entry.paint_staining,
+          "Luminosity":
+            entry.paint_luminosity,
+          "Optical role":
+            entry.paint_optical_role,
+          "Job title":
+            entry.paint_job_title,
+          "Subjects":
+            entry.my_paint_subjects,
+          "Purpose":
+            entry.my_paint_purpose,
+          "Techniques":
+            entry.my_best_techniques,
+          "Recommended paper":
+            entry.my_recommended_paper,
+          "Aliases":
+            entry.paint_aliases
         };
 
+
         extendedFields = {
-          "Subject and mood": entry.ai_keywords,
-          "Personal notes": entry.my_notes,
-          "Best mixes": entry.mix_with,
-          "Full content": entry.content,
+          "Personal observations":
+            entry.my_notes,
+          "Best mixes":
+            entry.mix_with,
+          "Full content":
+            entry.content,
           "Manufacturer description":
             entry.ext_manufacturer_description
         };
@@ -275,23 +441,32 @@ function findMatches(
        */
       if (type === "subject") {
         structuredFields = {
-          "Subject name": entry.subject_name,
-          "Subject ID": entry.subject_id,
-          "Related subjects": entry.my_paint_subjects,
-          "Purpose": entry.my_paint_purpose,
-          "Difficulty": entry.subject_difficulty,
+          "Subject name":
+            entry.subject_name,
+          "Subject ID":
+            entry.subject_id,
+          "Related subjects":
+            entry.my_paint_subjects,
+          "Purpose":
+            entry.my_paint_purpose,
+          "Difficulty":
+            entry.subject_difficulty,
           "Recommended brushes":
             entry.my_recommended_brushes,
           "Recommended paper":
             entry.my_recommended_paper
         };
 
+
         extendedFields = {
-          "Related keywords": entry.ai_keywords,
-          "Personal notes": entry.my_notes,
+          "Related keywords":
+            entry.ai_keywords,
+          "Personal notes":
+            entry.my_notes,
           "Recommended paints and mixes":
             entry.mix_with,
-          "Full painting guide": entry.content
+          "Full painting guide":
+            entry.content
         };
       }
 
@@ -301,59 +476,92 @@ function findMatches(
        */
       if (type === "paper") {
         structuredFields = {
-          "Paper name": entry.paper_name,
-          "Paper ID": entry.paper_id,
-          "Brand": entry.paper_brand,
-          "Weight": entry.paper_gsm_weight,
-          "Color": entry.paper_color,
-          "Material": entry.paper_material,
-          "Cotton content": entry.paper_cotton_content,
-          "Surface": entry.paper_surface,
-          "Sizing": entry.paper_sizing,
-          "Lifting abilities": entry.paper_lifting_abilities,
-          "Pilling": entry.paper_pilling,
-          "Granulation": entry.paper_granulation,
-          "Burnisher suited": entry.paper_burnisher_suited,
-          "Paint edges": entry.paper_clear_paintedges,
-          "Color shift": entry.paper_colorshift,
-          "Scrub tolerance": entry.paper_scrub_tolerance,
-          "Layer tolerance": entry.paper_layer_tolerance,
+          "Paper name":
+            entry.paper_name,
+          "Paper ID":
+            entry.paper_id,
+          "Brand":
+            entry.paper_brand,
+          "Weight":
+            entry.paper_gsm_weight,
+          "Color":
+            entry.paper_color,
+          "Material":
+            entry.paper_material,
+          "Cotton content":
+            entry.paper_cotton_content,
+          "Surface":
+            entry.paper_surface,
+          "Sizing":
+            entry.paper_sizing,
+          "Lifting abilities":
+            entry.paper_lifting_abilities,
+          "Pilling":
+            entry.paper_pilling,
+          "Granulation":
+            entry.paper_granulation,
+          "Burnisher suited":
+            entry.paper_burnisher_suited,
+          "Paint edges":
+            entry.paper_clear_paintedges,
+          "Color shift":
+            entry.paper_colorshift,
+          "Scrub tolerance":
+            entry.paper_scrub_tolerance,
+          "Layer tolerance":
+            entry.paper_layer_tolerance,
           "Brush recommendations":
             entry.paper_brush_recommendations,
-          "Luminosity": entry.paint_luminosity,
-          "Glow": entry.paint_glow,
-          "Techniques": entry.my_best_techniques,
-          "Subjects": entry.my_paint_subjects,
-          "Purpose": entry.my_paint_purpose,
-          "Rating": entry.my_rating_1_10
+          "Luminosity":
+            entry.paint_luminosity,
+          "Glow":
+            entry.paint_glow,
+          "Techniques":
+            entry.my_best_techniques,
+          "Subjects":
+            entry.my_paint_subjects,
+          "Purpose":
+            entry.my_paint_purpose,
+          "Rating":
+            entry.my_rating_1_10
         };
 
+
         extendedFields = {
-          "Related keywords": entry.ai_keywords,
-          "Personal notes": entry.my_notes,
-          "Full content": entry.content
+          "Related keywords":
+            entry.ai_keywords,
+          "Personal notes":
+            entry.my_notes,
+          "Full content":
+            entry.content
         };
       }
 
 
-      const searchFields = useExtendedSearch
-        ? { ...structuredFields, ...extendedFields }
-        : structuredFields;
+      const searchFields =
+        useExtendedSearch
+          ? {
+              ...structuredFields,
+              ...extendedFields
+            }
+          : structuredFields;
 
 
-      const preparedFields = Object.entries(searchFields)
-        .map(([label, value]) => ({
-          label,
-          value,
-          words: getFieldWords(value)
-        }));
+      const preparedFields =
+        Object.entries(searchFields)
+          .map(([label, value]) => ({
+            label,
+            value,
+            words: getFieldWords(value)
+          }));
 
 
-      const isMatch = searchTerms.every((term) =>
-        preparedFields.some((field) =>
-          field.words.has(term)
-        )
-      );
+      const isMatch =
+        searchTerms.every((term) =>
+          preparedFields.some((field) =>
+            field.words.has(term)
+          )
+        );
 
 
       if (!isMatch) {
@@ -361,13 +569,17 @@ function findMatches(
       }
 
 
-      const matchedFields = preparedFields
-        .filter((field) =>
-          searchTerms.some((term) =>
-            field.words.has(term)
+      const matchedFields =
+        preparedFields
+          .filter((field) =>
+            searchTerms.some((term) =>
+              field.words.has(term)
+            )
           )
-        )
-        .map((field) => field.label);
+          .map(
+            (field) =>
+              field.label
+          );
 
 
       return {
@@ -380,42 +592,89 @@ function findMatches(
 }
 
 
+/*
+ * PAINT RESULT
+ */
 function renderPaintResult(
   paint,
   matchedFields,
   searchTerms
 ) {
   const name = highlightText(
-    paint.paint_name || "Unnamed paint",
+    paint.paint_name ||
+      "Unnamed paint",
     searchTerms
   );
 
-  const brand = highlightText(
-    paint.paint_brand || "Unknown",
+
+  const brand = highlightBrand(
+    paint.paint_brand ||
+      "Unknown",
     searchTerms
   );
 
-  const pigments = highlightText(
-    paint.paint_pigments || "Unknown",
-    searchTerms
-  );
 
   const notes = highlightText(
-    paint.my_notes || "No notes available.",
+    paint.my_notes ||
+      "No notes available.",
     searchTerms
   );
 
-  const content = renderMarkdown(
-    paint.content ||
-      "No full note content available.",
+
+  const pigments = highlightText(
+    paint.paint_pigments ||
+      "Unknown",
     searchTerms
   );
 
-  const aiKeywords = highlightText(
-    paint.ai_keywords ||
-      "No AI keywords available.",
+
+  const temperature = highlightText(
+    paint.paint_temperature,
     searchTerms
   );
+
+
+  const opacity = highlightText(
+    paint.paint_opacity,
+    searchTerms
+  );
+
+
+  const granulation = highlightText(
+    paint.paint_granulation,
+    searchTerms
+  );
+
+
+  const staining = highlightText(
+    paint.paint_staining,
+    searchTerms
+  );
+
+
+  const luminosity = highlightText(
+    paint.paint_luminosity,
+    searchTerms
+  );
+
+
+  const opticalRole = highlightText(
+    paint.paint_optical_role,
+    searchTerms
+  );
+
+
+  const jobTitle = highlightText(
+    paint.paint_job_title,
+    searchTerms
+  );
+
+
+  const purpose = highlightText(
+    paint.my_paint_purpose,
+    searchTerms
+  );
+
 
   const mixes = highlightText(
     paint.mix_with ||
@@ -423,12 +682,29 @@ function renderPaintResult(
     searchTerms
   );
 
-  const matchedFieldList = matchedFields
-    .map(
-      (field) =>
-        `<li>${escapeHtml(field)}</li>`
-    )
-    .join("");
+
+  const content = renderMarkdown(
+    paint.content ||
+      "No full note content available.",
+    searchTerms
+  );
+
+
+  const manufacturerDescription =
+    highlightText(
+      paint.ext_manufacturer_description ||
+        "No manufacturer description available.",
+      searchTerms
+    );
+
+
+  const matchedFieldList =
+    matchedFields
+      .map(
+        (field) =>
+          `<li>${escapeHtml(field)}</li>`
+      )
+      .join("");
 
 
   return `
@@ -438,11 +714,18 @@ function renderPaintResult(
         PAINT
       </p>
 
-      <h2>${name}</h2>
+      <h2>
+        ${name}
+      </h2>
 
       <p>
         <strong>Brand:</strong>
         ${brand}
+      </p>
+
+      <p>
+        <strong>Personal observations:</strong>
+        ${notes}
       </p>
 
       <p>
@@ -451,50 +734,92 @@ function renderPaintResult(
       </p>
 
       <p>
-        <strong>Personal observations:</strong>
-        ${notes}
+        <strong>Temperature:</strong>
+        ${temperature}
       </p>
 
+      <p>
+        <strong>Opacity:</strong>
+        ${opacity}
+      </p>
+
+      <p>
+        <strong>Granulation:</strong>
+        ${granulation}
+      </p>
+
+      <p>
+        <strong>Staining:</strong>
+        ${staining}
+      </p>
+
+
       <div class="match-evidence">
-        <strong>Why this matches your search:</strong>
+
+        <strong>
+          Why this matches your search:
+        </strong>
 
         <ul>
           ${matchedFieldList}
         </ul>
+
       </div>
 
+
       <details>
+
         <summary>
-          Show all information
+          Show additional information
         </summary>
 
         <div class="entry-details">
 
+          <p>
+            <strong>Luminosity:</strong>
+            ${luminosity}
+          </p>
+
+          <p>
+            <strong>Optical role:</strong>
+            ${opticalRole}
+          </p>
+
+          <p>
+            <strong>Job title / function:</strong>
+            ${jobTitle}
+          </p>
+
+          <p>
+            <strong>Subjects:</strong>
+            ${purpose}
+          </p>
+
+          <p>
+            <strong>Mixes:</strong>
+            ${mixes}
+          </p>
+
+
           <h3>
-            Personal notes and experiences with this color
+            Personal experiences
           </h3>
 
           <div class="note-content">
             ${content}
           </div>
 
+
           <h3>
-            Related keywords and characteristics
+            Manufacturer's description
           </h3>
 
           <p>
-            ${aiKeywords}
-          </p>
-
-          <h3>
-            This color performs great in mixes with:
-          </h3>
-
-          <p>
-            ${mixes}
+            ${manufacturerDescription}
           </p>
 
         </div>
+
       </details>
 
     </article>
@@ -502,6 +827,9 @@ function renderPaintResult(
 }
 
 
+/*
+ * SUBJECT RESULT
+ */
 function renderSubjectResult(
   subject,
   matchedFields,
@@ -514,20 +842,24 @@ function renderSubjectResult(
     searchTerms
   );
 
+
   const difficulty = highlightText(
     subject.subject_difficulty,
     searchTerms
   );
+
 
   const brushes = highlightText(
     subject.my_recommended_brushes,
     searchTerms
   );
 
+
   const paper = highlightText(
     subject.my_recommended_paper,
     searchTerms
   );
+
 
   const notes = highlightText(
     subject.my_notes ||
@@ -535,11 +867,13 @@ function renderSubjectResult(
     searchTerms
   );
 
+
   const mixes = highlightText(
     subject.mix_with ||
       "No paints registered.",
     searchTerms
   );
+
 
   const keywords = highlightText(
     subject.ai_keywords ||
@@ -547,23 +881,27 @@ function renderSubjectResult(
     searchTerms
   );
 
+
   const content = renderMarkdown(
     subject.content ||
       "No painting guide available.",
     searchTerms
   );
 
+
   const references =
     createClickableReferences(
       subject.ext_references
     );
 
-  const matchedFieldList = matchedFields
-    .map(
-      (field) =>
-        `<li>${escapeHtml(field)}</li>`
-    )
-    .join("");
+
+  const matchedFieldList =
+    matchedFields
+      .map(
+        (field) =>
+          `<li>${escapeHtml(field)}</li>`
+      )
+      .join("");
 
 
   return `
@@ -597,6 +935,7 @@ function renderSubjectResult(
         ${notes}
       </p>
 
+
       <div class="match-evidence">
 
         <strong>
@@ -608,6 +947,7 @@ function renderSubjectResult(
         </ul>
 
       </div>
+
 
       <details>
 
@@ -625,6 +965,7 @@ function renderSubjectResult(
             ${content}
           </div>
 
+
           <h3>
             Recommended paints and mixes
           </h3>
@@ -633,6 +974,7 @@ function renderSubjectResult(
             ${mixes}
           </p>
 
+
           <h3>
             Related keywords
           </h3>
@@ -640,6 +982,7 @@ function renderSubjectResult(
           <p>
             ${keywords}
           </p>
+
 
           <h3>
             External references
@@ -658,6 +1001,9 @@ function renderSubjectResult(
 }
 
 
+/*
+ * PAPER RESULT
+ */
 function renderPaperResult(
   paper,
   matchedFields,
@@ -670,115 +1016,139 @@ function renderPaperResult(
     searchTerms
   );
 
+
   const brand = highlightText(
-    paper.paper_brand || "Unknown",
+    paper.paper_brand ||
+      "Unknown",
     searchTerms
   );
+
 
   const weight = highlightText(
     paper.paper_gsm_weight,
     searchTerms
   );
 
+
   const surface = highlightText(
     paper.paper_surface,
     searchTerms
   );
+
 
   const material = highlightText(
     paper.paper_material,
     searchTerms
   );
 
+
   const cotton = highlightText(
     paper.paper_cotton_content,
     searchTerms
   );
+
 
   const color = highlightText(
     paper.paper_color,
     searchTerms
   );
 
+
   const sizing = highlightText(
     paper.paper_sizing,
     searchTerms
   );
+
 
   const lifting = highlightText(
     paper.paper_lifting_abilities,
     searchTerms
   );
 
+
   const pilling = highlightText(
     paper.paper_pilling,
     searchTerms
   );
+
 
   const granulation = highlightText(
     paper.paper_granulation,
     searchTerms
   );
 
+
   const burnisher = highlightText(
     paper.paper_burnisher_suited,
     searchTerms
   );
+
 
   const edges = highlightText(
     paper.paper_clear_paintedges,
     searchTerms
   );
 
+
   const colorShift = highlightText(
     paper.paper_colorshift,
     searchTerms
   );
+
 
   const scrubTolerance = highlightText(
     paper.paper_scrub_tolerance,
     searchTerms
   );
 
+
   const layerTolerance = highlightText(
     paper.paper_layer_tolerance,
     searchTerms
   );
+
 
   const brushes = highlightText(
     paper.paper_brush_recommendations,
     searchTerms
   );
 
+
   const luminosity = highlightText(
     paper.paint_luminosity,
     searchTerms
   );
+
 
   const glow = highlightText(
     paper.paint_glow,
     searchTerms
   );
 
+
   const techniques = highlightText(
     paper.my_best_techniques,
     searchTerms
   );
+
 
   const subjects = highlightText(
     paper.my_paint_subjects,
     searchTerms
   );
 
+
   const purpose = highlightText(
     paper.my_paint_purpose,
     searchTerms
   );
 
+
   const rating = highlightText(
     paper.my_rating_1_10,
     searchTerms
   );
+
 
   const notes = highlightText(
     paper.my_notes ||
@@ -786,28 +1156,33 @@ function renderPaperResult(
     searchTerms
   );
 
+
   const content = renderMarkdown(
     paper.content ||
       "No full paper note available.",
     searchTerms
   );
 
+
   const references =
     createClickableReferences(
       paper.ext_references
     );
+
 
   const source =
     createClickableReferences(
       paper.ext_source
     );
 
-  const matchedFieldList = matchedFields
-    .map(
-      (field) =>
-        `<li>${escapeHtml(field)}</li>`
-    )
-    .join("");
+
+  const matchedFieldList =
+    matchedFields
+      .map(
+        (field) =>
+          `<li>${escapeHtml(field)}</li>`
+      )
+      .join("");
 
 
   return `
@@ -876,6 +1251,7 @@ function renderPaperResult(
         ${notes}
       </p>
 
+
       <div class="match-evidence">
 
         <strong>
@@ -887,6 +1263,7 @@ function renderPaperResult(
         </ul>
 
       </div>
+
 
       <details>
 
@@ -960,6 +1337,7 @@ function renderPaperResult(
             ${glow}
           </p>
 
+
           <h3>
             Personal experience and paper description
           </h3>
@@ -968,6 +1346,7 @@ function renderPaperResult(
             ${content}
           </div>
 
+
           <h3>
             External references
           </h3>
@@ -975,6 +1354,7 @@ function renderPaperResult(
           <p>
             ${references}
           </p>
+
 
           <h3>
             External source
@@ -1069,8 +1449,10 @@ async function analyzeInput() {
   const resultElement =
     document.getElementById("result");
 
+
   const inputElement =
     document.getElementById("userInput");
+
 
   const extendedSearchElement =
     document.getElementById(
@@ -1079,7 +1461,9 @@ async function analyzeInput() {
 
 
   const normalizedSearch =
-    normalizeText(inputElement.value);
+    normalizeText(
+      inputElement.value
+    );
 
 
   if (!normalizedSearch) {
@@ -1090,9 +1474,10 @@ async function analyzeInput() {
   }
 
 
-  const searchTerms = normalizedSearch
-    .split(" ")
-    .filter(Boolean);
+  const searchTerms =
+    normalizedSearch
+      .split(" ")
+      .filter(Boolean);
 
 
   try {
@@ -1148,8 +1533,10 @@ async function analyzeInput() {
     const paints =
       await paintResponse.json();
 
+
     const subjects =
       await subjectResponse.json();
+
 
     const papers =
       await paperResponse.json();
@@ -1159,28 +1546,31 @@ async function analyzeInput() {
       extendedSearchElement.checked;
 
 
-    const paintMatches = findMatches(
-      paints,
-      searchTerms,
-      useExtendedSearch,
-      "paint"
-    );
+    const paintMatches =
+      findMatches(
+        paints,
+        searchTerms,
+        useExtendedSearch,
+        "paint"
+      );
 
 
-    const subjectMatches = findMatches(
-      subjects,
-      searchTerms,
-      useExtendedSearch,
-      "subject"
-    );
+    const subjectMatches =
+      findMatches(
+        subjects,
+        searchTerms,
+        useExtendedSearch,
+        "subject"
+      );
 
 
-    const paperMatches = findMatches(
-      papers,
-      searchTerms,
-      useExtendedSearch,
-      "paper"
-    );
+    const paperMatches =
+      findMatches(
+        papers,
+        searchTerms,
+        useExtendedSearch,
+        "paper"
+      );
 
 
     if (
@@ -1201,17 +1591,20 @@ async function analyzeInput() {
     /*
      * CATEGORY NAVIGATION
      */
-    resultHtml += createResultNavigation(
-      subjectMatches.length,
-      paintMatches.length,
-      paperMatches.length
-    );
+    resultHtml +=
+      createResultNavigation(
+        subjectMatches.length,
+        paintMatches.length,
+        paperMatches.length
+      );
 
 
     /*
      * SUBJECT RESULTS
      */
-    if (subjectMatches.length > 0) {
+    if (
+      subjectMatches.length > 0
+    ) {
       resultHtml += `
         <section
           class="subject-results"
@@ -1224,12 +1617,16 @@ async function analyzeInput() {
           </h2>
 
           ${subjectMatches
-            .map(({ entry, matchedFields }) =>
-              renderSubjectResult(
+            .map(
+              ({
                 entry,
-                matchedFields,
-                searchTerms
-              )
+                matchedFields
+              }) =>
+                renderSubjectResult(
+                  entry,
+                  matchedFields,
+                  searchTerms
+                )
             )
             .join("")}
 
@@ -1241,7 +1638,9 @@ async function analyzeInput() {
     /*
      * PAINT RESULTS
      */
-    if (paintMatches.length > 0) {
+    if (
+      paintMatches.length > 0
+    ) {
       resultHtml += `
         <section
           class="paint-results"
@@ -1254,12 +1653,16 @@ async function analyzeInput() {
           </h2>
 
           ${paintMatches
-            .map(({ entry, matchedFields }) =>
-              renderPaintResult(
+            .map(
+              ({
                 entry,
-                matchedFields,
-                searchTerms
-              )
+                matchedFields
+              }) =>
+                renderPaintResult(
+                  entry,
+                  matchedFields,
+                  searchTerms
+                )
             )
             .join("")}
 
@@ -1271,7 +1674,9 @@ async function analyzeInput() {
     /*
      * PAPER RESULTS
      */
-    if (paperMatches.length > 0) {
+    if (
+      paperMatches.length > 0
+    ) {
       resultHtml += `
         <section
           class="paper-results"
@@ -1284,12 +1689,16 @@ async function analyzeInput() {
           </h2>
 
           ${paperMatches
-            .map(({ entry, matchedFields }) =>
-              renderPaperResult(
+            .map(
+              ({
                 entry,
-                matchedFields,
-                searchTerms
-              )
+                matchedFields
+              }) =>
+                renderPaperResult(
+                  entry,
+                  matchedFields,
+                  searchTerms
+                )
             )
             .join("")}
 
@@ -1309,6 +1718,7 @@ async function analyzeInput() {
       error
     );
 
+
     resultElement.textContent =
       "Could not load data. Check the browser console.";
   }
@@ -1323,6 +1733,7 @@ document.addEventListener(
       document.getElementById(
         "analyzeButton"
       );
+
 
     const inputElement =
       document.getElementById(
@@ -1340,7 +1751,9 @@ document.addEventListener(
       "keydown",
       (event) => {
 
-        if (event.key === "Enter") {
+        if (
+          event.key === "Enter"
+        ) {
           analyzeInput();
         }
 
