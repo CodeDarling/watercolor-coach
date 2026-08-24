@@ -33,13 +33,19 @@ function escapeHtml(value) {
 
 
 function escapeRegExp(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return value.replace(
+    /[.*+?^${}()|[\]\\]/g,
+    "\\$&"
+  );
 }
 
 
 /*
  * Capitalize first letter only.
- * Used for ordinary metadata values.
+ *
+ * Example:
+ * transparent -> Transparent
+ * blue_green -> Blue green
  */
 function capitalizeFirst(value) {
   const text = String(value).trim();
@@ -48,44 +54,63 @@ function capitalizeFirst(value) {
     return text;
   }
 
-  return text.charAt(0).toUpperCase() + text.slice(1);
+  return (
+    text.charAt(0).toUpperCase() +
+    text.slice(1)
+  );
 }
 
 
 /*
- * Capitalize every word.
- * Primarily used for paint brands.
+ * Title Case.
+ *
+ * Used ONLY where we explicitly want
+ * every word to start with a capital letter.
+ *
+ * Example:
+ * winsor_blue_green_shade
+ * ->
+ * Winsor Blue Green Shade
  */
 function titleCase(value) {
   return String(value)
     .toLowerCase()
-    .replace(/\b([a-zæøå])/gi, (letter) =>
-      letter.toUpperCase()
+    .replace(
+      /\b([a-zæøå])/gi,
+      (letter) =>
+        letter.toUpperCase()
     );
 }
 
 
 /*
- * Format ordinary metadata.
+ * GENERAL METADATA FORMATTER
+ *
+ * Used for ordinary metadata.
  *
  * - underscores become spaces
  * - arrays use |
  * - booleans become Yes / No
- * - first item starts with uppercase
+ * - only the first word is capitalized
  */
 function formatValue(value) {
   if (
     value === null ||
     value === undefined ||
     value === "" ||
-    (Array.isArray(value) && value.length === 0)
+    (
+      Array.isArray(value) &&
+      value.length === 0
+    )
   ) {
     return "Not specified";
   }
 
 
   if (typeof value === "boolean") {
-    return value ? "Yes" : "No";
+    return value
+      ? "Yes"
+      : "No";
   }
 
 
@@ -93,47 +118,73 @@ function formatValue(value) {
     return value
       .flat(Infinity)
       .map((item) => {
-        if (typeof item === "boolean") {
-          return item ? "Yes" : "No";
+
+        if (
+          typeof item ===
+          "boolean"
+        ) {
+          return item
+            ? "Yes"
+            : "No";
         }
 
-        const formattedItem = String(item)
-          .replaceAll("_", " ")
-          .replace(/\s+/g, " ")
-          .trim();
 
-        return titleCase(formattedItem);
+        const formattedItem =
+          String(item)
+            .replaceAll("_", " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+
+        return capitalizeFirst(
+          formattedItem
+        );
       })
       .join(" | ");
   }
 
 
-  const formattedText = String(value)
-    .replaceAll("_", " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  const formattedText =
+    String(value)
+      .replaceAll("_", " ")
+      .replace(/\s+/g, " ")
+      .trim();
 
 
-  return titleCase(formattedText);
+  return capitalizeFirst(
+    formattedText
+  );
 }
 
 
 /*
- * Format brand names so every word begins
- * with a capital letter.
+ * PAINT NAME FORMATTER
+ *
+ * Every word begins with
+ * a capital letter.
+ *
+ * Example:
+ * quinophtalone_yellow
+ * ->
+ * Quinophtalone Yellow
  */
-function formatBrand(value) {
+function formatPaintName(value) {
   if (
     value === null ||
     value === undefined ||
     value === ""
   ) {
-    return "Unknown";
+    return "Unnamed paint";
   }
 
-  const formattedText = Array.isArray(value)
-    ? value.flat(Infinity).join(" | ")
-    : String(value);
+
+  const formattedText =
+    Array.isArray(value)
+      ? value
+          .flat(Infinity)
+          .join(" ")
+      : String(value);
+
 
   return titleCase(
     formattedText
@@ -145,7 +196,95 @@ function formatBrand(value) {
 
 
 /*
- * Highlight already formatted text.
+ * MIX_WITH FORMATTER
+ *
+ * Each paint name is Title Case.
+ * Different paints are separated by |.
+ *
+ * Example:
+ * azo_yellow
+ * quinophtalone_yellow
+ * winsor_red_deep
+ *
+ * ->
+ *
+ * Azo Yellow | Quinophtalone Yellow |
+ * Winsor Red Deep
+ */
+function formatPaintMixes(value) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === "" ||
+    (
+      Array.isArray(value) &&
+      value.length === 0
+    )
+  ) {
+    return "No mixes registered.";
+  }
+
+
+  const values =
+    Array.isArray(value)
+      ? value.flat(Infinity)
+      : [value];
+
+
+  return values
+    .map((item) => {
+
+      const formattedItem =
+        String(item)
+          .replaceAll("_", " ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+
+      return titleCase(
+        formattedItem
+      );
+    })
+    .join(" | ");
+}
+
+
+/*
+ * BRAND FORMATTER
+ *
+ * Every word begins with
+ * a capital letter.
+ */
+function formatBrand(value) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return "Unknown";
+  }
+
+
+  const formattedText =
+    Array.isArray(value)
+      ? value
+          .flat(Infinity)
+          .join(" | ")
+      : String(value);
+
+
+  return titleCase(
+    formattedText
+      .replaceAll("_", " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+
+/*
+ * Highlight text that has already
+ * been formatted.
  */
 function highlightFormattedText(
   formattedValue,
@@ -154,20 +293,29 @@ function highlightFormattedText(
   let highlightedText =
     escapeHtml(formattedValue);
 
-  const uniqueTerms = [...new Set(searchTerms)]
-    .sort(
-      (first, second) =>
-        second.length - first.length
-    );
+
+  const uniqueTerms =
+    [...new Set(searchTerms)]
+      .sort(
+        (first, second) =>
+          second.length -
+          first.length
+      );
 
 
-  for (const term of uniqueTerms) {
-    const escapedTerm = escapeRegExp(term);
+  for (
+    const term of uniqueTerms
+  ) {
+    const escapedTerm =
+      escapeRegExp(term);
 
-    const pattern = new RegExp(
-      `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
-      "gi"
-    );
+
+    const pattern =
+      new RegExp(
+        `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
+        "gi"
+      );
+
 
     highlightedText =
       highlightedText.replace(
@@ -182,9 +330,12 @@ function highlightFormattedText(
 
 
 /*
- * Highlight ordinary metadata values.
+ * Highlight ordinary metadata.
  */
-function highlightText(value, searchTerms) {
+function highlightText(
+  value,
+  searchTerms
+) {
   return highlightFormattedText(
     formatValue(value),
     searchTerms
@@ -193,9 +344,40 @@ function highlightText(value, searchTerms) {
 
 
 /*
+ * Highlight a paint name.
+ */
+function highlightPaintName(
+  value,
+  searchTerms
+) {
+  return highlightFormattedText(
+    formatPaintName(value),
+    searchTerms
+  );
+}
+
+
+/*
+ * Highlight paint mixes.
+ */
+function highlightPaintMixes(
+  value,
+  searchTerms
+) {
+  return highlightFormattedText(
+    formatPaintMixes(value),
+    searchTerms
+  );
+}
+
+
+/*
  * Highlight brand names.
  */
-function highlightBrand(value, searchTerms) {
+function highlightBrand(
+  value,
+  searchTerms
+) {
   return highlightFormattedText(
     formatBrand(value),
     searchTerms
@@ -204,9 +386,16 @@ function highlightBrand(value, searchTerms) {
 
 
 /*
- * Render Markdown-style content from Obsidian.
+ * Highlight RAW prose without
+ * changing capitalization.
+ *
+ * Used for manufacturer descriptions
+ * and other normal prose.
  */
-function renderMarkdown(value, searchTerms) {
+function highlightRawText(
+  value,
+  searchTerms
+) {
   if (
     value === null ||
     value === undefined ||
@@ -215,7 +404,69 @@ function renderMarkdown(value, searchTerms) {
     return "";
   }
 
-  let text = escapeHtml(String(value));
+
+  let highlightedText =
+    escapeHtml(String(value));
+
+
+  const uniqueTerms =
+    [...new Set(searchTerms)]
+      .sort(
+        (first, second) =>
+          second.length -
+          first.length
+      );
+
+
+  for (
+    const term of uniqueTerms
+  ) {
+    const escapedTerm =
+      escapeRegExp(term);
+
+
+    const pattern =
+      new RegExp(
+        `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
+        "gi"
+      );
+
+
+    highlightedText =
+      highlightedText.replace(
+        pattern,
+        "$1<mark>$2</mark>"
+      );
+  }
+
+
+  return highlightedText;
+}
+
+
+/*
+ * Render Markdown-style content
+ * from Obsidian.
+ *
+ * Capitalization is preserved.
+ */
+function renderMarkdown(
+  value,
+  searchTerms
+) {
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return "";
+  }
+
+
+  let text =
+    escapeHtml(
+      String(value)
+    );
 
 
   text = text.replace(
@@ -223,78 +474,106 @@ function renderMarkdown(value, searchTerms) {
     "<h3>$1</h3>"
   );
 
+
   text = text.replace(
     /^## (.+)$/gm,
     "<h2>$1</h2>"
   );
+
 
   text = text.replace(
     /^# (.+)$/gm,
     "<h1>$1</h1>"
   );
 
+
   text = text.replace(
     /\*\*(.+?)\*\*/g,
     "<strong>$1</strong>"
   );
+
 
   text = text.replace(
     /^\s*[-*] (.+)$/gm,
     "<li>$1</li>"
   );
 
+
   text = text.replace(
     /(?:<li>.*?<\/li>\s*)+/gs,
-    (match) => `<ul>${match}</ul>`
+    (match) =>
+      `<ul>${match}</ul>`
   );
 
 
-  const blocks = text
-    .split(/\n\s*\n/)
-    .filter(
-      (block) =>
-        block.trim() !== ""
-    );
+  const blocks =
+    text
+      .split(/\n\s*\n/)
+      .filter(
+        (block) =>
+          block.trim() !== ""
+      );
 
 
   text = blocks
     .map((block) => {
+
       const trimmedBlock =
         block.trim();
 
+
       if (
-        trimmedBlock.startsWith("<h1>") ||
-        trimmedBlock.startsWith("<h2>") ||
-        trimmedBlock.startsWith("<h3>") ||
-        trimmedBlock.startsWith("<ul>")
+        trimmedBlock.startsWith(
+          "<h1>"
+        ) ||
+        trimmedBlock.startsWith(
+          "<h2>"
+        ) ||
+        trimmedBlock.startsWith(
+          "<h3>"
+        ) ||
+        trimmedBlock.startsWith(
+          "<ul>"
+        )
       ) {
         return trimmedBlock;
       }
 
+
       return `
         <p>
-          ${trimmedBlock.replace(/\n/g, "<br>")}
+          ${trimmedBlock.replace(
+            /\n/g,
+            "<br>"
+          )}
         </p>
       `;
     })
     .join("");
 
 
-  const uniqueTerms = [...new Set(searchTerms)]
-    .sort(
-      (first, second) =>
-        second.length - first.length
-    );
+  const uniqueTerms =
+    [...new Set(searchTerms)]
+      .sort(
+        (first, second) =>
+          second.length -
+          first.length
+      );
 
 
-  for (const term of uniqueTerms) {
+  for (
+    const term of uniqueTerms
+  ) {
     const escapedTerm =
       escapeRegExp(term);
 
-    const pattern = new RegExp(
-      `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
-      "gi"
-    );
+
+    const pattern =
+      new RegExp(
+        `(^|[^a-z0-9æøå])(${escapedTerm})(?=[^a-z0-9æøå]|$)`,
+        "gi"
+      );
+
 
     text = text.replace(
       pattern,
@@ -320,7 +599,9 @@ function createClickableReferences(
   references
 ) {
   if (!references) {
-    return "No external references available.";
+    return (
+      "No external references available."
+    );
   }
 
 
@@ -343,26 +624,34 @@ function createClickableReferences(
       );
 
 
-  if (validReferences.length === 0) {
-    return "No external references available.";
+  if (
+    validReferences.length === 0
+  ) {
+    return (
+      "No external references available."
+    );
   }
 
 
   return validReferences
-    .map((reference, index) => {
-      const safeUrl =
-        escapeHtml(reference);
+    .map(
+      (reference, index) => {
 
-      return `
-        <a
-          href="${safeUrl}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          External reference ${index + 1}
-        </a>
-      `;
-    })
+        const safeUrl =
+          escapeHtml(reference);
+
+
+        return `
+          <a
+            href="${safeUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            External reference ${index + 1}
+          </a>
+        `;
+      }
+    )
     .join("<br>");
 }
 
@@ -383,55 +672,84 @@ function findMatches(
       /*
        * PAINT SEARCH FIELDS
        *
-       * ai_keywords is intentionally NOT included.
-       * It is reserved for a future LLM layer.
+       * ai_keywords is intentionally
+       * excluded from browser search.
        */
       if (type === "paint") {
+
         structuredFields = {
-          "Paint name": entry.paint_name,
-          "Paint ID": entry.paint_id,
-          "Brand": entry.paint_brand,
-          "Pigments": entry.paint_pigments,
+
+          "Paint name":
+            entry.paint_name,
+
+          "Paint ID":
+            entry.paint_id,
+
+          "Brand":
+            entry.paint_brand,
+
+          "Pigments":
+            entry.paint_pigments,
+
           "Color family":
             entry.paint_color_family,
+
           "Hue bias":
             entry.paint_hue_bias,
+
           "Temperature":
             entry.paint_temperature,
+
           "Opacity":
             entry.paint_opacity,
+
           "Granulation":
             entry.paint_granulation,
+
           "Staining":
             entry.paint_staining,
+
           "Luminosity":
             entry.paint_luminosity,
+
           "Optical role":
             entry.paint_optical_role,
+
           "Job title":
             entry.paint_job_title,
+
           "Subjects":
             entry.my_paint_subjects,
+
           "Purpose":
             entry.my_paint_purpose,
+
           "Techniques":
             entry.my_best_techniques,
+
           "Recommended paper":
             entry.my_recommended_paper,
+
           "Aliases":
             entry.paint_aliases
+
         };
 
 
         extendedFields = {
+
           "Personal observations":
             entry.my_notes,
+
           "Best mixes":
             entry.mix_with,
+
           "Full content":
             entry.content,
+
           "Manufacturer description":
             entry.ext_manufacturer_description
+
         };
       }
 
@@ -440,33 +758,47 @@ function findMatches(
        * SUBJECT SEARCH FIELDS
        */
       if (type === "subject") {
+
         structuredFields = {
+
           "Subject name":
             entry.subject_name,
+
           "Subject ID":
             entry.subject_id,
+
           "Related subjects":
             entry.my_paint_subjects,
+
           "Purpose":
             entry.my_paint_purpose,
+
           "Difficulty":
             entry.subject_difficulty,
+
           "Recommended brushes":
             entry.my_recommended_brushes,
+
           "Recommended paper":
             entry.my_recommended_paper
+
         };
 
 
         extendedFields = {
+
           "Related keywords":
             entry.ai_keywords,
+
           "Personal notes":
             entry.my_notes,
+
           "Recommended paints and mixes":
             entry.mix_with,
+
           "Full painting guide":
             entry.content
+
         };
       }
 
@@ -475,65 +807,95 @@ function findMatches(
        * PAPER SEARCH FIELDS
        */
       if (type === "paper") {
+
         structuredFields = {
+
           "Paper name":
             entry.paper_name,
+
           "Paper ID":
             entry.paper_id,
+
           "Brand":
             entry.paper_brand,
+
           "Weight":
             entry.paper_gsm_weight,
+
           "Color":
             entry.paper_color,
+
           "Material":
             entry.paper_material,
+
           "Cotton content":
             entry.paper_cotton_content,
+
           "Surface":
             entry.paper_surface,
+
           "Sizing":
             entry.paper_sizing,
+
           "Lifting abilities":
             entry.paper_lifting_abilities,
+
           "Pilling":
             entry.paper_pilling,
+
           "Granulation":
             entry.paper_granulation,
+
           "Burnisher suited":
             entry.paper_burnisher_suited,
+
           "Paint edges":
             entry.paper_clear_paintedges,
+
           "Color shift":
             entry.paper_colorshift,
+
           "Scrub tolerance":
             entry.paper_scrub_tolerance,
+
           "Layer tolerance":
             entry.paper_layer_tolerance,
+
           "Brush recommendations":
             entry.paper_brush_recommendations,
+
           "Luminosity":
             entry.paint_luminosity,
+
           "Glow":
             entry.paint_glow,
+
           "Techniques":
             entry.my_best_techniques,
+
           "Subjects":
             entry.my_paint_subjects,
+
           "Purpose":
             entry.my_paint_purpose,
+
           "Rating":
             entry.my_rating_1_10
+
         };
 
 
         extendedFields = {
+
           "Related keywords":
             entry.ai_keywords,
+
           "Personal notes":
             entry.my_notes,
+
           "Full content":
             entry.content
+
         };
       }
 
@@ -548,19 +910,26 @@ function findMatches(
 
 
       const preparedFields =
-        Object.entries(searchFields)
-          .map(([label, value]) => ({
-            label,
-            value,
-            words: getFieldWords(value)
-          }));
+        Object.entries(
+          searchFields
+        )
+          .map(
+            ([label, value]) => ({
+              label,
+              value,
+              words:
+                getFieldWords(value)
+            })
+          );
 
 
       const isMatch =
-        searchTerms.every((term) =>
-          preparedFields.some((field) =>
-            field.words.has(term)
-          )
+        searchTerms.every(
+          (term) =>
+            preparedFields.some(
+              (field) =>
+                field.words.has(term)
+            )
         );
 
 
@@ -571,10 +940,12 @@ function findMatches(
 
       const matchedFields =
         preparedFields
-          .filter((field) =>
-            searchTerms.some((term) =>
-              field.words.has(term)
-            )
+          .filter(
+            (field) =>
+              searchTerms.some(
+                (term) =>
+                  field.words.has(term)
+              )
           )
           .map(
             (field) =>
@@ -600,102 +971,129 @@ function renderPaintResult(
   matchedFields,
   searchTerms
 ) {
-  const name = highlightText(
-    paint.paint_name ||
-      "Unnamed paint",
-    searchTerms
-  );
 
-
-  const brand = highlightBrand(
-    paint.paint_brand ||
-      "Unknown",
-    searchTerms
-  );
-
-
-  const notes = highlightText(
-    paint.my_notes ||
-      "No notes available.",
-    searchTerms
-  );
-
-
-  const pigments = highlightText(
-    paint.paint_pigments ||
-      "Unknown",
-    searchTerms
-  );
-
-
-  const temperature = highlightText(
-    paint.paint_temperature,
-    searchTerms
-  );
-
-
-  const opacity = highlightText(
-    paint.paint_opacity,
-    searchTerms
-  );
-
-
-  const granulation = highlightText(
-    paint.paint_granulation,
-    searchTerms
-  );
-
-
-  const staining = highlightText(
-    paint.paint_staining,
-    searchTerms
-  );
-
-
-  const luminosity = highlightText(
-    paint.paint_luminosity,
-    searchTerms
-  );
-
-
-  const opticalRole = highlightText(
-    paint.paint_optical_role,
-    searchTerms
-  );
-
-
-  const jobTitle = highlightText(
-    paint.paint_job_title,
-    searchTerms
-  );
-
-
-  const purpose = highlightText(
-    paint.my_paint_purpose,
-    searchTerms
-  );
-
-
-  const mixes = highlightText(
-    paint.mix_with ||
-      "No mixes registered.",
-    searchTerms
-  );
-
-
-  const content = renderMarkdown(
-    paint.content ||
-      "No full note content available.",
-    searchTerms
-  );
-
-
-  const manufacturerDescription =
-    highlightText(
-      paint.ext_manufacturer_description ||
-        "No manufacturer description available.",
+  const name =
+    highlightPaintName(
+      paint.paint_name ||
+        "Unnamed paint",
       searchTerms
     );
+
+
+  const brand =
+    highlightBrand(
+      paint.paint_brand ||
+        "Unknown",
+      searchTerms
+    );
+
+
+  const notes =
+    highlightText(
+      paint.my_notes ||
+        "No notes available.",
+      searchTerms
+    );
+
+
+  const pigments =
+    highlightText(
+      paint.paint_pigments ||
+        "Unknown",
+      searchTerms
+    );
+
+
+  const temperature =
+    highlightText(
+      paint.paint_temperature,
+      searchTerms
+    );
+
+
+  const opacity =
+    highlightText(
+      paint.paint_opacity,
+      searchTerms
+    );
+
+
+  const granulation =
+    highlightText(
+      paint.paint_granulation,
+      searchTerms
+    );
+
+
+  const staining =
+    highlightText(
+      paint.paint_staining,
+      searchTerms
+    );
+
+
+  const luminosity =
+    highlightText(
+      paint.paint_luminosity,
+      searchTerms
+    );
+
+
+  const opticalRole =
+    highlightText(
+      paint.paint_optical_role,
+      searchTerms
+    );
+
+
+  const jobTitle =
+    highlightText(
+      paint.paint_job_title,
+      searchTerms
+    );
+
+
+  const purpose =
+    highlightText(
+      paint.my_paint_purpose,
+      searchTerms
+    );
+
+
+  /*
+   * mix_with uses its own
+   * Title Case formatter.
+   */
+  const mixes =
+    highlightPaintMixes(
+      paint.mix_with,
+      searchTerms
+    );
+
+
+  /*
+   * Obsidian prose keeps
+   * original capitalization.
+   */
+  const content =
+    renderMarkdown(
+      paint.content ||
+        "No full note content available.",
+      searchTerms
+    );
+
+
+  /*
+   * Manufacturer description is prose.
+   * Capitalization is NOT changed.
+   */
+  const manufacturerDescription =
+    paint.ext_manufacturer_description
+      ? highlightRawText(
+          paint.ext_manufacturer_description,
+          searchTerms
+        )
+      : "No manufacturer description available.";
 
 
   const matchedFieldList =
@@ -718,35 +1116,42 @@ function renderPaintResult(
         ${name}
       </h2>
 
+
       <p>
         <strong>Brand:</strong>
         ${brand}
       </p>
+
 
       <p>
         <strong>Personal observations:</strong>
         ${notes}
       </p>
 
+
       <p>
         <strong>Pigment:</strong>
         ${pigments}
       </p>
+
 
       <p>
         <strong>Temperature:</strong>
         ${temperature}
       </p>
 
+
       <p>
         <strong>Opacity:</strong>
         ${opacity}
       </p>
 
+
       <p>
         <strong>Granulation:</strong>
         ${granulation}
       </p>
+
 
       <p>
         <strong>Staining:</strong>
@@ -773,6 +1178,7 @@ function renderPaintResult(
           Show additional information
         </summary>
 
+
         <div class="entry-details">
 
           <p>
@@ -780,20 +1186,24 @@ function renderPaintResult(
             ${luminosity}
           </p>
 
+
           <p>
             <strong>Optical role:</strong>
             ${opticalRole}
           </p>
+
 
           <p>
             <strong>Job title / function:</strong>
             ${jobTitle}
           </p>
 
+
           <p>
             <strong>Subjects:</strong>
             ${purpose}
           </p>
+
 
           <p>
             <strong>Mixes:</strong>
@@ -805,6 +1215,7 @@ function renderPaintResult(
             Personal experiences
           </h3>
 
+
           <div class="note-content">
             ${content}
           </div>
@@ -813,6 +1224,7 @@ function renderPaintResult(
           <h3>
             Manufacturer's description
           </h3>
+
 
           <p>
             ${manufacturerDescription}
@@ -835,58 +1247,67 @@ function renderSubjectResult(
   matchedFields,
   searchTerms
 ) {
-  const name = highlightText(
-    subject.subject_name ||
-      subject.subject_id ||
-      "Unnamed subject",
-    searchTerms
-  );
+
+  const name =
+    highlightText(
+      subject.subject_name ||
+        subject.subject_id ||
+        "Unnamed subject",
+      searchTerms
+    );
 
 
-  const difficulty = highlightText(
-    subject.subject_difficulty,
-    searchTerms
-  );
+  const difficulty =
+    highlightText(
+      subject.subject_difficulty,
+      searchTerms
+    );
 
 
-  const brushes = highlightText(
-    subject.my_recommended_brushes,
-    searchTerms
-  );
+  const brushes =
+    highlightText(
+      subject.my_recommended_brushes,
+      searchTerms
+    );
 
 
-  const paper = highlightText(
-    subject.my_recommended_paper,
-    searchTerms
-  );
+  const paper =
+    highlightText(
+      subject.my_recommended_paper,
+      searchTerms
+    );
 
 
-  const notes = highlightText(
-    subject.my_notes ||
-      "No personal notes available.",
-    searchTerms
-  );
+  const notes =
+    highlightText(
+      subject.my_notes ||
+        "No personal notes available.",
+      searchTerms
+    );
 
 
-  const mixes = highlightText(
-    subject.mix_with ||
-      "No paints registered.",
-    searchTerms
-  );
+  const mixes =
+    highlightText(
+      subject.mix_with ||
+        "No paints registered.",
+      searchTerms
+    );
 
 
-  const keywords = highlightText(
-    subject.ai_keywords ||
-      "No related keywords available.",
-    searchTerms
-  );
+  const keywords =
+    highlightText(
+      subject.ai_keywords ||
+        "No related keywords available.",
+      searchTerms
+    );
 
 
-  const content = renderMarkdown(
-    subject.content ||
-      "No painting guide available.",
-    searchTerms
-  );
+  const content =
+    renderMarkdown(
+      subject.content ||
+        "No painting guide available.",
+      searchTerms
+    );
 
 
   const references =
@@ -911,24 +1332,29 @@ function renderSubjectResult(
         PAINTING SUBJECT
       </p>
 
+
       <h2>
         ${name}
       </h2>
+
 
       <p>
         <strong>Difficulty:</strong>
         ${difficulty}
       </p>
 
+
       <p>
         <strong>Recommended brushes:</strong>
         ${brushes}
       </p>
 
+
       <p>
         <strong>Recommended paper:</strong>
         ${paper}
       </p>
+
 
       <p>
         <strong>Personal observations:</strong>
@@ -955,11 +1381,13 @@ function renderSubjectResult(
           Show painting guide and all information
         </summary>
 
+
         <div class="entry-details">
 
           <h3>
             How to paint this subject
           </h3>
+
 
           <div class="note-content">
             ${content}
@@ -970,6 +1398,7 @@ function renderSubjectResult(
             Recommended paints and mixes
           </h3>
 
+
           <p>
             ${mixes}
           </p>
@@ -979,6 +1408,7 @@ function renderSubjectResult(
             Related keywords
           </h3>
 
+
           <p>
             ${keywords}
           </p>
@@ -987,6 +1417,7 @@ function renderSubjectResult(
           <h3>
             External references
           </h3>
+
 
           <p>
             ${references}
@@ -1009,159 +1440,185 @@ function renderPaperResult(
   matchedFields,
   searchTerms
 ) {
-  const name = highlightText(
-    paper.paper_name ||
-      paper.paper_id ||
-      "Unnamed paper",
-    searchTerms
-  );
+
+  const name =
+    highlightText(
+      paper.paper_name ||
+        paper.paper_id ||
+        "Unnamed paper",
+      searchTerms
+    );
 
 
-  const brand = highlightText(
-    paper.paper_brand ||
-      "Unknown",
-    searchTerms
-  );
+  const brand =
+    highlightText(
+      paper.paper_brand ||
+        "Unknown",
+      searchTerms
+    );
 
 
-  const weight = highlightText(
-    paper.paper_gsm_weight,
-    searchTerms
-  );
+  const weight =
+    highlightText(
+      paper.paper_gsm_weight,
+      searchTerms
+    );
 
 
-  const surface = highlightText(
-    paper.paper_surface,
-    searchTerms
-  );
+  const surface =
+    highlightText(
+      paper.paper_surface,
+      searchTerms
+    );
 
 
-  const material = highlightText(
-    paper.paper_material,
-    searchTerms
-  );
+  const material =
+    highlightText(
+      paper.paper_material,
+      searchTerms
+    );
 
 
-  const cotton = highlightText(
-    paper.paper_cotton_content,
-    searchTerms
-  );
+  const cotton =
+    highlightText(
+      paper.paper_cotton_content,
+      searchTerms
+    );
 
 
-  const color = highlightText(
-    paper.paper_color,
-    searchTerms
-  );
+  const color =
+    highlightText(
+      paper.paper_color,
+      searchTerms
+    );
 
 
-  const sizing = highlightText(
-    paper.paper_sizing,
-    searchTerms
-  );
+  const sizing =
+    highlightText(
+      paper.paper_sizing,
+      searchTerms
+    );
 
 
-  const lifting = highlightText(
-    paper.paper_lifting_abilities,
-    searchTerms
-  );
+  const lifting =
+    highlightText(
+      paper.paper_lifting_abilities,
+      searchTerms
+    );
 
 
-  const pilling = highlightText(
-    paper.paper_pilling,
-    searchTerms
-  );
+  const pilling =
+    highlightText(
+      paper.paper_pilling,
+      searchTerms
+    );
 
 
-  const granulation = highlightText(
-    paper.paper_granulation,
-    searchTerms
-  );
+  const granulation =
+    highlightText(
+      paper.paper_granulation,
+      searchTerms
+    );
 
 
-  const burnisher = highlightText(
-    paper.paper_burnisher_suited,
-    searchTerms
-  );
+  const burnisher =
+    highlightText(
+      paper.paper_burnisher_suited,
+      searchTerms
+    );
 
 
-  const edges = highlightText(
-    paper.paper_clear_paintedges,
-    searchTerms
-  );
+  const edges =
+    highlightText(
+      paper.paper_clear_paintedges,
+      searchTerms
+    );
 
 
-  const colorShift = highlightText(
-    paper.paper_colorshift,
-    searchTerms
-  );
+  const colorShift =
+    highlightText(
+      paper.paper_colorshift,
+      searchTerms
+    );
 
 
-  const scrubTolerance = highlightText(
-    paper.paper_scrub_tolerance,
-    searchTerms
-  );
+  const scrubTolerance =
+    highlightText(
+      paper.paper_scrub_tolerance,
+      searchTerms
+    );
 
 
-  const layerTolerance = highlightText(
-    paper.paper_layer_tolerance,
-    searchTerms
-  );
+  const layerTolerance =
+    highlightText(
+      paper.paper_layer_tolerance,
+      searchTerms
+    );
 
 
-  const brushes = highlightText(
-    paper.paper_brush_recommendations,
-    searchTerms
-  );
+  const brushes =
+    highlightText(
+      paper.paper_brush_recommendations,
+      searchTerms
+    );
 
 
-  const luminosity = highlightText(
-    paper.paint_luminosity,
-    searchTerms
-  );
+  const luminosity =
+    highlightText(
+      paper.paint_luminosity,
+      searchTerms
+    );
 
 
-  const glow = highlightText(
-    paper.paint_glow,
-    searchTerms
-  );
+  const glow =
+    highlightText(
+      paper.paint_glow,
+      searchTerms
+    );
 
 
-  const techniques = highlightText(
-    paper.my_best_techniques,
-    searchTerms
-  );
+  const techniques =
+    highlightText(
+      paper.my_best_techniques,
+      searchTerms
+    );
 
 
-  const subjects = highlightText(
-    paper.my_paint_subjects,
-    searchTerms
-  );
+  const subjects =
+    highlightText(
+      paper.my_paint_subjects,
+      searchTerms
+    );
 
 
-  const purpose = highlightText(
-    paper.my_paint_purpose,
-    searchTerms
-  );
+  const purpose =
+    highlightText(
+      paper.my_paint_purpose,
+      searchTerms
+    );
 
 
-  const rating = highlightText(
-    paper.my_rating_1_10,
-    searchTerms
-  );
+  const rating =
+    highlightText(
+      paper.my_rating_1_10,
+      searchTerms
+    );
 
 
-  const notes = highlightText(
-    paper.my_notes ||
-      "No personal notes available.",
-    searchTerms
-  );
+  const notes =
+    highlightText(
+      paper.my_notes ||
+        "No personal notes available.",
+      searchTerms
+    );
 
 
-  const content = renderMarkdown(
-    paper.content ||
-      "No full paper note available.",
-    searchTerms
-  );
+  const content =
+    renderMarkdown(
+      paper.content ||
+        "No full paper note available.",
+      searchTerms
+    );
 
 
   const references =
@@ -1192,59 +1649,71 @@ function renderPaperResult(
         PAPER
       </p>
 
+
       <h2>
         ${name}
       </h2>
+
 
       <p>
         <strong>Brand:</strong>
         ${brand}
       </p>
 
+
       <p>
         <strong>Weight:</strong>
         ${weight} gsm
       </p>
+
 
       <p>
         <strong>Surface:</strong>
         ${surface}
       </p>
 
+
       <p>
         <strong>Material:</strong>
         ${material}
       </p>
+
 
       <p>
         <strong>Cotton content:</strong>
         ${cotton}%
       </p>
 
+
       <p>
         <strong>Color:</strong>
         ${color}
       </p>
+
 
       <p>
         <strong>Best techniques:</strong>
         ${techniques}
       </p>
 
+
       <p>
         <strong>Subjects:</strong>
         ${subjects}
       </p>
+
 
       <p>
         <strong>Best used for:</strong>
         ${purpose}
       </p>
 
+
       <p>
         <strong>My rating:</strong>
         ${rating}/10
       </p>
+
 
       <p>
         <strong>Personal observations:</strong>
@@ -1271,66 +1740,79 @@ function renderPaperResult(
           Show paper details and full notes
         </summary>
 
+
         <div class="entry-details">
 
           <h3>
             Paper properties
           </h3>
 
+
           <p>
             <strong>Sizing:</strong>
             ${sizing}
           </p>
+
 
           <p>
             <strong>Lifting abilities:</strong>
             ${lifting}
           </p>
 
+
           <p>
             <strong>Pilling:</strong>
             ${pilling}
           </p>
+
 
           <p>
             <strong>Granulation suited:</strong>
             ${granulation}
           </p>
 
+
           <p>
             <strong>Burnisher suited:</strong>
             ${burnisher}
           </p>
+
 
           <p>
             <strong>Paint edges:</strong>
             ${edges}
           </p>
 
+
           <p>
             <strong>Color shift:</strong>
             ${colorShift}
           </p>
+
 
           <p>
             <strong>Scrub tolerance:</strong>
             ${scrubTolerance}
           </p>
 
+
           <p>
             <strong>Layer tolerance:</strong>
             ${layerTolerance}
           </p>
+
 
           <p>
             <strong>Recommended brush hair:</strong>
             ${brushes}
           </p>
 
+
           <p>
             <strong>Paint luminosity:</strong>
             ${luminosity}
           </p>
+
 
           <p>
             <strong>Paint glow:</strong>
@@ -1342,6 +1824,7 @@ function renderPaperResult(
             Personal experience and paper description
           </h3>
 
+
           <div class="note-content">
             ${content}
           </div>
@@ -1351,6 +1834,7 @@ function renderPaperResult(
             External references
           </h3>
 
+
           <p>
             ${references}
           </p>
@@ -1359,6 +1843,7 @@ function renderPaperResult(
           <h3>
             External source
           </h3>
+
 
           <p>
             ${source}
@@ -1374,23 +1859,26 @@ function renderPaperResult(
 
 
 /*
- * Create clickable result-category navigation
+ * CATEGORY NAVIGATION
  */
 function createResultNavigation(
   subjectCount,
   paintCount,
   paperCount
 ) {
+
   const links = [];
 
 
   if (subjectCount > 0) {
+
     links.push(`
       <a
         class="result-category-link"
         href="#subject-results"
       >
         Painting subjects
+
         <span class="result-category-count">
           ${subjectCount}
         </span>
@@ -1400,12 +1888,14 @@ function createResultNavigation(
 
 
   if (paintCount > 0) {
+
     links.push(`
       <a
         class="result-category-link"
         href="#paint-results"
       >
         Paints
+
         <span class="result-category-count">
           ${paintCount}
         </span>
@@ -1415,12 +1905,14 @@ function createResultNavigation(
 
 
   if (paperCount > 0) {
+
     links.push(`
       <a
         class="result-category-link"
         href="#paper-results"
       >
         Papers
+
         <span class="result-category-count">
           ${paperCount}
         </span>
@@ -1446,12 +1938,17 @@ function createResultNavigation(
 
 
 async function analyzeInput() {
+
   const resultElement =
-    document.getElementById("result");
+    document.getElementById(
+      "result"
+    );
 
 
   const inputElement =
-    document.getElementById("userInput");
+    document.getElementById(
+      "userInput"
+    );
 
 
   const extendedSearchElement =
@@ -1467,6 +1964,7 @@ async function analyzeInput() {
 
 
   if (!normalizedSearch) {
+
     resultElement.textContent =
       "Please enter a search term.";
 
@@ -1481,12 +1979,13 @@ async function analyzeInput() {
 
 
   try {
+
     resultElement.textContent =
       "Searching...";
 
 
     /*
-     * Load all three databases
+     * Load databases
      */
     const [
       paintResponse,
@@ -1494,22 +1993,32 @@ async function analyzeInput() {
       paperResponse
     ] = await Promise.all([
 
-      fetch("./data/paint.json", {
-        cache: "no-store"
-      }),
+      fetch(
+        "./data/paint.json",
+        {
+          cache: "no-store"
+        }
+      ),
 
-      fetch("./data/subjects.json", {
-        cache: "no-store"
-      }),
+      fetch(
+        "./data/subjects.json",
+        {
+          cache: "no-store"
+        }
+      ),
 
-      fetch("./data/papers.json", {
-        cache: "no-store"
-      })
+      fetch(
+        "./data/papers.json",
+        {
+          cache: "no-store"
+        }
+      )
 
     ]);
 
 
     if (!paintResponse.ok) {
+
       throw new Error(
         `Could not load paint.json. HTTP status: ${paintResponse.status}`
       );
@@ -1517,6 +2026,7 @@ async function analyzeInput() {
 
 
     if (!subjectResponse.ok) {
+
       throw new Error(
         `Could not load subjects.json. HTTP status: ${subjectResponse.status}`
       );
@@ -1524,6 +2034,7 @@ async function analyzeInput() {
 
 
     if (!paperResponse.ok) {
+
       throw new Error(
         `Could not load papers.json. HTTP status: ${paperResponse.status}`
       );
@@ -1578,6 +2089,7 @@ async function analyzeInput() {
       subjectMatches.length === 0 &&
       paperMatches.length === 0
     ) {
+
       resultElement.textContent =
         "No matching paints, painting subjects or papers found.";
 
@@ -1605,6 +2117,7 @@ async function analyzeInput() {
     if (
       subjectMatches.length > 0
     ) {
+
       resultHtml += `
         <section
           class="subject-results"
@@ -1641,6 +2154,7 @@ async function analyzeInput() {
     if (
       paintMatches.length > 0
     ) {
+
       resultHtml += `
         <section
           class="paint-results"
@@ -1677,6 +2191,7 @@ async function analyzeInput() {
     if (
       paperMatches.length > 0
     ) {
+
       resultHtml += `
         <section
           class="paper-results"
